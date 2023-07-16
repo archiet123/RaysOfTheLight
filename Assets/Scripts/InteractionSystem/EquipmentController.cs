@@ -35,6 +35,13 @@ public class EquipmentController : MonoBehaviour, IInteractable
         WeaponTab.Select();
         ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = ActiveTab;
+
+        string PanelName = EventSystem.current.currentSelectedGameObject.name;
+        if (PanelName == "WeaponsTab")
+        {
+            WeaponPanel.SetActive(true);
+        }
+
     }
 
     public void SetActiveButton()
@@ -43,6 +50,24 @@ public class EquipmentController : MonoBehaviour, IInteractable
         ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = ActiveTab;
 
+        //activating correct panel on button click
+        string PanelName = EventSystem.current.currentSelectedGameObject.name;
+        if (PanelName == "WeaponsTab")
+        {
+            WeaponPanel.SetActive(true);
+        }
+        else if (PanelName == "UtilityTab")
+        {
+            UtiltiyPanel.SetActive(true);
+        }
+        else if (PanelName == "StatsTab")
+        {
+            StatsPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("broken");
+        }
     }
 
     public void DeSelectedButton()
@@ -50,6 +75,25 @@ public class EquipmentController : MonoBehaviour, IInteractable
         //when button is deselected the sprite is changed to the inactive tab image
         ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = InactiveTab;
+
+        //deactivating correct panel on button click
+        string PanelName = EventSystem.current.currentSelectedGameObject.name;
+        if (PanelName == "WeaponsTab")
+        {
+            WeaponPanel.SetActive(false);
+        }
+        else if (PanelName == "UtilityTab")
+        {
+            UtiltiyPanel.SetActive(false);
+        }
+        else if (PanelName == "StatsTab")
+        {
+            StatsPanel.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("broken");
+        }
     }
 
     public void GetBool(bool DisablePauseMenu)
