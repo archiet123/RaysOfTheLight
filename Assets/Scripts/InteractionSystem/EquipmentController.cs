@@ -18,6 +18,10 @@ public class EquipmentController : MonoBehaviour, IInteractable
     public Button WeaponTab;
     public Button UtilityTab;
     public Button StatsTab;
+    //MenuDisplays
+    public GameObject WeaponPanel;
+    public GameObject UtiltiyPanel;
+    public GameObject StatsPanel;
 
     //images
     public Sprite InactiveTab;
