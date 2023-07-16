@@ -17,11 +17,11 @@ public class PlayerInteract : MonoBehaviour
             //this way E can be use to skip sentances
             if (DisableInteract)
             {
-                Debug.Log("disable interact");
+                // Debug.Log("disable interact");
             }
             else
             {
-                Debug.Log("enable interact");
+                // Debug.Log("enable interact");
                 IInteractable interactable = GetInteractableObject();
                 if (interactable != null)
                 {

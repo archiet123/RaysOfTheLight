@@ -66,7 +66,9 @@ public class UIController : MonoBehaviour
                 Cursor.visible = false;
                 DisablePauseMenu = false;
                 // getting variable from GunBenchScript
-                FindObjectOfType<GunBenchScript>().GetBool(DisablePauseMenu);
+                // FindObjectOfType<GunBenchScript>().GetBool(DisablePauseMenu);
+                FindObjectOfType<EquipmentController>().GetBool(DisablePauseMenu);
+                // FindObjectOfType<GunBenchScript>().GetBool1(DisablePauseMenu);
                 //is false
                 FindObjectOfType<GunScript>().GetBool1(DisablePauseMenu);
             }

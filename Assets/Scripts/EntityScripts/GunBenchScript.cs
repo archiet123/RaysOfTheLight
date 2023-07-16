@@ -6,12 +6,16 @@ public class GunBenchScript : MonoBehaviour, IInteractable
 {
     //GameObjects
     public GameObject player;
-    public GameObject GunBenchUI;
+    public GameObject EquipmentMenu;
     //bools
     [SerializeField] public static bool IsShown = false;
     // [SerializeField] public static bool CanShoot;
 
     public void GetBool(bool DisablePauseMenu)
+    {
+        IsShown = DisablePauseMenu;
+    }
+    public void GetBool1(bool DisablePauseMenu)
     {
         IsShown = DisablePauseMenu;
     }
@@ -40,7 +44,7 @@ public class GunBenchScript : MonoBehaviour, IInteractable
     public void CloseGunbench()
     {
         // Debug.Log("close");
-        GunBenchUI.SetActive(false);
+        EquipmentMenu.SetActive(false);
         Time.timeScale = 1f;
         IsShown = false;
         player.SetActive(true);
@@ -52,7 +56,7 @@ public class GunBenchScript : MonoBehaviour, IInteractable
     public void OpenGunbench()
     {
         // Debug.Log("open");
-        GunBenchUI.SetActive(true);
+        EquipmentMenu.SetActive(true);
         Time.timeScale = 0f;
         IsShown = true;
         Cursor.lockState = CursorLockMode.None;
@@ -70,7 +74,7 @@ public class GunBenchScript : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "Use Gunbench";
+        return "GunBench";
     }
 
     void IInteractable.Interact(Transform InteractorTransform)
