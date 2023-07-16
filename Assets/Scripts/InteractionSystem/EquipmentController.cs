@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+using UnityEngine.InputSystem;
 public class EquipmentController : MonoBehaviour, IInteractable
 {
     //GameObjects
@@ -17,40 +17,42 @@ public class EquipmentController : MonoBehaviour, IInteractable
     public Button WeaponTab;
     public Button UtilityTab;
     public Button StatsTab;
-    Button ActiveButton;
-    public GameObject CurrentTab;
+
+
     //strings
     public string PreviousTab;
-
+    public string CurrentTab;
     //images
     public Sprite InactiveTab;
     public Sprite ActiveTab;
 
+    public GameObject ActiveButton;
+
     void start()
     {
         ActiveButton = WeaponTab;
-        string PreviousTab = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(ActiveButton);
     }
 
-    void Update()
+    public void SetActiveButton()
     {
-
+        ActiveButton = EventSystem.current.currentSelectedGameObject;
+        Debug.Log(ActiveButton);
     }
 
-    public void SelectedNewTab()
+    public void Selectedbutton()
     {
-        CurrentTab = EventSystem.current.currentSelectedGameObject;
-        ActiveButton.image.sprite = InactiveTab;
-        ActiveButton = CurrentTab;
-        ActiveButton.image.sprite = ActiveTab;
-        // Debug.Log($"Set {CurrentTab} Active");
+        ActiveButton.GetComponent<Image>().sprite = ActiveTab;
+        // Button button = ActiveButton;
+        // button.image.sprite = ActiveTab;
     }
 
-    public void DisablePreviousTab()
+    public void DeSelectedButton()
     {
-        //PreviousTab.SetFalse
+        ActiveButton.GetComponent<Image>().sprite = InactiveTab;
+        // Button button = ActiveButton;
+        // button.image.sprite = InactiveTab;
     }
-
 
     public void GetBool(bool DisablePauseMenu)
     {
