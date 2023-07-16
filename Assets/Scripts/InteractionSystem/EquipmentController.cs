@@ -30,26 +30,32 @@ public class EquipmentController : MonoBehaviour, IInteractable
 
     void start()
     {
-        ActiveButton = WeaponTab;
-        Debug.Log(ActiveButton);
+        // ActiveButton = 
+        // ActiveButton = EventSystem.current.currentSelectedGameObject;
+        // Debug.Log(ActiveButton);
     }
 
     public void SetActiveButton()
     {
+        // ActiveButton.GetComponent<Image>().sprite = ActiveTab;
         ActiveButton = EventSystem.current.currentSelectedGameObject;
-        Debug.Log(ActiveButton);
+        ActiveButton.GetComponent<Image>().sprite = ActiveTab;
+        // Debug.Log(ActiveButton);
     }
 
-    public void Selectedbutton()
-    {
-        ActiveButton.GetComponent<Image>().sprite = ActiveTab;
-        // Button button = ActiveButton;
-        // button.image.sprite = ActiveTab;
-    }
+    // public void Selectedbutton()
+    // {
+    //     ActiveButton.GetComponent<Image>().sprite = ActiveTab;
+    //     // Debug.Log($"selected: {ActiveButton}");
+    //     // Button button = ActiveButton;
+    //     // button.image.sprite = ActiveTab;
+    // }
 
     public void DeSelectedButton()
     {
+        ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = InactiveTab;
+        Debug.Log($"deselected: {ActiveButton}");
         // Button button = ActiveButton;
         // button.image.sprite = InactiveTab;
     }
