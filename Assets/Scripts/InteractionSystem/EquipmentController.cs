@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 public class EquipmentController : MonoBehaviour, IInteractable
 {
@@ -18,46 +19,33 @@ public class EquipmentController : MonoBehaviour, IInteractable
     public Button UtilityTab;
     public Button StatsTab;
 
-
-    //strings
-    public string PreviousTab;
-    public string CurrentTab;
     //images
     public Sprite InactiveTab;
     public Sprite ActiveTab;
 
     public GameObject ActiveButton;
 
-    void start()
+    void Start()
     {
-        // ActiveButton = 
-        // ActiveButton = EventSystem.current.currentSelectedGameObject;
-        // Debug.Log(ActiveButton);
+        //on start weapons menu needs to be active, this also sets the corresponding image to an active tab
+        WeaponTab.Select();
+        ActiveButton = EventSystem.current.currentSelectedGameObject;
+        ActiveButton.GetComponent<Image>().sprite = ActiveTab;
     }
 
     public void SetActiveButton()
     {
-        // ActiveButton.GetComponent<Image>().sprite = ActiveTab;
+        // when a button (tab) is clicked the sprite is changed to the active image
         ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = ActiveTab;
-        // Debug.Log(ActiveButton);
-    }
 
-    // public void Selectedbutton()
-    // {
-    //     ActiveButton.GetComponent<Image>().sprite = ActiveTab;
-    //     // Debug.Log($"selected: {ActiveButton}");
-    //     // Button button = ActiveButton;
-    //     // button.image.sprite = ActiveTab;
-    // }
+    }
 
     public void DeSelectedButton()
     {
+        //when button is deselected the sprite is changed to the inactive tab image
         ActiveButton = EventSystem.current.currentSelectedGameObject;
         ActiveButton.GetComponent<Image>().sprite = InactiveTab;
-        Debug.Log($"deselected: {ActiveButton}");
-        // Button button = ActiveButton;
-        // button.image.sprite = InactiveTab;
     }
 
     public void GetBool(bool DisablePauseMenu)
