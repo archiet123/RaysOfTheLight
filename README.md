@@ -1,4 +1,4 @@
-# TheBoysGame
+# RaysOfTheLight
 
 This document is the design document for our game. Here we will write down all our ideas that we have for the game.
 
