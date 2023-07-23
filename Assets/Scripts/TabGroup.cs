@@ -27,6 +27,25 @@ public class TabGroup : MonoBehaviour
         WeaponPanel.SetActive(true);
     }
 
+    void Update()
+    {
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     if (SelectedTab.transform.GetSiblingIndex() > 0)
+        //     {
+        //         SetActive(SelectedTab.transform.GetSiblingIndex() - 1);
+        //     }
+        // }
+
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     if (ActiveTab.transform.GetSiblingIndex() < (transform.childCount - 1))
+        //     {
+        //         SetActive(ActiveTab.transform.GetSiblingIndex() + 1);
+        //     }
+        // }
+    }
+
     public void Subscribe(TabButton button)
     {
         if (TabButtons == null)
