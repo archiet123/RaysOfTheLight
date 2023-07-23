@@ -1028,10 +1028,9 @@ GameObject:
   - component: {fileID: 80544410}
   - component: {fileID: 80544413}
   - component: {fileID: 80544412}
-  - component: {fileID: 80544411}
-  - component: {fileID: 80544414}
+  - component: {fileID: 80544415}
   m_Layer: 5
-  m_Name: WeaponsTab
+  m_Name: Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,62 +1057,6 @@ RectTransform:
   m_AnchoredPosition: {x: 446, y: 0}
   m_SizeDelta: {x: 221, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &80544411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80544409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 80544412}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 369773983}
-        m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-        m_MethodName: SetActiveButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &80544412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1078,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1152,7 +1095,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80544409}
   m_CullTransparentMesh: 1
---- !u!114 &80544414
+--- !u!114 &80544415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1161,30 +1104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 80544409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventID: 10
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 369773983}
-          m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-          m_MethodName: DeSelectedButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  tabGroup: {fileID: 0}
+  Background: {fileID: 0}
 --- !u!1 &84929087
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,7 +5288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &369773982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5402,15 +5326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7309461462876297877}
   EquipmentMenu: {fileID: 369773981}
-  WeaponTab: {fileID: 80544411}
-  UtilityTab: {fileID: 1247904221}
-  StatsTab: {fileID: 1830748330}
-  WeaponPanel: {fileID: 1621739651}
-  UtiltiyPanel: {fileID: 1871309875}
-  StatsPanel: {fileID: 1248839497}
-  InactiveTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
-  ActiveButton: {fileID: 0}
 --- !u!1001 &373194685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9857,15 +9772,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7309461462876297877}
   EquipmentMenu: {fileID: 369773981}
-  WeaponTab: {fileID: 80544411}
-  UtilityTab: {fileID: 1247904221}
-  StatsTab: {fileID: 1830748330}
-  WeaponPanel: {fileID: 0}
-  UtiltiyPanel: {fileID: 0}
-  StatsPanel: {fileID: 0}
-  InactiveTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
-  ActiveButton: {fileID: 0}
 --- !u!1001 &828059878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12605,6 +12511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084685306}
+  - component: {fileID: 1084685307}
   m_Layer: 5
   m_Name: ButtonsTabs
   m_TagString: Untagged
@@ -12635,6 +12542,22 @@ RectTransform:
   m_AnchoredPosition: {x: -6.7, y: 264.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1084685307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084685305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b11ce5444551d04788524b613ccae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TabButtons: []
+  IdleTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
+  HoverTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
+  ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
 --- !u!1001 &1096331568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14813,10 +14736,9 @@ GameObject:
   - component: {fileID: 1247904220}
   - component: {fileID: 1247904223}
   - component: {fileID: 1247904222}
-  - component: {fileID: 1247904221}
-  - component: {fileID: 1247904224}
+  - component: {fileID: 1247904225}
   m_Layer: 5
-  m_Name: UtilityTab
+  m_Name: Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14843,62 +14765,6 @@ RectTransform:
   m_AnchoredPosition: {x: 232, y: 0}
   m_SizeDelta: {x: 221, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1247904221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247904219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1247904222}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 369773983}
-        m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-        m_MethodName: SetActiveButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1247904222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14920,7 +14786,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -14937,7 +14803,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247904219}
   m_CullTransparentMesh: 1
---- !u!114 &1247904224
+--- !u!114 &1247904225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14946,30 +14812,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247904219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventID: 10
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 369773983}
-          m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-          m_MethodName: DeSelectedButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  tabGroup: {fileID: 0}
+  Background: {fileID: 0}
 --- !u!1 &1248839497
 GameObject:
   m_ObjectHideFlags: 0
@@ -21400,8 +21247,7 @@ GameObject:
   - component: {fileID: 1830748328}
   - component: {fileID: 1830748332}
   - component: {fileID: 1830748331}
-  - component: {fileID: 1830748330}
-  - component: {fileID: 1830748329}
+  - component: {fileID: 1830748333}
   m_Layer: 5
   m_Name: StatsTab
   m_TagString: Untagged
@@ -21430,95 +21276,6 @@ RectTransform:
   m_AnchoredPosition: {x: 18.3, y: 0}
   m_SizeDelta: {x: 221, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1830748329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830748327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventID: 10
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 369773983}
-          m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-          m_MethodName: DeSelectedButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1830748330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830748327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1830748331}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 369773983}
-        m_TargetAssemblyTypeName: EquipmentController, Assembly-CSharp
-        m_MethodName: SetActiveButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1830748331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21540,7 +21297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -21557,6 +21314,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830748327}
   m_CullTransparentMesh: 1
+--- !u!114 &1830748333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830748327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabGroup: {fileID: 0}
+  Background: {fileID: 0}
 --- !u!1 &1832063014
 GameObject:
   m_ObjectHideFlags: 0
