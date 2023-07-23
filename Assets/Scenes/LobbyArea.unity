@@ -5288,7 +5288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &369773982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12558,6 +12558,13 @@ MonoBehaviour:
   IdleTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
   HoverTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
   ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
+  SelectedTab: {fileID: 0}
+  DisplaysToSwap:
+  - {fileID: 1248839497}
+  - {fileID: 1871309875}
+  - {fileID: 1621739651}
+  WeaponPanel: {fileID: 1621739651}
+  WeaponButton: {fileID: 80544409}
 --- !u!1001 &1096331568
 PrefabInstance:
   m_ObjectHideFlags: 0

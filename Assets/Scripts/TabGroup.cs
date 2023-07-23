@@ -6,13 +6,26 @@ public class TabGroup : MonoBehaviour
 {
     //List of buttons
     public List<TabButton> TabButtons;
-    //images for tab activity states
+    //images for tab activity states 
     public Sprite IdleTab;
     public Sprite HoverTab;
     public Sprite ActiveTab;
 
     //setting active tab
     public TabButton SelectedTab;
+
+    //list for different displays
+    public List<GameObject> DisplaysToSwap;
+
+    //on start UI
+    public GameObject WeaponPanel;
+    public GameObject WeaponButton;
+
+    void Start()
+    {
+        WeaponButton.GetComponent<Image>().sprite = ActiveTab;
+        WeaponPanel.SetActive(true);
+    }
 
     public void Subscribe(TabButton button)
     {
@@ -44,6 +57,18 @@ public class TabGroup : MonoBehaviour
         SelectedTab = button;
         ResetTabs();
         button.Background.sprite = ActiveTab;
+        int index = button.transform.GetSiblingIndex();
+        for (int i = 0; i < DisplaysToSwap.Count; i++)
+        {
+            if (i == index)
+            {
+                DisplaysToSwap[i].SetActive(true);
+            }
+            else
+            {
+                DisplaysToSwap[i].SetActive(false);
+            }
+        }
     }
 
     public void ResetTabs()
