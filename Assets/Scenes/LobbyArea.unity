@@ -1028,9 +1028,9 @@ GameObject:
   - component: {fileID: 80544410}
   - component: {fileID: 80544413}
   - component: {fileID: 80544412}
-  - component: {fileID: 80544415}
+  - component: {fileID: 80544414}
   m_Layer: 5
-  m_Name: Tab
+  m_Name: TabButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1095,7 +1095,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80544409}
   m_CullTransparentMesh: 1
---- !u!114 &80544415
+--- !u!114 &80544414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1104,10 +1104,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 80544409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
+  m_Script: {fileID: 11500000, guid: a45a040330564574889cbff28b730bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabGroup: {fileID: 0}
+  tabGroup: {fileID: 1084685307}
   Background: {fileID: 0}
 --- !u!1 &84929087
 GameObject:
@@ -12551,7 +12551,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084685305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b11ce5444551d04788524b613ccae7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 95ff76fda3e70aa428f4d2ada8234786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TabButtons: []
@@ -14736,9 +14736,9 @@ GameObject:
   - component: {fileID: 1247904220}
   - component: {fileID: 1247904223}
   - component: {fileID: 1247904222}
-  - component: {fileID: 1247904225}
+  - component: {fileID: 1247904224}
   m_Layer: 5
-  m_Name: Tab
+  m_Name: TabButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14786,7 +14786,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -14803,7 +14803,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247904219}
   m_CullTransparentMesh: 1
---- !u!114 &1247904225
+--- !u!114 &1247904224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14812,10 +14812,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247904219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
+  m_Script: {fileID: 11500000, guid: a45a040330564574889cbff28b730bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabGroup: {fileID: 0}
+  tabGroup: {fileID: 1084685307}
   Background: {fileID: 0}
 --- !u!1 &1248839497
 GameObject:
@@ -21249,7 +21249,7 @@ GameObject:
   - component: {fileID: 1830748331}
   - component: {fileID: 1830748333}
   m_Layer: 5
-  m_Name: StatsTab
+  m_Name: TabButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21297,7 +21297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -21323,10 +21323,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1830748327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1640bf6c574b8c943ad8e73315562e98, type: 3}
+  m_Script: {fileID: 11500000, guid: a45a040330564574889cbff28b730bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabGroup: {fileID: 0}
+  tabGroup: {fileID: 1084685307}
   Background: {fileID: 0}
 --- !u!1 &1832063014
 GameObject:
