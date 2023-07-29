@@ -34,6 +34,7 @@ public class GunScript : MonoBehaviour
     //audio definitions
     public AudioSource ShootFX;
     public AudioSource ReloadFX;
+   
 
     private void Awake()
     {
@@ -105,6 +106,7 @@ public class GunScript : MonoBehaviour
     {
         //audio stuff here
         ShootFX.Play();
+        //Animator = GetComponent<Animation>.play()
 
         ReadyToShoot = false;
 
