@@ -3558,6 +3558,7 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
+  animator: {fileID: 0}
 --- !u!1001 &222472017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10127,6 +10128,7 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
+  animator: {fileID: 833488541}
 --- !u!224 &846394598 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3644484702112912160, guid: dbb4051e1646b3e4fbad0f41ea9a7475, type: 3}
@@ -19804,6 +19806,7 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
+  animator: {fileID: 0}
 --- !u!1001 &1693301951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20061,6 +20064,7 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 170883988}
   ReloadFX: {fileID: 1956830231}
+  animator: {fileID: 0}
 --- !u!1 &1730128389
 GameObject:
   m_ObjectHideFlags: 0
@@ -25081,6 +25085,7 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 904467062}
   ReloadFX: {fileID: 1956830231}
+  animator: {fileID: 0}
 --- !u!1001 &751066102568987034
 PrefabInstance:
   m_ObjectHideFlags: 0
