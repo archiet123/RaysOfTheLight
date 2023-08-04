@@ -33,7 +33,7 @@ public class ActiveChilderen : MonoBehaviour
         if (ChildCount == ActiveCount)
         {
             GameManager.GetComponent<UIController>().DisplayWinScreen();
-            Debug.Log("you win");
+            // Debug.Log("you win");
             // return true;
         }
     }

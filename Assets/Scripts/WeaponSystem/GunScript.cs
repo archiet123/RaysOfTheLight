@@ -35,6 +35,9 @@ public class GunScript : MonoBehaviour
     public AudioSource ShootFX;
     public AudioSource ReloadFX;
 
+    // public Animator animator;
+
+
     private void Awake()
     {
         BulletsLeft = MagazineSize;
@@ -106,6 +109,11 @@ public class GunScript : MonoBehaviour
         //audio stuff here
         ShootFX.Play();
 
+
+        //Animator = GetComponent<Animation>.play()
+
+        // animator.SetBool("isShooting", Shooting);
+
         ReadyToShoot = false;
 
         Ray ray = PlayerCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
@@ -171,4 +179,10 @@ public class GunScript : MonoBehaviour
         Reloading = false;
         // Debug.Log("Reloaded");
     }
+
 }
+
+
+
+
+
