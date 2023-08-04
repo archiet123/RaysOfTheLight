@@ -19,14 +19,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (Health <= 0)
         {
-            Debug.Log("you lose");
+            // Debug.Log("you lose");
             GameManager.GetComponent<UIController>().DisplayLoseScreen();
         }
     }
 
     public void SetHealth(int CurrentHealth)
     {
-        Debug.Log("sethealth");
+        // Debug.Log("sethealth");
         HealthSlider.value = CurrentHealth;
     }
 
