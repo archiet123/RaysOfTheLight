@@ -35,7 +35,7 @@ public class GunScript : MonoBehaviour
     public AudioSource ShootFX;
     public AudioSource ReloadFX;
 
-    public Animator animator;
+    // public Animator animator;
 
 
     private void Awake()
@@ -111,8 +111,8 @@ public class GunScript : MonoBehaviour
 
 
         //Animator = GetComponent<Animation>.play()
-        
-        animator.SetBool("isShooting", Shooting);
+
+        // animator.SetBool("isShooting", Shooting);
 
         ReadyToShoot = false;
 
@@ -182,8 +182,7 @@ public class GunScript : MonoBehaviour
 
 }
 
-    
 
 
 
-    
+

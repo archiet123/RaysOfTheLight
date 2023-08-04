@@ -3558,7 +3558,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 0}
 --- !u!1001 &222472017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5403,15 +5402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7309461462876297877}
   EquipmentMenu: {fileID: 369773981}
-  WeaponTab: {fileID: 80544411}
-  UtilityTab: {fileID: 1247904221}
-  StatsTab: {fileID: 1830748330}
-  WeaponPanel: {fileID: 1621739651}
-  UtiltiyPanel: {fileID: 1871309875}
-  StatsPanel: {fileID: 1248839497}
-  InactiveTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
-  ActiveButton: {fileID: 0}
 --- !u!1001 &373194685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6954,7 +6944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.252
+      value: 2.484
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9464,7 +9454,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 949197913}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: -10
+  m_MaxValue: -20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -9890,15 +9880,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7309461462876297877}
   EquipmentMenu: {fileID: 369773981}
-  WeaponTab: {fileID: 80544411}
-  UtilityTab: {fileID: 1247904221}
-  StatsTab: {fileID: 1830748330}
-  WeaponPanel: {fileID: 0}
-  UtiltiyPanel: {fileID: 0}
-  StatsPanel: {fileID: 0}
-  InactiveTab: {fileID: 21300000, guid: 3a8244faad60e064f939b5f41c9dee8c, type: 3}
-  ActiveTab: {fileID: 21300000, guid: 37eddf579698a874580adb636f3999fa, type: 3}
-  ActiveButton: {fileID: 0}
 --- !u!1001 &828059878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10115,7 +10096,7 @@ MonoBehaviour:
   Bullet: {fileID: 2030714133}
   ShootForce: 200
   UpwardForce: 0
-  TimeBetweenShooting: 0.3
+  TimeBetweenShooting: 0.1
   ReloadTime: 1
   TimeBetweenShots: 0.1
   MagazineSize: 12
@@ -10128,7 +10109,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 833488541}
 --- !u!224 &846394598 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3644484702112912160, guid: dbb4051e1646b3e4fbad0f41ea9a7475, type: 3}
@@ -19806,7 +19786,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 1630892857}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 0}
 --- !u!1001 &1693301951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20064,7 +20043,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 170883988}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 0}
 --- !u!1 &1730128389
 GameObject:
   m_ObjectHideFlags: 0
@@ -24758,16 +24736,28 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4074547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4074547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4074547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.184
       objectReference: {fileID: 0}
     - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82316
+      value: -0.552
       objectReference: {fileID: 0}
     - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.862
+      value: 27.773
       objectReference: {fileID: 0}
     - target: {fileID: 4140090820636009977, guid: d9169cbe3fba0ae4da29f6615c18cdfd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25085,7 +25075,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 904467062}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 0}
 --- !u!1001 &751066102568987034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25288,16 +25277,28 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.58507574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5850757
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.58507574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.097
+      value: -1.958
       objectReference: {fileID: 0}
     - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.404
+      value: -1.105
       objectReference: {fileID: 0}
     - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.897
+      value: -9.272
       objectReference: {fileID: 0}
     - target: {fileID: 8758732425430604320, guid: aceed0dca1a313a42ac521cbebb29cb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25463,7 +25464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691193317664628484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.179, z: 2.488}
+  m_LocalPosition: {x: -0.214, y: 0.293, z: 2.893}
   m_LocalScale: {x: 1.3005, y: 1.3005, z: 1.3005}
   m_ConstrainProportionsScale: 0
   m_Children:
