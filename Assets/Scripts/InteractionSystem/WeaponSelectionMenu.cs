@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
-    [SerializeField] private string ButtonID;
+    [SerializeField] private int ButtonID;
 
-    // interactable.Interact(ButtonID);
 
-    public void GetString()
+    void Update()
     {
-        GetButtonID();
+        SetWeapon();
     }
-    public string GetButtonID()
+    public void SetWeapon()
     {
-        return ButtonID;
+        ISetWeapon setWeapon = GetUniqueID();
     }
+
+    public ISetWeapon GetUniqueID()
+    {
+        setWeapon.SetWeaponActive(ButtonID);
+    }
+
 }

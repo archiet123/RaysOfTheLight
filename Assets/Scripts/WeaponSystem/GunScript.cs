@@ -180,6 +180,19 @@ public class GunScript : MonoBehaviour
         // Debug.Log("Reloaded");
     }
 
+    //
+    private void SetWeaponActive(int ButtonID)
+    {
+        Debug.Log("buttonID" + ButtonID);
+        //WeaponID needs to be declared as a variable in this script, 
+        //if it matches ButtonID then "gameobject.SetActive(true);
+
+        // future logic
+        // ActiveWeapon.SetActive(false);
+        // ActiveWeapon = ButtonID;
+        // ActiveWeapon.SetActive(true);
+    }
+
 }
 
 
