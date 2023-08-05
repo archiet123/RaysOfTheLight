@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
@@ -38,7 +39,12 @@ public class GunScript : MonoBehaviour
     // public Animator animator;
 
     //interface
-    public WeaponSelectionMenu weaponSelectionMenu;
+
+
+    //weaponID
+    public string WeaponID;
+
+
 
     private void Awake()
     {
@@ -56,27 +62,8 @@ public class GunScript : MonoBehaviour
             AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
 
-        // Debug.Log(weaponSelectionMenu.ButtonID);
-        weaponSelectionMenu = GetComponent<WeaponSelectionMenu>();
-        Debug.Log(weaponSelectionMenu);
+
     }
-
-
-    //interface stuff
-    // private void SetWeaponActive(ISetWeapon setWeapon)
-    // {
-    //     ID = setWeapon.GetButtonID();
-    //     Debug.Log(ID);
-    //     //WeaponID needs to be declared as a variable in this script, 
-    //     //if it matches ButtonID then "gameobject.SetActive(true);
-
-    //     // future logic
-    //     // ActiveWeapon.SetActive(false);
-    //     // ActiveWeapon = ButtonID;
-    //     // ActiveWeapon.SetActive(true);
-    // }
-
-
 
     public void GetBool(bool IsShown)
     {

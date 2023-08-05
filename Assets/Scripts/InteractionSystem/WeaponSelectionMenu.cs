@@ -6,37 +6,47 @@ using UnityEngine.UI;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
-    [SerializeField] public string ButtonID;
-
-
-    //add buttons to a list, print the index of the button in the list.
+    //unique buttonID
+    public int ButtonID;
 
     //List of buttons
     public List<Button> GunButtons;
 
-    void Update()
-    {
+    //WeaponList
+    public List<GameObject> WeaponsToChoose = new List<GameObject>();
 
+    //active weapon
+    public GameObject ActiveWeapon;
+
+    void Start()
+    {
+        ActiveWeapon = WeaponsToChoose[0];
+        ActiveWeapon.SetActive(true);
     }
 
-    //when button is clicked the index of the name is fetched
+    void Update()
+    {
+        // SetWeaponActive()
+    }
+
+    //when button is clicked the index of the button is fetched
     public void SetWeapon()
     {
         for (int i = 0; i < GunButtons.Count; ++i)
         {
             int capturedButtonIndex = i;
-            GunButtons[i].onClick.AddListener(() => { function(capturedButtonIndex); });
+            GunButtons[i].onClick.AddListener(() => { GetButtonID(capturedButtonIndex); });
         }
     }
 
-    public void function(int capturedButtonIndex)
+    public void GetButtonID(int capturedButtonIndex)
     {
-        ButtonID = capturedButtonIndex.ToString();
+        ButtonID = capturedButtonIndex;
+        Debug.Log($"weaponID: {ButtonID}");
+
+        ActiveWeapon.SetActive(false);
+        ActiveWeapon = WeaponsToChoose[capturedButtonIndex];
+        ActiveWeapon.SetActive(true);
     }
 
-    //returns the index of the button that has been clicked
-    public string GetButtonID()
-    {
-        return ButtonID;
-    }
 }
