@@ -40,6 +40,7 @@ public class NpcInteractable : MonoBehaviour, IInteractable
         return InteractText;
     }
 
+    //InteractorTransform identifies this gameobject to interact with
     public void Interact(Transform InteractorTransform)
     {
         // Debug.Log("test interact");

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
@@ -37,6 +38,13 @@ public class GunScript : MonoBehaviour
 
     // public Animator animator;
 
+    //interface
+
+
+    //weaponID
+    public string WeaponID;
+
+
 
     private void Awake()
     {
@@ -53,6 +61,8 @@ public class GunScript : MonoBehaviour
         {
             AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
+
+
     }
 
     public void GetBool(bool IsShown)
@@ -179,6 +189,9 @@ public class GunScript : MonoBehaviour
         Reloading = false;
         // Debug.Log("Reloaded");
     }
+
+    //
+
 
 }
 

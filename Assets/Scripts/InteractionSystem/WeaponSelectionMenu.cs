@@ -1,19 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
-    [SerializeField] private string ButtonID;
+    //unique buttonID
+    public int ButtonID = 0;
 
-    // interactable.Interact(ButtonID);
+    //List of buttons
+    public List<Button> GunButtons;
 
-    public void GetString()
+    //WeaponList
+    public List<GameObject> WeaponsToChoose = new List<GameObject>();
+
+    //active weapon
+    public GameObject ActiveWeapon;
+
+    void Start()
     {
-        GetButtonID();
+        ActiveWeapon = WeaponsToChoose[0];
+        ActiveWeapon.SetActive(true);
     }
-    public string GetButtonID()
+
+    void Update()
     {
-        return ButtonID;
+
     }
+
+    //when button is clicked the index of the button is fetched
+    public void SetWeapon()
+    {
+        for (int i = 0; i < GunButtons.Count; ++i)
+        {
+            int capturedButtonIndex = i;
+            GunButtons[i].onClick.AddListener(() => { GetButtonID(capturedButtonIndex); });
+        }
+    }
+
+    public void GetButtonID(int capturedButtonIndex)
+    {
+        ButtonID = capturedButtonIndex;
+        Debug.Log($"weaponID: {ButtonID}");
+
+        ActiveWeapon.SetActive(false);
+        ActiveWeapon = WeaponsToChoose[capturedButtonIndex];
+        ActiveWeapon.SetActive(true);
+    }
+
 }

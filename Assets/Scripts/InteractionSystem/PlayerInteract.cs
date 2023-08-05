@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
+
         //if E is clicked within range on an entity NpcInteracable is called, 
         //functionality for that entity is run on NpcInteractable.
         if (Input.GetKeyDown(KeyCode.E))
@@ -81,7 +82,6 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
         }
-
         return closestInteractable;
     }
 }
