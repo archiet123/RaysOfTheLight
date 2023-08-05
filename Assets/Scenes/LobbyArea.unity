@@ -10086,9 +10086,9 @@ MonoBehaviour:
   Bullet: {fileID: 2030714133}
   ShootForce: 200
   UpwardForce: 0
-  TimeBetweenShooting: 1
+  TimeBetweenShooting: 0.3
   ReloadTime: 1
-  TimeBetweenShots: 1
+  TimeBetweenShots: 0.3
   MagazineSize: 12
   BulletsPerTap: 1
   AllowButtonHold: 0
