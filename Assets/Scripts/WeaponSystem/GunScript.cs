@@ -58,7 +58,7 @@ public class GunScript : MonoBehaviour
     private void Update()
     {
         PlayAnimation();
-        
+
         MyInput();
 
         //Set ammo display if it exists 
@@ -72,16 +72,16 @@ public class GunScript : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if (Shooting && BulletsLeft != 0)
-        {
-            animator.SetBool("isShooting", true);
-        }else
-        {
-            animator.SetBool("isShooting", false);
-        }
-
+        //     if (Shooting && MagazineSize > 0)
+        //     {
+        //         animator.SetBool("isShooting", true);
+        //     }
+        //     else
+        //     {
+        //         animator.SetBool("isShooting", false);
+        //     }
+        // }
     }
-
 
 
     public void GetBool(bool IsShown)
@@ -123,7 +123,10 @@ public class GunScript : MonoBehaviour
                 BulletsShot = 0;
 
                 Shoot();
-                
+            }
+            else
+            {
+                animator.SetBool("isShooting", false);
             }
         }
         else
@@ -139,10 +142,8 @@ public class GunScript : MonoBehaviour
         //audio stuff here
         ShootFX.Play();
 
-
-        //Animator = GetComponent<Animation>.play()
-
-        
+        //play shoot animation
+        animator.SetBool("isShooting", true);
 
         ReadyToShoot = false;
 
@@ -181,13 +182,13 @@ public class GunScript : MonoBehaviour
         {
             Invoke("ResetShot", TimeBetweenShooting);
             AllowInvoke = false;
-            
+
         }
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (BulletsShot < BulletsPerTap && BulletsLeft > 0)
         {
             Invoke("Shoot", TimeBetweenShots);
-            
+
         }
     }
 
@@ -211,11 +212,8 @@ public class GunScript : MonoBehaviour
         Reloading = false;
         // Debug.Log("Reloaded");
     }
-
-    //
-
-
 }
+
 
 
 
