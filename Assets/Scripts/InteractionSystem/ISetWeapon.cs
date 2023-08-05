@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface ISetWeapon
 {
-    void SetWeaponActive(int ButtonID);
+    // void SetWeaponActive(int ButtonID);
 
-    int GetButtonID();
+    // int GetButtonID();
 }
