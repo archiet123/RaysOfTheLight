@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WeaponSelectionMenu : MonoBehaviour
 {
     //unique buttonID
-    public int ButtonID;
+    public int ButtonID = 0;
 
     //List of buttons
     public List<Button> GunButtons;
@@ -26,7 +26,7 @@ public class WeaponSelectionMenu : MonoBehaviour
 
     void Update()
     {
-        // SetWeaponActive()
+
     }
 
     //when button is clicked the index of the button is fetched
