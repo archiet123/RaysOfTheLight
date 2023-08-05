@@ -22,31 +22,20 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         ActiveWeapon = WeaponsToChoose[0];
         ActiveWeapon.SetActive(true);
-    }
 
-    void Update()
-    {
-
-    }
-
-    //when button is clicked the index of the button is fetched
-    public void SetWeapon()
-    {
-        for (int i = 0; i < GunButtons.Count; ++i)
+        for (int i = 0; i < GunButtons.Count; i++)
         {
-            int capturedButtonIndex = i;
-            GunButtons[i].onClick.AddListener(() => { GetButtonID(capturedButtonIndex); });
+            int closureIndex = i; // adds listener to all buttons in list
+            GunButtons[closureIndex].onClick.AddListener(() => TaskOnClick(closureIndex));
         }
     }
 
-    public void GetButtonID(int capturedButtonIndex)
-    {
-        ButtonID = capturedButtonIndex;
-        Debug.Log($"weaponID: {ButtonID}");
 
+    public void TaskOnClick(int buttonIndex)
+    {
+        //setting old weapon to false and new to true
         ActiveWeapon.SetActive(false);
-        ActiveWeapon = WeaponsToChoose[capturedButtonIndex];
+        ActiveWeapon = WeaponsToChoose[buttonIndex];
         ActiveWeapon.SetActive(true);
     }
-
 }
