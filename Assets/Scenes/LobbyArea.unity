@@ -3402,7 +3402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2030714133}
-  ShootForce: 200
+  ShootForce: 500
   UpwardForce: 0
   TimeBetweenShooting: 0.3
   ReloadTime: 1
@@ -10084,7 +10084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2030714133}
-  ShootForce: 200
+  ShootForce: 500
   UpwardForce: 0
   TimeBetweenShooting: 0.3
   ReloadTime: 1
@@ -20044,7 +20044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573830669
 Transform:
   m_ObjectHideFlags: 0
