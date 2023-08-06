@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GunScript : MonoBehaviour
 {
+    public string WeaponName;
+
     //bullet
     public GameObject Bullet;
 
@@ -167,7 +169,7 @@ public class GunScript : MonoBehaviour
 
         Vector3 Directionwithspread = Directionwithoutspread + new Vector3(x, y, 0);
 
-        
+
 
         GameObject CurrentBullet = Instantiate(Bullet, AttackPoint.position, Quaternion.identity);
 
