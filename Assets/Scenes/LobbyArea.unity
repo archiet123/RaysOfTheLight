@@ -8246,6 +8246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639903480}
+  - component: {fileID: 639903481}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Weapon
@@ -8261,7 +8262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639903479}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.188, y: 0.176, z: 3.926}
+  m_LocalPosition: {x: -0.188, y: 0.176, z: 3.064}
   m_LocalScale: {x: 0.1338, y: 0.1338, z: 0.1338}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8269,6 +8270,20 @@ Transform:
   m_Father: {fileID: 4680642760399262019}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &639903481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639903479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f7df42e0fdae449803f4088ea8caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: Pistol
+  WeaponIcon: {fileID: 0}
 --- !u!1001 &641508408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13463,7 +13478,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 74b59a70c59767c40bc51eb4d533f85b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74b59a70c59767c40bc51eb4d533f85b, type: 3}
       propertyPath: m_LocalScale.x
@@ -20150,13 +20165,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1573830669}
+  - component: {fileID: 1573830670}
   m_Layer: 0
   m_Name: Sawnoff Parent
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573830669
 Transform:
   m_ObjectHideFlags: 0
@@ -20172,8 +20188,22 @@ Transform:
   - {fileID: 717785187}
   - {fileID: 671444208}
   m_Father: {fileID: 4680642760399262019}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1573830670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573830668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81f7df42e0fdae449803f4088ea8caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: Sawnoff
+  WeaponIcon: {fileID: 0}
 --- !u!1 &1575099899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 473b0137a013d1b43938d57eed1e4e72, type: 3}
@@ -24081,7 +24111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e3296590c9817c4491e9c1d3583d257, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e3296590c9817c4491e9c1d3583d257, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24089,7 +24119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e3296590c9817c4491e9c1d3583d257, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e3296590c9817c4491e9c1d3583d257, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30614,8 +30644,8 @@ Transform:
   - {fileID: 4571692622484295605}
   - {fileID: 1475688921639956711}
   - {fileID: 639903480}
-  - {fileID: 1450534438}
   - {fileID: 1573830669}
+  - {fileID: 1450534438}
   m_Father: {fileID: 7309461463903070560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32988,6 +33018,7 @@ MonoBehaviour:
   ActiveSlot: 
   Slot1: {fileID: 639903479}
   Slot2: {fileID: 1573830668}
+  theObject: {fileID: 0}
 --- !u!224 &7309461463756370959
 RectTransform:
   m_ObjectHideFlags: 0

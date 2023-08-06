@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponInfo : GunScript
+public class WeaponInfo : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //unique weapon name for each weapon
+    public string WeaponName;
+
+    //weapon icon, to be displayed as hotbar image
+    public Sprite WeaponIcon;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
+
+
 }

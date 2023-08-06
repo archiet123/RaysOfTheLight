@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
+
     //unique buttonID
     public int ButtonID = 0;
 
@@ -22,6 +23,8 @@ public class WeaponSelectionMenu : MonoBehaviour
     public GameObject Slot1;
     public GameObject Slot2;
 
+    public GameObject theObject;
+
     void Start()
     {
         Slot1.SetActive(true);
@@ -34,9 +37,8 @@ public class WeaponSelectionMenu : MonoBehaviour
         GetWeaponInfo();
         GetInput();
 
-        Debug.Log(Slot1);
-        Debug.Log(Slot2);
-
+        // Debug.Log(Slot1);
+        // Debug.Log(Slot2);
     }
 
     public void GetInput()
@@ -60,8 +62,16 @@ public class WeaponSelectionMenu : MonoBehaviour
     public void GetWeaponInfo()
     {
         //gets current gameobjects in slot1 and slot2, then fetches the components name
+        theObject = GameObject.FindGameObjectWithTag("Weapon");
+        if (theObject)
+        {
+            string Slot1Name = theObject.GetComponent<WeaponInfo>().WeaponName;
+            Debug.Log(Slot1Name);
+        }
+
         // string Slot1Name = Slot1.GetComponent<Tag>().WeaponName;
         // Debug.Log(Slot1Name);
+
         // string Slot2Name = Slot2.GetComponent<GunScript>().WeaponName;
         // Debug.Log(Slot2Name);
     }
