@@ -18,10 +18,6 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-
-    }
     private void OnCollisionEnter(Collision Collision)
     {
         GameObject other = Collision.gameObject;
@@ -29,19 +25,17 @@ public class BulletScript : MonoBehaviour
 
         if (Collision.gameObject.tag == "Enemy")
         {
-
-
-
             other.GetComponent<HealthScript>().DealDamage(WeaponDamage);
+            Destroy();
         }
         else if (Collision.gameObject.tag == "Player")
         {
 
             other.GetComponent<PlayerHealth>().DealDamage(EnemyDamage);
         }
-        else
+        else if (Collision.gameObject.tag == "Untagged")
         {
-
+            Destroy();
         }
     }
     private void Destroy()

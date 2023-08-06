@@ -13,7 +13,7 @@ public class GunScript : MonoBehaviour
     public float ShootForce, UpwardForce;
 
     //Gun Stats
-    public float TimeBetweenShooting, ReloadTime, TimeBetweenShots;
+    public float TimeBetweenShooting, spread, ReloadTime, TimeBetweenShots;
     public int MagazineSize, BulletsPerTap;
     public bool AllowButtonHold;
 
@@ -160,13 +160,20 @@ public class GunScript : MonoBehaviour
             TargetPoint = ray.GetPoint(75);
         }
 
-        Vector3 Direction = TargetPoint - AttackPoint.position;
+        Vector3 Directionwithoutspread = TargetPoint - AttackPoint.position;
+
+        float x = Random.Range(-spread, spread);
+        float y = Random.Range(-spread, spread);
+
+        Vector3 Directionwithspread = Directionwithoutspread + new Vector3(x, y, 0);
+
+        
 
         GameObject CurrentBullet = Instantiate(Bullet, AttackPoint.position, Quaternion.identity);
 
-        CurrentBullet.transform.forward = Direction.normalized;
+        CurrentBullet.transform.forward = Directionwithspread.normalized;
 
-        CurrentBullet.GetComponent<Rigidbody>().AddForce(Direction.normalized * ShootForce, ForceMode.Impulse);
+        CurrentBullet.GetComponent<Rigidbody>().AddForce(Directionwithspread.normalized * ShootForce, ForceMode.Impulse);
         CurrentBullet.GetComponent<Rigidbody>().AddForce(PlayerCam.transform.up * UpwardForce, ForceMode.Impulse);
 
         if (MuzzleFlash != null)
