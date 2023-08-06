@@ -26,6 +26,7 @@ public class BulletScript : MonoBehaviour
         if (Collision.gameObject.tag == "Enemy")
         {
             other.GetComponent<HealthScript>().DealDamage(WeaponDamage);
+            Destroy();
         }
         else if (Collision.gameObject.tag == "Player")
         {
