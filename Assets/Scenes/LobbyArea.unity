@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 50500091}
   m_Layer: 0
   m_Name: EnemyProjectile
-  m_TagString: Untagged
+  m_TagString: something
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8437,6 +8437,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 473b0137a013d1b43938d57eed1e4e72, type: 3}
+--- !u!1 &671444207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671444208}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671444208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671444207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.561, y: 0.26, z: 2.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1573830669}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675276902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 543677394c450c747a9f70a45280a86c, type: 3}
@@ -8969,17 +9000,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2030714133}
-  ShootForce: 600
+  ShootForce: 200
   UpwardForce: 0
   TimeBetweenShooting: 0.5
-  spread: 10
+  spread: 2
   ReloadTime: 2
-  TimeBetweenShots: 0.5
+  TimeBetweenShots: 0
   MagazineSize: 16
   BulletsPerTap: 8
   AllowButtonHold: 0
   PlayerCam: {fileID: 7309461462619741570}
-  AttackPoint: {fileID: 2447655311499863383}
+  AttackPoint: {fileID: 671444208}
   MuzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   AmmoDisplay: {fileID: 723502205}
   AllowInvoke: 1
@@ -10095,7 +10126,7 @@ MonoBehaviour:
   BulletsPerTap: 1
   AllowButtonHold: 0
   PlayerCam: {fileID: 7309461462619741570}
-  AttackPoint: {fileID: 2447655311499863383}
+  AttackPoint: {fileID: 1689108261}
   MuzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   AmmoDisplay: {fileID: 723502205}
   AllowInvoke: 1
@@ -20004,6 +20035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 717785187}
+  - {fileID: 671444208}
   m_Father: {fileID: 4680642760399262019}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -21331,6 +21363,37 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1689108260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689108261}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689108261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689108260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01779, y: 0.01751, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 361032616}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689622551
 GameObject:
   m_ObjectHideFlags: 0
@@ -25862,7 +25925,7 @@ GameObject:
   - component: {fileID: 2030714139}
   m_Layer: 0
   m_Name: BasicBullet
-  m_TagString: Untagged
+  m_TagString: something
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25938,8 +26001,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030714133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.243263, y: -1.6644235, z: -1.6179047}
-  m_LocalScale: {x: 0.27986133, y: 0.27986133, z: 0.27986133}
+  m_LocalPosition: {x: -41.243263, y: -1.6644235, z: -1.216}
+  m_LocalScale: {x: 0.15608665, y: 0.15608665, z: 0.15608665}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2821003487037503915}
@@ -25974,7 +26037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 2030714133}
-  MaxCollisions: 1
+  MaxCollisions: 10
   Collisions: 0
   WeaponDamage: 20
   EnemyDamage: 20
