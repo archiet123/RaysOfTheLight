@@ -91,6 +91,7 @@ public class WeaponSelectionMenu : MonoBehaviour
     }
 
 
+    //this function actually sucks but it works so dont touch it
     public void TaskOnClick(int buttonIndex)
     {
         //setting old weapon to false and new to true        
