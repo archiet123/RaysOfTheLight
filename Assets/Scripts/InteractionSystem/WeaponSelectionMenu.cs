@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
-
     //unique buttonID
     public int ButtonID = 0;
 
@@ -16,6 +16,7 @@ public class WeaponSelectionMenu : MonoBehaviour
     //WeaponList
     public List<GameObject> WeaponsToChoose = new List<GameObject>();
 
+    public List<char> WeaponNames = new List<char>();
     //active weapon
     public GameObject ActiveWeapon;
     public string ActiveSlot;
@@ -23,7 +24,13 @@ public class WeaponSelectionMenu : MonoBehaviour
     public GameObject Slot1;
     public GameObject Slot2;
 
-    public GameObject theObject;
+    //current weapon of any type
+    public GameObject CurrentEquipedWeapon;
+
+    //ui stuff slot for current weapon
+    public Image ImageContainer;
+    public TextMeshProUGUI GunName;
+
 
     void Start()
     {
@@ -36,9 +43,6 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         GetWeaponInfo();
         GetInput();
-
-        // Debug.Log(Slot1);
-        // Debug.Log(Slot2);
     }
 
     public void GetInput()
@@ -62,18 +66,19 @@ public class WeaponSelectionMenu : MonoBehaviour
     public void GetWeaponInfo()
     {
         //gets current gameobjects in slot1 and slot2, then fetches the components name
-        theObject = GameObject.FindGameObjectWithTag("Weapon");
-        if (theObject)
+        CurrentEquipedWeapon = GameObject.FindGameObjectWithTag("Weapon");
+        if (CurrentEquipedWeapon)
         {
-            string Slot1Name = theObject.GetComponent<WeaponInfo>().WeaponName;
-            Debug.Log(Slot1Name);
+            foreach (char slot in CurrentEquipedWeapon.ToString())
+            {
+                //gets and sets current weapon name to ui
+                string Slot1Name = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponName;
+                GunName.text = Slot1Name;
+
+                //gets and sets current icon name to ui
+                ImageContainer.sprite = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponIcon;
+            }
         }
-
-        // string Slot1Name = Slot1.GetComponent<Tag>().WeaponName;
-        // Debug.Log(Slot1Name);
-
-        // string Slot2Name = Slot2.GetComponent<GunScript>().WeaponName;
-        // Debug.Log(Slot2Name);
     }
 
     public void Addlisteners()
