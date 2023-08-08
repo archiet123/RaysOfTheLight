@@ -10,15 +10,4 @@ public class WeaponInfo : MonoBehaviour
     //weapon icon, to be displayed as hotbar image
     public Sprite WeaponIcon;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
-
 }
