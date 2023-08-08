@@ -33900,7 +33900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f7812ad0d57a6469ca107866ebbe25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonID: 0
   GunButtons:
   - {fileID: 1127921576}
   - {fileID: 944708613}
@@ -33932,7 +33931,8 @@ MonoBehaviour:
   ImageContainer2: {fileID: 1677487745}
   GunName1: {fileID: 1086842092}
   GunName2: {fileID: 725715305}
-  AmmoCounter: {fileID: 723502205}
+  AmmoCounter1: {fileID: 723502205}
+  AmmoCounter2: {fileID: 1099998318}
 --- !u!224 &7309461463756370959
 RectTransform:
   m_ObjectHideFlags: 0
