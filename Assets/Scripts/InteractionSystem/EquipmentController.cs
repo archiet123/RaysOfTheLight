@@ -75,7 +75,7 @@ public class EquipmentController : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "Equipment";
+        return "Loadout";
     }
 
     void IInteractable.Interact(Transform InteractorTransform)
