@@ -7,9 +7,6 @@ using TMPro;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
-    //unique buttonID
-    public int ButtonID = 0;
-
     //List of buttons
     public List<Button> GunButtons;
 
@@ -33,30 +30,29 @@ public class WeaponSelectionMenu : MonoBehaviour
     public TextMeshProUGUI GunName1;
     public TextMeshProUGUI GunName2;
 
-    public TextMeshProUGUI AmmoCounter0;
     public TextMeshProUGUI AmmoCounter1;
+    public TextMeshProUGUI AmmoCounter2;
+
+    void Awake()
+    {
+
+    }
 
     void Start()
     {
         Slot1.SetActive(true);
+        Slot2.SetActive(true);
+        Slot2.SetActive(false);
         ActiveSlot = "Slot1";
         Addlisteners();
-        GetWeaponInfo();
+
     }
 
     void Update()
     {
         GetInput();
-
-        int bulletsLeft = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
-        int bulletsPerTap = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
-        int magazineSize = Slot1.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
-        Debug.Log(bulletsLeft);
-        Debug.Log(bulletsPerTap);
-        Debug.Log(magazineSize);
-
-
-        AmmoCounter0.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+        GetWeaponInfo();
+        GetAmmoCount();
     }
 
     public void GetInput()
@@ -77,6 +73,20 @@ public class WeaponSelectionMenu : MonoBehaviour
             ActiveSlot = "Slot2";
             GetWeaponInfo();
         }
+    }
+
+    public void GetAmmoCount()
+    {
+        int bulletsLeft1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
+        int bulletsPerTap1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
+        int magazineSize1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
+
+        int bulletsLeft2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
+        int bulletsPerTap2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
+        int magazineSize2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
+
+        AmmoCounter1.SetText(bulletsLeft1 / bulletsPerTap1 + " / " + magazineSize1 / bulletsPerTap1);
+        AmmoCounter2.SetText(bulletsLeft2 / bulletsPerTap2 + " / " + magazineSize2 / bulletsPerTap2);
     }
 
     public void GetWeaponInfo()
@@ -101,18 +111,12 @@ public class WeaponSelectionMenu : MonoBehaviour
         {
             string Slot1WeaponName = Slot1.GetComponent<WeaponInfo>().WeaponName;
             GunName1.text = Slot1WeaponName;
-
-
-
-
-
             ImageContainer1.sprite = Slot1.GetComponent<WeaponInfo>().WeaponIcon;
 
 
             string Slot2WeaponName = Slot2.GetComponent<WeaponInfo>().WeaponName;
             GunName2.text = Slot2WeaponName;
             ImageContainer2.sprite = Slot2.GetComponent<WeaponInfo>().WeaponIcon;
-
         }
         else
         {
