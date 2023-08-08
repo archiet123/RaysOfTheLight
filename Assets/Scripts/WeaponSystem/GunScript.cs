@@ -19,7 +19,7 @@ public class GunScript : MonoBehaviour
     public int MagazineSize, BulletsPerTap;
     public bool AllowButtonHold;
 
-    int BulletsLeft, BulletsShot;
+    public int BulletsLeft, BulletsShot;
 
     //bools//
     bool Shooting, ReadyToShoot, Reloading;
@@ -66,7 +66,7 @@ public class GunScript : MonoBehaviour
         //Set ammo display if it exists 
         if (AmmoDisplay != null)
         {
-            AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
+            // AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
 
 

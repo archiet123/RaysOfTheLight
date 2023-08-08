@@ -28,21 +28,35 @@ public class WeaponSelectionMenu : MonoBehaviour
     public GameObject CurrentEquipedWeapon;
 
     //ui stuff slot for current weapon
-    public Image ImageContainer;
-    public TextMeshProUGUI GunName;
+    public Image ImageContainer1;
+    public Image ImageContainer2;
+    public TextMeshProUGUI GunName1;
+    public TextMeshProUGUI GunName2;
 
+    public TextMeshProUGUI AmmoCounter0;
+    public TextMeshProUGUI AmmoCounter1;
 
     void Start()
     {
         Slot1.SetActive(true);
         ActiveSlot = "Slot1";
         Addlisteners();
+        GetWeaponInfo();
     }
 
     void Update()
     {
-        GetWeaponInfo();
         GetInput();
+
+        int bulletsLeft = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
+        int bulletsPerTap = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
+        int magazineSize = Slot1.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
+        Debug.Log(bulletsLeft);
+        Debug.Log(bulletsPerTap);
+        Debug.Log(magazineSize);
+
+
+        AmmoCounter0.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
     }
 
     public void GetInput()
@@ -53,6 +67,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot1.SetActive(true);
 
             ActiveSlot = "Slot1";
+            GetWeaponInfo();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -60,24 +75,48 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot2.SetActive(true);
 
             ActiveSlot = "Slot2";
+            GetWeaponInfo();
         }
     }
 
     public void GetWeaponInfo()
     {
         //gets current gameobjects in slot1 and slot2, then fetches the components name
-        CurrentEquipedWeapon = GameObject.FindGameObjectWithTag("Weapon");
-        if (CurrentEquipedWeapon)
-        {
-            foreach (char slot in CurrentEquipedWeapon.ToString())
-            {
-                //gets and sets current weapon name to ui
-                string Slot1Name = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponName;
-                GunName.text = Slot1Name;
 
-                //gets and sets current icon name to ui
-                ImageContainer.sprite = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponIcon;
-            }
+        // CurrentEquipedWeapon = GameObject.FindGameObjectWithTag("Weapon");
+        // if (CurrentEquipedWeapon)
+        // {
+        //     foreach (char slot in CurrentEquipedWeapon.ToString())
+        //     {
+        //         //gets and sets current weapon name to ui
+        //         string Slot1Name = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponName;
+        //         GunName.text = Slot1Name;
+
+        //         //gets and sets current icon name to ui
+        //         ImageContainer.sprite = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponIcon;
+        //     }
+        // }
+
+        if (Slot1.tag == "Weapon" && Slot2.tag == "Weapon")
+        {
+            string Slot1WeaponName = Slot1.GetComponent<WeaponInfo>().WeaponName;
+            GunName1.text = Slot1WeaponName;
+
+
+
+
+
+            ImageContainer1.sprite = Slot1.GetComponent<WeaponInfo>().WeaponIcon;
+
+
+            string Slot2WeaponName = Slot2.GetComponent<WeaponInfo>().WeaponName;
+            GunName2.text = Slot2WeaponName;
+            ImageContainer2.sprite = Slot2.GetComponent<WeaponInfo>().WeaponIcon;
+
+        }
+        else
+        {
+            Debug.Log("a gun could not be found");
         }
     }
 
@@ -102,6 +141,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot1.SetActive(false);
             Slot1 = ActiveWeapon;
             Slot1.SetActive(true);
+            GetWeaponInfo();
         }
         else if (ActiveSlot == "Slot2")
         {
@@ -110,6 +150,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot2.SetActive(false);
             Slot2 = ActiveWeapon;
             Slot2.SetActive(true);
+            GetWeaponInfo();
         }
         else
         {
