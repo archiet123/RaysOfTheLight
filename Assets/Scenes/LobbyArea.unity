@@ -7149,7 +7149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.484
+      value: 2.691
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7194,6 +7194,34 @@ PrefabInstance:
     - target: {fileID: 2356043224471405935, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.29561868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.29561865
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.64234704
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6423469
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086560957254312686, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7598419493678936200, guid: 4920b3d4a0843034ab66821ffcfb6d99, type: 3}
       propertyPath: m_Layer
@@ -22894,7 +22922,7 @@ MonoBehaviour:
   Bullet: {fileID: 914442450}
   ShootForce: 200
   UpwardForce: 0
-  TimeBetweenShooting: 0.5
+  TimeBetweenShooting: 0.1
   spread: 0
   ReloadTime: 4
   TimeBetweenShots: 1
@@ -22910,8 +22938,29 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 170883988}
   ReloadFX: {fileID: 1956830231}
-  animator: {fileID: 0}
+  animator: {fileID: 1727173429}
   WeaponID: 
+--- !u!95 &1727173429
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727173426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ee2c9b883094bd4aa24cb4327ddce2f, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1730128389
 GameObject:
   m_ObjectHideFlags: 0
@@ -24603,6 +24652,7 @@ GameObject:
   - component: {fileID: 1836133082}
   - component: {fileID: 1836133081}
   - component: {fileID: 1836133085}
+  - component: {fileID: 1836133086}
   m_Layer: 0
   m_Name: Stand
   m_TagString: Untagged
@@ -24706,6 +24756,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameScene: 1
+--- !u!95 &1836133086
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836133079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a8b238b69d66a54183cdea52fad4905, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1843174052
 GameObject:
   m_ObjectHideFlags: 0
@@ -33714,7 +33785,7 @@ Animator:
   m_GameObject: {fileID: 7309461462876297877}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fdd8a0e7188554e4b9bf9f3480dd4b1a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0b9f2fb23f5794a41853e43c1e04b390, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
