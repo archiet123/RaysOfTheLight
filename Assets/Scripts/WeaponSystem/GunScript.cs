@@ -59,7 +59,6 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
-        PlayAnimation();
 
         MyInput();
 
@@ -69,21 +68,10 @@ public class GunScript : MonoBehaviour
             // AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
 
-
+        Debug.Log(Shooting);
     }
 
-    public void PlayAnimation()
-    {
-        //     if (Shooting && MagazineSize > 0)
-        //     {
-        //         animator.SetBool("isShooting", true);
-        //     }
-        //     else
-        //     {
-        //         animator.SetBool("isShooting", false);
-        //     }
-        // }
-    }
+
 
 
     public void GetBool(bool IsShown)
