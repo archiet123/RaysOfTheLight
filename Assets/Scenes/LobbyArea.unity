@@ -3005,6 +3005,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 493228046}
   EnemyHealthBar: {fileID: 1152462693}
   currencySystem: {fileID: 7309461463745230933}
+  EnemyValue: 5
 --- !u!114 &197385495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5528,6 +5529,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 1580685259}
   EnemyHealthBar: {fileID: 1749843352}
   currencySystem: {fileID: 7309461463745230933}
+  EnemyValue: 5
 --- !u!114 &347692298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16720,6 +16722,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 482707368}
   EnemyHealthBar: {fileID: 1588140832}
   currencySystem: {fileID: 7309461463745230933}
+  EnemyValue: 5
 --- !u!114 &1111054623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24980,6 +24983,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 1952085981}
   EnemyHealthBar: {fileID: 2082681333}
   currencySystem: {fileID: 7309461463745230933}
+  EnemyValue: 5
 --- !u!114 &1651277208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30272,6 +30276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vending_machine_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45c3a690af17f15459adffeb03a58ae7, type: 3}
+      propertyPath: m_TagString
+      value: Perks
+      objectReference: {fileID: 0}
     - target: {fileID: 4767400413853537203, guid: 45c3a690af17f15459adffeb03a58ae7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -30301,6 +30309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencySystem: {fileID: 7309461463745230933}
+  UseCost: 15
 --- !u!65 &1982541198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31364,6 +31373,7 @@ MonoBehaviour:
   HealthSlider: {fileID: 1687958392}
   EnemyHealthBar: {fileID: 1898080652}
   currencySystem: {fileID: 7309461463745230933}
+  EnemyValue: 5
 --- !u!114 &2087180610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37747,7 +37757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonersTMP: {fileID: 393637740}
-  Moners: 0
+  Moners: 15
 --- !u!224 &7309461463756370959
 RectTransform:
   m_ObjectHideFlags: 0

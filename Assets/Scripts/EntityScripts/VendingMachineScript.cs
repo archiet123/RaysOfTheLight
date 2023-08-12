@@ -4,23 +4,63 @@ using UnityEngine;
 
 public class VendingMachineScript : MonoBehaviour, IInteractable
 {
+    //currency script
     public CurrencySystem currencySystem;
+
+    //value of currency
+    private int CurrentCurrency;
+
+    public int UseCost = 15;
 
     //entities functionality goes here
     public void ActionFunction()
     {
-        Debug.Log(gameObject.tag);
+        string VendingType = (gameObject.tag);
 
-        int CurrentCurrency = currencySystem.GetComponent<CurrencySystem>().Moners;
-        if (CurrentCurrency == 0)
+        if (VendingType == "Perks")
         {
-            Debug.Log("not enough money");
+            GivePlayerPerk();
+        }
+        else if (VendingType == "Weapons")
+        {
+            GivePlayerWeapon();
+        }
+        else if (VendingType == "Bullets")
+        {
+            GivePlayerBullets();
         }
         else
         {
-            Debug.Log("give item");
+            Debug.Log("vending machine type could not be found");
+        }
+
+    }
+
+    public void GivePlayerPerk()
+    {
+        int CurrentCurrency = currencySystem.GetComponent<CurrencySystem>().Moners;
+        if (CurrentCurrency >= UseCost)
+        {
+            currencySystem.TakeMoners(UseCost);
+            Debug.Log("give perk");
+            //call spawn function here
+        }
+        else
+        {
+            Debug.Log("Cannot afford");
         }
     }
+
+    public void GivePlayerWeapon()
+    {
+
+    }
+
+    public void GivePlayerBullets()
+    {
+
+    }
+
 
     //Interactable stuff
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
