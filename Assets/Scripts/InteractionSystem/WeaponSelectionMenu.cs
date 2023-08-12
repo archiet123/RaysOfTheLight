@@ -83,8 +83,6 @@ public class WeaponSelectionMenu : MonoBehaviour
 
             ActiveSlot = "Slot2";
             GetWeaponInfo();
-
-            //scaleChange = new Vector3(-0.01f, -0.01f, -0.01f);
         }
     }
 

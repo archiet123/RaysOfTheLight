@@ -9,11 +9,14 @@ public class HealthScript : MonoBehaviour
     int countDownStartValue = 3;
     public int EnemyHealth;
     public int DeadEnemyCount;
-    public ActiveChilderen anotherScript;
+    public ActiveChilderen activeChilderen;
+
 
     //UI Objects
     public Slider HealthSlider;
     public GameObject EnemyHealthBar;
+
+    public CurrencySystem currencySystem;
     void Update()
     {
         CheckEnemyHealth();
@@ -22,7 +25,7 @@ public class HealthScript : MonoBehaviour
     void Start()
     {
         EnemyHealthBar.SetActive(false);
-        anotherScript = GameObject.Find("Enemies").GetComponent<ActiveChilderen>();
+        activeChilderen = GameObject.Find("Enemies").GetComponent<ActiveChilderen>();
     }
 
     public void CheckEnemyHealth()
@@ -32,8 +35,8 @@ public class HealthScript : MonoBehaviour
             gameObject.SetActive(false);
             DeadEnemyCount++;
             // Debug.Log($"enemy script: {DeadEnemyCount}");
-            anotherScript.sendValue(DeadEnemyCount); //send your value to another script
-
+            activeChilderen.sendValue(DeadEnemyCount); //send your value to another script
+            currencySystem.Moners++;
         }
     }
 
