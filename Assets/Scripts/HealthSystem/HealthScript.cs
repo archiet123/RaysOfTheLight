@@ -17,6 +17,8 @@ public class HealthScript : MonoBehaviour
     public GameObject EnemyHealthBar;
 
     public CurrencySystem currencySystem;
+
+    public int EnemyValue = 5;
     void Update()
     {
         CheckEnemyHealth();
@@ -32,13 +34,29 @@ public class HealthScript : MonoBehaviour
     {
         if (EnemyHealth <= 0)
         {
-            gameObject.SetActive(false);
-            DeadEnemyCount++;
-            // Debug.Log($"enemy script: {DeadEnemyCount}");
-            activeChilderen.sendValue(DeadEnemyCount); //send your value to another script
-            currencySystem.Moners++;
+            DisableEnemy();
+            currencySystem.GetMoners(EnemyValue);
+            // StartCoroutine(AddMoners(EnemyValue));
         }
     }
+
+    public void DisableEnemy()
+    {
+        gameObject.SetActive(false);
+        DeadEnemyCount++;
+        // Debug.Log($"enemy script: {DeadEnemyCount}");
+        activeChilderen.sendValue(DeadEnemyCount); //send your value to another script
+    }
+
+    // IEnumerator AddMoners(int EnemyValue)
+    // {
+    //     for (int i = 0; i < EnemyValue; i++)
+    //     {
+    //         currencySystem.Moners += 1;
+    //         yield return null;
+    //         yield return null;
+    //     }
+    // }
 
     public void SetHealth(int CurrentHealth)
     {
