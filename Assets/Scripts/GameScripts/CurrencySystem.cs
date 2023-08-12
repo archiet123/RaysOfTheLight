@@ -24,7 +24,7 @@ public class CurrencySystem : MonoBehaviour
 
     public void GetMoners(int MonersToAdd)
     {
-        Debug.Log(MonersToAdd);
+        // Debug.Log(MonersToAdd);
         StartCoroutine(AddMoners(MonersToAdd));
     }
 
@@ -35,7 +35,7 @@ public class CurrencySystem : MonoBehaviour
         {
             Moners += 1;
             MonersTMP.SetText("₪" + Moners);
-            Debug.Log(Moners);
+            // Debug.Log(Moners);
             yield return null;
             yield return null;
             yield return null;
@@ -95,6 +95,24 @@ public class CurrencySystem : MonoBehaviour
             yield return null;
             yield return null;
             yield return null;
+
+        }
+    }
+
+    public void TakeMoners(int MonersToSubtract)
+    {
+        Debug.Log(MonersToSubtract);
+        StartCoroutine(SubtractMoners(MonersToSubtract));
+    }
+
+    //this slowly adds moners, please find a better way
+    IEnumerator SubtractMoners(int MonersToSubtract)
+    {
+        for (int i = 0; i < MonersToSubtract; i++)
+        {
+            Moners -= 1;
+            MonersTMP.SetText("₪" + Moners);
+            // Debug.Log(Moners);
             yield return null;
             yield return null;
             yield return null;
@@ -140,6 +158,26 @@ public class CurrencySystem : MonoBehaviour
             yield return null;
             yield return null;
             yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+            yield return null;
+
         }
     }
 }
