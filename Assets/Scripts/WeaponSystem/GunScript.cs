@@ -68,7 +68,7 @@ public class GunScript : MonoBehaviour
             // AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
 
-        Debug.Log(Shooting);
+        // Debug.Log(Shooting);
     }
 
 
