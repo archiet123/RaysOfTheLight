@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class VendingMachineScript : MonoBehaviour, IInteractable
 {
@@ -9,8 +12,14 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     //value of currency
     private int CurrentCurrency;
-
+    //cost of vendingmachine
     public int UseCost = 15;
+
+    //UI warning if not affordable
+    public GameObject WarningParent;
+    public TextMeshProUGUI WarningTMP;
+
+    int countDownStartValue = 3;
 
     //entities functionality goes here
     public void ActionFunction()
@@ -43,11 +52,15 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         {
             currencySystem.TakeMoners(UseCost);
             Debug.Log("give perk");
+
             //call spawn function here
         }
         else
         {
-            Debug.Log("Cannot afford");
+            // Debug.Log("Cannot afford");
+            WarningParent.SetActive(true);
+            WarningTMP.SetText("Cannot afford");
+            countDownTimer();
         }
     }
 
@@ -61,6 +74,20 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     }
 
+    void countDownTimer()
+    {
+        if (countDownStartValue > 0)
+        {
+            TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
+            countDownStartValue--;
+            Invoke("countDownTimer", 1.0f);
+        }
+        else
+        {
+            WarningParent.SetActive(false);
+            countDownStartValue = 3;
+        }
+    }
 
     //Interactable stuff
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
@@ -72,7 +99,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "Buy";
+        return "Buy (₪15)";
     }
 
     void IInteractable.Interact(Transform InteractorTransform)
