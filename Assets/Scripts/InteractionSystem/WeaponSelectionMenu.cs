@@ -10,21 +10,23 @@ public class WeaponSelectionMenu : MonoBehaviour
     //List of buttons
     public List<Button> GunButtons;
 
-    //WeaponList
-    public List<GameObject> WeaponsToChoose = new List<GameObject>();
+    //WeaponList, because im dumb we need a list of 3g guns for each slot
+    public List<GameObject> WeaponsToChoose1 = new List<GameObject>();
+    public List<GameObject> WeaponsToChoose2 = new List<GameObject>();
 
-    public List<char> WeaponNames = new List<char>();
+    // public List<char> WeaponNames = new List<char>();
     //active weapon
-    public GameObject ActiveWeapon;
-    public string ActiveSlot;
+    private GameObject ActiveWeapon1;
+    private GameObject ActiveWeapon2;
+    private string ActiveSlot;
 
     public GameObject Slot1;
     public GameObject Slot2;
 
-    //current weapon of any type
-    public GameObject CurrentEquipedWeapon;
-
     //ui stuff slot for current weapon
+    public GameObject Slot1Container;
+    public GameObject Slot2Container;
+
     public Image ImageContainer1;
     public Image ImageContainer2;
     public TextMeshProUGUI GunName1;
@@ -33,13 +35,15 @@ public class WeaponSelectionMenu : MonoBehaviour
     public TextMeshProUGUI AmmoCounter1;
     public TextMeshProUGUI AmmoCounter2;
 
-    void Awake()
-    {
-
-    }
+    private Vector3 Shrink;
+    private Vector3 Grow;
 
     void Start()
     {
+        Grow = new Vector3(1.0f, 1.0f, 1.0f);
+        Shrink = new Vector3(0.5f, 0.5f, 1.0f);
+        Slot2Container.transform.localScale = Shrink;
+
         Slot1.SetActive(true);
         Slot2.SetActive(true);
         Slot2.SetActive(false);
@@ -59,6 +63,10 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            //active hotbar slot is to scale, inactive is shrunk by half
+            Slot2Container.transform.localScale = Shrink;
+            Slot1Container.transform.localScale = Grow;
+
             Slot2.SetActive(false);
             Slot1.SetActive(true);
 
@@ -67,11 +75,16 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            Slot2Container.transform.localScale = Grow;
+            Slot1Container.transform.localScale = Shrink;
+
             Slot1.SetActive(false);
             Slot2.SetActive(true);
 
             ActiveSlot = "Slot2";
             GetWeaponInfo();
+
+            //scaleChange = new Vector3(-0.01f, -0.01f, -0.01f);
         }
     }
 
@@ -91,22 +104,6 @@ public class WeaponSelectionMenu : MonoBehaviour
 
     public void GetWeaponInfo()
     {
-        //gets current gameobjects in slot1 and slot2, then fetches the components name
-
-        // CurrentEquipedWeapon = GameObject.FindGameObjectWithTag("Weapon");
-        // if (CurrentEquipedWeapon)
-        // {
-        //     foreach (char slot in CurrentEquipedWeapon.ToString())
-        //     {
-        //         //gets and sets current weapon name to ui
-        //         string Slot1Name = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponName;
-        //         GunName.text = Slot1Name;
-
-        //         //gets and sets current icon name to ui
-        //         ImageContainer.sprite = CurrentEquipedWeapon.GetComponent<WeaponInfo>().WeaponIcon;
-        //     }
-        // }
-
         if (Slot1.tag == "Weapon" && Slot2.tag == "Weapon")
         {
             string Slot1WeaponName = Slot1.GetComponent<WeaponInfo>().WeaponName;
@@ -137,22 +134,19 @@ public class WeaponSelectionMenu : MonoBehaviour
     //this function actually sucks but it works so dont touch it
     public void TaskOnClick(int buttonIndex)
     {
-        //setting old weapon to false and new to true        
-        ActiveWeapon = WeaponsToChoose[buttonIndex];
+        ActiveWeapon1 = WeaponsToChoose1[buttonIndex];
+        ActiveWeapon2 = WeaponsToChoose2[buttonIndex];
         if (ActiveSlot == "Slot1")
         {
-            // ActiveSlot.SetActive(false);
             Slot1.SetActive(false);
-            Slot1 = ActiveWeapon;
+            Slot1 = ActiveWeapon1;
             Slot1.SetActive(true);
             GetWeaponInfo();
         }
         else if (ActiveSlot == "Slot2")
         {
-            Debug.Log("2");
-            // ActiveSlot.SetActive(false);
             Slot2.SetActive(false);
-            Slot2 = ActiveWeapon;
+            Slot2 = ActiveWeapon2;
             Slot2.SetActive(true);
             GetWeaponInfo();
         }
