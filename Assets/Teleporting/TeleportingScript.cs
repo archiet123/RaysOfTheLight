@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TeleportingScript : MonoBehaviour
 {
-    
+    public Collider collider;
     public int GameScene;
     
     public void ActionFunction()
