@@ -28,7 +28,7 @@ public class GunScript : MonoBehaviour
     //Refrences
     public Camera PlayerCam;
     public Transform AttackPoint;
-
+    
     public GameObject MuzzleFlash;
     public TextMeshProUGUI AmmoDisplay;
 
@@ -68,7 +68,7 @@ public class GunScript : MonoBehaviour
             // AmmoDisplay.SetText(BulletsLeft / BulletsPerTap + " / " + MagazineSize / BulletsPerTap);
         }
 
-        // Debug.Log(Shooting);
+       
     }
 
 
@@ -209,7 +209,12 @@ public class GunScript : MonoBehaviour
         Reloading = false;
         // Debug.Log("Reloaded");
     }
+
+    
+
+
 }
+
 
 
 
