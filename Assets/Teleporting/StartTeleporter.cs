@@ -1,36 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class StartTeleporter : MonoBehaviour
+public class StartTeleporter : MonoBehaviour, IInteractable
 {
-    public TeleportingScript teleportingScript;
-
-
-    void Start()
+    public int GameScene;
+    public GameObject Portal;
+    public Collider TeleporterCollider;
+    // public GameObject PortalObject;
+    
+    
+    //entities functionality goes here
+    public void ActionFunction()
     {
-        //Fetch the GameObject's Collider (make sure it has a Collider component)
-        // collider = GetComponent<Collider>();
+        Portal.SetActive(true);
+        // TeleporterCollider.SetActive(true);
+        TeleporterCollider = TeleporterCollider.GetComponent<CapsuleCollider>();
+        TeleporterCollider.enabled = !TeleporterCollider.enabled;
+        
+    
     }
 
+    
+    //Interactable stuff
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
+    public void CallActionFunction()
+    {
+        ActionFunction();
+    }
 
+    public string GetInteractText()
+    {
+        return "Initialise";
+    }
 
+    void IInteractable.Interact(Transform InteractorTransform)
+    {
+        CallActionFunction();
+    }
 
-    // public string GetInteractText()
-    // {
-    //     return "Start Game";
-    // }
-
-    // void IInteractable.Interact(Transform InteractorTransform)
-    // {
-    //     CallActionFunction();
-    // }
-
-    // public Transform GetTransform()
-    // {
-    //     // Debug.Log("got transform");
-    //     return transform;
-    // }
+    public Transform GetTransform()
+    {
+        // Debug.Log("got transform");
+        return transform;
+    }
 }
+
+
 
