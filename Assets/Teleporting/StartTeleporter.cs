@@ -5,18 +5,18 @@ using UnityEngine;
 public class StartTeleporter : MonoBehaviour
 {
     public TeleportingScript teleportingScript;
-    
+
 
     void Start()
     {
         //Fetch the GameObject's Collider (make sure it has a Collider component)
-        collider = GetComponent<Collider>();
+        // collider = GetComponent<Collider>();
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     // public string GetInteractText()
     // {
     //     return "Start Game";
