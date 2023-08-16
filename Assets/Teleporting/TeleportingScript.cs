@@ -7,7 +7,7 @@ public class TeleportingScript : MonoBehaviour
 {
     public Collider collider;
     public int GameScene;
-    
+
     public void ActionFunction()
     {
         StartGame(GameScene);
@@ -21,13 +21,13 @@ public class TeleportingScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player");
+        if (other.tag == "Player") ;
         {
-          ActionFunction();              
+            ActionFunction();
         }
-        
-    
-    } 
+
+
+    }
 
 
 }
