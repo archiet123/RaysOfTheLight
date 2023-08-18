@@ -16,7 +16,7 @@ public class LockRooms : MonoBehaviour
     public void LockAllDoors()
     {
         // animator.SetBool("LockAllDoors", true); use this one
-        animator.SetBool("LockFrontDoor", true);
+        animator.SetBool("RoomLock", true);
         Debug.Log("lock all doors");
     }
 }
