@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
                 IInteractable interactable = GetInteractableObject();
                 if (interactable != null)
                 {
-                    // Debug.Log("e click");
+                    Debug.Log("e click");
                     interactable.Interact(transform);
                 }
                 else
