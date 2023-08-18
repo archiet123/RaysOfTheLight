@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
     //UI   
     public GameObject pauseMenu;
     public GameObject player;
-    public GameObject GunBenchUI;
+    // public GameObject GunBenchUI;
     public GameObject OptionsMenu;
     public GameObject WinDisplay;
     public GameObject LoseDisplay;
@@ -59,7 +59,7 @@ public class UIController : MonoBehaviour
             //if true the gunbenchUI will be hidden
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                GunBenchUI.SetActive(false);
+                // GunBenchUI.SetActive(false);
                 Time.timeScale = 1f;
                 player.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;

@@ -23140,7 +23140,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7309461462876297877}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6143995566755671880, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
 --- !u!23 &2646775507038445736
 MeshRenderer:
