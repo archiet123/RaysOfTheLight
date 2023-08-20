@@ -9,7 +9,8 @@ public class TemBtn : MonoBehaviour, IInteractable
 
     public void ActionFunction()
     {
-        animator.SetBool("RoomOpen", true);
+        // animator.SetBool("RoomOpen", true);
+        animator.SetBool("RoomLock", false);
 
     }
 
