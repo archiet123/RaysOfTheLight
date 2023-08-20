@@ -9,9 +9,9 @@ public class LockRooms : MonoBehaviour
     //List of completed rooms
     public List<string> CompletedRooms;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") ;
+        if (other.tag == "Player")
         {
             string CurrentRoom = (gameObject.tag);
             if (CompletedRooms.Contains(CurrentRoom))
@@ -24,6 +24,10 @@ public class LockRooms : MonoBehaviour
                 LockAllDoors();
                 SpawnEnemies(CurrentRoom);
             }
+        }
+        else
+        {
+            Debug.Log("enemy");
         }
     }
 
