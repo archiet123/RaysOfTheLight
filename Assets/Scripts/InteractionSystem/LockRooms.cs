@@ -16,12 +16,11 @@ public class LockRooms : MonoBehaviour
             string CurrentRoom = (gameObject.tag);
             if (CompletedRooms.Contains(CurrentRoom))
             {
-                Debug.Log("completed: " + CurrentRoom);
+                Debug.Log("previously completed");
             }
             else
             {
                 CompletedRooms.Add(CurrentRoom);
-                // animator.SetBool("RoomOpen", true);
                 LockAllDoors();
                 SpawnEnemies(CurrentRoom);
             }
@@ -35,9 +34,7 @@ public class LockRooms : MonoBehaviour
 
     public void LockAllDoors()
     {
-        // animator.SetBool("LockAllDoors", true); use this one
         animator.SetBool("RoomLock", true);
-        Debug.Log("lock all doors");
-
+        // Debug.Log("lock all doors");
     }
 }

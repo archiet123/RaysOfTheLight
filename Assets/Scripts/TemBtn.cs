@@ -10,8 +10,14 @@ public class TemBtn : MonoBehaviour, IInteractable
     public void ActionFunction()
     {
         animator.SetBool("RoomOpen", true);
-        animator.SetBool("RoomLock", false);
+
     }
+
+
+
+
+
+
 
     //Interactable stuff
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
@@ -24,7 +30,7 @@ public class TemBtn : MonoBehaviour, IInteractable
     public string GetInteractText()
     {
         return "Action here";
-        Debug.Log("clickable");
+        // Debug.Log("clickable");
     }
 
     void IInteractable.Interact(Transform InteractorTransform)
