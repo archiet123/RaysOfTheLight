@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TemBtn : MonoBehaviour, IInteractable
 {
+    //Door animator
     public Animator animator;
-    //entities functionality goes here
+
     public void ActionFunction()
     {
-        Debug.Log("test");
         animator.SetBool("RoomOpen", true);
+        animator.SetBool("RoomLock", false);
     }
 
     //Interactable stuff
