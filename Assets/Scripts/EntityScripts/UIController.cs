@@ -116,6 +116,7 @@ public class UIController : MonoBehaviour
 
     public void DisplayWinScreen()
     {
+
         player.SetActive(false);
         Time.timeScale = 0f;
         WinDisplay.SetActive(true);
