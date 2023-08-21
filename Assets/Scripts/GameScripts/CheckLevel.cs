@@ -25,34 +25,36 @@ public class CheckLevel : MonoBehaviour
             {
                 Debug.Log("open");
                 animator.SetBool("RoomLock", false);
+                Debug.Log($"cl: {DeadEnemyCount}");
             }
             else
             {
                 Debug.Log("stay closed");
+                Debug.Log($"cl1: {DeadEnemyCount}");
             }
         }
         else if (EnemyRoom == Office)
         {
             if (DeadEnemyCount == OfficeEnemyCount)
             {
-                Debug.Log("open");
+                // Debug.Log("open");
                 animator.SetBool("RoomLock", false);
             }
             else
             {
-                Debug.Log("stay closed");
+                // Debug.Log("stay closed");
             }
         }
         else if (EnemyRoom == ServerRoom)
         {
             if (DeadEnemyCount == OfficeEnemyCount)
             {
-                Debug.Log("open");
+                // Debug.Log("open");
                 animator.SetBool("RoomLock", false);
             }
             else
             {
-                Debug.Log("stay closed");
+                // Debug.Log("stay closed");
             }
         }
         else

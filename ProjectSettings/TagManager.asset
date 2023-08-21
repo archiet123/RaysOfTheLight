@@ -8,8 +8,9 @@ TagManager:
   - Enemy
   - Weapon
   - Perks
-  - FirstRoom
   - SecondRoom
+  - Kitchen
+  - Office
   layers:
   - Default
   - TransparentFX

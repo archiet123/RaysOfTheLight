@@ -42,7 +42,6 @@ public class HealthScript : MonoBehaviour
         {
             DisableEnemy();
             currencySystem.GetMoners(EnemyValue);
-            // StartCoroutine(AddMoners(EnemyValue));
         }
     }
 
@@ -50,27 +49,13 @@ public class HealthScript : MonoBehaviour
     {
         gameObject.SetActive(false);
         DeadEnemyCount++;
-        // Debug.Log($"enemy script: {DeadEnemyCount}");
+        Debug.Log($"enemy script: {DeadEnemyCount}");
 
-        // activeChilderen.sendValue(DeadEnemyCount);
+        //when enemy dies check if the room should open
         checkLevel.IsComplete(DeadEnemyCount, EnemyRoom);
-        //maybe send second parameter to GameStatus script.
-        //second parm will be the room the enemie is assigned to
-        //then when all enemies are dead for that room the doors will open again
 
-        //public void IsComplete(EnemiesRemaining){ if EnemyRoom == x 
-        //then check if DeadEnemyCount == Enemies in x }
     }
 
-    // IEnumerator AddMoners(int EnemyValue)
-    // {
-    //     for (int i = 0; i < EnemyValue; i++)
-    //     {
-    //         currencySystem.Moners += 1;
-    //         yield return null;
-    //         yield return null;
-    //     }
-    // }
 
     public void SetHealth(int CurrentHealth)
     {

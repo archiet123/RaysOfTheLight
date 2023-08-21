@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LockRooms : MonoBehaviour
 {
+    //enemies to set active
+    private GameObject EnemySpawn;
+
     public Animator animator;
 
     //List of completed rooms
@@ -27,13 +30,14 @@ public class LockRooms : MonoBehaviour
         }
         else
         {
-            Debug.Log("enemy");
+            // Debug.Log("enemy");
         }
     }
 
-    public void SpawnEnemies(string CurrentRoom)
+    public void SpawnEnemies(string EnemySpawn)
     {
-        // Debug.Log(CurrentRoom);
+        //sets the enemy container in the hieracy to true and 'spawns' enemies
+        GameObject.Find(EnemySpawn).transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void LockAllDoors()
