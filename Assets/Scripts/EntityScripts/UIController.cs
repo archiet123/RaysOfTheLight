@@ -37,7 +37,6 @@ public class UIController : MonoBehaviour
             {
                 if (OptionsDisplayed)
                 {
-
                     HideOptionsMenu();
                 }
                 else if (isPaused)
