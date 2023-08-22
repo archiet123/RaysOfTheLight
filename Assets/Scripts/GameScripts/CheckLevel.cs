@@ -17,25 +17,29 @@ public class CheckLevel : MonoBehaviour
     //animator to open doors
     public Animator animator;
 
+    //counter per room
+    public int TotalDead;
+
     public void IsComplete(int DeadEnemyCount, string EnemyRoom)
     {
+        TotalDead += DeadEnemyCount;
         if (EnemyRoom == Kitchen)
         {
-            if (DeadEnemyCount == KitchenEnemyCount)
+            if (TotalDead == KitchenEnemyCount)
             {
                 Debug.Log("open");
                 animator.SetBool("RoomLock", false);
-                Debug.Log($"cl: {DeadEnemyCount}");
+                Debug.Log($"cl: {TotalDead}");
             }
             else
             {
                 Debug.Log("stay closed");
-                Debug.Log($"cl1: {DeadEnemyCount}");
+                Debug.Log($"cl1: {TotalDead}");
             }
         }
         else if (EnemyRoom == Office)
         {
-            if (DeadEnemyCount == OfficeEnemyCount)
+            if (TotalDead == OfficeEnemyCount)
             {
                 // Debug.Log("open");
                 animator.SetBool("RoomLock", false);
@@ -47,7 +51,7 @@ public class CheckLevel : MonoBehaviour
         }
         else if (EnemyRoom == ServerRoom)
         {
-            if (DeadEnemyCount == OfficeEnemyCount)
+            if (TotalDead == OfficeEnemyCount)
             {
                 // Debug.Log("open");
                 animator.SetBool("RoomLock", false);

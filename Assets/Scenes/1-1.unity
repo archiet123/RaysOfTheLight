@@ -2475,8 +2475,8 @@ MonoBehaviour:
   timeBetweenAttacks: 0.5
   AttackPoint: {fileID: 70751901}
   projectile: {fileID: 7015627235587302584}
-  sightRange: 20
-  attackRange: 1
+  sightRange: 10
+  attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!54 &856510807
@@ -2745,6 +2745,7 @@ Transform:
   - {fileID: 1545498561}
   - {fileID: 2071945577}
   - {fileID: 998471062}
+  - {fileID: 1174381521}
   m_Father: {fileID: 1569484239}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2910,7 +2911,7 @@ GameObject:
   - component: {fileID: 998471064}
   - component: {fileID: 998471067}
   m_Layer: 0
-  m_Name: LockAllDoorsCollider (2)
+  m_Name: OfficeCollider1
   m_TagString: Office
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3007,6 +3008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666dea1d777d9a9438592dd3028daf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkLevel: {fileID: 7015627235403154718}
   animator: {fileID: 2116724284}
   CompletedRooms: []
 --- !u!1 &1022290555
@@ -3200,6 +3202,120 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1174381520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174381521}
+  - component: {fileID: 1174381525}
+  - component: {fileID: 1174381524}
+  - component: {fileID: 1174381523}
+  - component: {fileID: 1174381522}
+  m_Layer: 0
+  m_Name: OfficeCollider2
+  m_TagString: Office
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1174381521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174381520}
+  m_LocalRotation: {x: -0.000003248485, y: -0.00037524197, z: 0.008656715, w: 0.99996245}
+  m_LocalPosition: {x: 20.6, y: 4.57, z: 6.1}
+  m_LocalScale: {x: 5.643016, y: 0.2545, z: 5.267755}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 974219693}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -0.043, z: 0.992}
+--- !u!114 &1174381522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174381520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666dea1d777d9a9438592dd3028daf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkLevel: {fileID: 7015627235403154718}
+  animator: {fileID: 2116724284}
+  CompletedRooms: []
+--- !u!136 &1174381523
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174381520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1174381524
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174381520}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 04ef988df6ba4ce499a7d8f3fea23e2c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1174381525
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174381520}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1184451737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,7 +3701,7 @@ GameObject:
   - component: {fileID: 1545498563}
   - component: {fileID: 1545498566}
   m_Layer: 0
-  m_Name: Kitchen1Collider
+  m_Name: KitchenCollider1
   m_TagString: Kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3682,6 +3798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666dea1d777d9a9438592dd3028daf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkLevel: {fileID: 7015627235403154718}
   animator: {fileID: 2116724284}
   CompletedRooms: []
 --- !u!1 &1569484238
@@ -4625,7 +4742,7 @@ GameObject:
   - component: {fileID: 2071945579}
   - component: {fileID: 2071945582}
   m_Layer: 0
-  m_Name: Kitchen2Collider
+  m_Name: KitchenCollider2
   m_TagString: Kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4722,6 +4839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666dea1d777d9a9438592dd3028daf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkLevel: {fileID: 7015627235403154718}
   animator: {fileID: 2116724284}
   CompletedRooms: []
 --- !u!1 &2116724282
@@ -16258,6 +16376,7 @@ MonoBehaviour:
   OfficeEnemyCount: 2
   ServerEnemyCount: 0
   animator: {fileID: 2116724284}
+  TotalDead: 0
 --- !u!224 &7015627235406539278
 RectTransform:
   m_ObjectHideFlags: 0

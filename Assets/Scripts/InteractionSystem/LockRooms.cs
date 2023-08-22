@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LockRooms : MonoBehaviour
 {
+    //refrence to Checklvl
+    public CheckLevel checkLevel;
+
     //enemies to set active
     private GameObject EnemySpawn;
 
@@ -36,7 +39,10 @@ public class LockRooms : MonoBehaviour
 
     public void SpawnEnemies(string EnemySpawn)
     {
-        //sets the enemy container in the hieracy to true and 'spawns' enemies
+        //resetting deathcounter to 0
+        checkLevel.TotalDead = 0;
+
+        //sets the enemy container in the hieracy to true and 'spawns' enemies#endregion
         GameObject.Find(EnemySpawn).transform.GetChild(0).gameObject.SetActive(true);
     }
 
