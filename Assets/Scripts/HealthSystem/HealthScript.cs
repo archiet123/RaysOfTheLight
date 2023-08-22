@@ -9,8 +9,13 @@ public class HealthScript : MonoBehaviour
     int countDownStartValue = 3;
     public int EnemyHealth;
     public int DeadEnemyCount;
-    public ActiveChilderen activeChilderen;
+    // public ActiveChilderen activeChilderen;
 
+    //Name of room enemy is in
+    public string EnemyRoom;
+
+    //script for enemies in level
+    public CheckLevel checkLevel;
 
     //UI Objects
     public Slider HealthSlider;
@@ -19,6 +24,7 @@ public class HealthScript : MonoBehaviour
     public CurrencySystem currencySystem;
 
     public int EnemyValue = 5;
+
     void Update()
     {
         CheckEnemyHealth();
@@ -27,7 +33,7 @@ public class HealthScript : MonoBehaviour
     void Start()
     {
         EnemyHealthBar.SetActive(false);
-        activeChilderen = GameObject.Find("Enemies").GetComponent<ActiveChilderen>();
+        // activeChilderen = GameObject.Find("Enemies").GetComponent<ActiveChilderen>();
     }
 
     public void CheckEnemyHealth()
@@ -36,7 +42,6 @@ public class HealthScript : MonoBehaviour
         {
             DisableEnemy();
             currencySystem.GetMoners(EnemyValue);
-            // StartCoroutine(AddMoners(EnemyValue));
         }
     }
 
@@ -44,19 +49,13 @@ public class HealthScript : MonoBehaviour
     {
         gameObject.SetActive(false);
         DeadEnemyCount++;
-        // Debug.Log($"enemy script: {DeadEnemyCount}");
-        activeChilderen.sendValue(DeadEnemyCount); //send your value to another script
+        Debug.Log($"enemy script: {DeadEnemyCount}");
+
+        //when enemy dies check if the room should open
+        checkLevel.IsComplete(DeadEnemyCount, EnemyRoom);
+
     }
 
-    // IEnumerator AddMoners(int EnemyValue)
-    // {
-    //     for (int i = 0; i < EnemyValue; i++)
-    //     {
-    //         currencySystem.Moners += 1;
-    //         yield return null;
-    //         yield return null;
-    //     }
-    // }
 
     public void SetHealth(int CurrentHealth)
     {
