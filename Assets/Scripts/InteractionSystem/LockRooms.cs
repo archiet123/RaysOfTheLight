@@ -22,10 +22,11 @@ public class LockRooms : MonoBehaviour
             string CurrentRoom = (gameObject.tag);
             if (CompletedRooms.Contains(CurrentRoom))
             {
-                // Debug.Log("previously completed");
+                Debug.Log("previously completed");
             }
             else
             {
+                Debug.Log("entered");
                 CompletedRooms.Add(CurrentRoom);
                 LockAllDoors();
                 SpawnEnemies(CurrentRoom);
