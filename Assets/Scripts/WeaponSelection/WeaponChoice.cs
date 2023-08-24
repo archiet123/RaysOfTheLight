@@ -6,5 +6,5 @@ using TMPro;
 
 public class WeaponChoice : MonoBehaviour
 {
-    public TextMeshProUGUI WeaponText;
+    // public TextMeshProUGUI WeaponText;
 }
