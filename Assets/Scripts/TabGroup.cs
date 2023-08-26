@@ -18,13 +18,13 @@ public class TabGroup : MonoBehaviour
     public List<GameObject> DisplaysToSwap;
 
     //on start UI
-    public GameObject WeaponPanel;
-    public GameObject WeaponButton;
+    public GameObject StartActivePanel;
+    public GameObject StartActiveTab;
 
     void Start()
     {
-        WeaponButton.GetComponent<Image>().sprite = ActiveTab;
-        WeaponPanel.SetActive(true);
+        StartActiveTab.GetComponent<Image>().sprite = ActiveTab;
+        StartActivePanel.SetActive(true);
     }
 
     void Update()
