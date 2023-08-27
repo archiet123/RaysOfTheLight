@@ -20,6 +20,10 @@ public class EquipmentController : MonoBehaviour, IInteractable
     {
         IsShown = DisablePauseMenu;
     }
+    public void GetBool1(bool DisablePauseMenu)
+    {
+        IsShown = DisablePauseMenu;
+    }
 
     private void ToggleBenchUI()
     {

@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
     //UI   
     public GameObject pauseMenu;
     public GameObject player;
-    // public GameObject GunBenchUI;
+    public GameObject EquipmentMenu;
     public GameObject OptionsMenu;
     public GameObject WinDisplay;
     public GameObject LoseDisplay;
@@ -58,16 +58,16 @@ public class UIController : MonoBehaviour
             //if true the gunbenchUI will be hidden
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                // GunBenchUI.SetActive(false);
+                EquipmentMenu.SetActive(false);
                 Time.timeScale = 1f;
                 player.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 DisablePauseMenu = false;
                 // getting variable from GunBenchScript
-                // FindObjectOfType<GunBenchScript>().GetBool(DisablePauseMenu);
+                // FindObjectOfType<EquipmentController>().GetBool(DisablePauseMenu);
                 FindObjectOfType<EquipmentController>().GetBool(DisablePauseMenu);
-                // FindObjectOfType<GunBenchScript>().GetBool1(DisablePauseMenu);
+                // FindObjectOfType<EquipmentController>().GetBool1(DisablePauseMenu);
                 //is false
                 FindObjectOfType<GunScript>().GetBool1(DisablePauseMenu);
             }
