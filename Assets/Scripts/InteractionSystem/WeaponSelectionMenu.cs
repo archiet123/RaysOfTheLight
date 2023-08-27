@@ -38,6 +38,11 @@ public class WeaponSelectionMenu : MonoBehaviour
     private Vector3 Shrink;
     private Vector3 Grow;
 
+
+    private string Slot1WeaponID;
+    private string Slot2WeaponID;
+
+
     void Start()
     {
         Grow = new Vector3(1.0f, 1.0f, 1.0f);
@@ -48,8 +53,9 @@ public class WeaponSelectionMenu : MonoBehaviour
         Slot2.SetActive(true);
         Slot2.SetActive(false);
         ActiveSlot = "Slot1";
-        Addlisteners();
 
+        Addlisteners();
+        OnStartWeapons();
     }
 
     void Update()
@@ -57,6 +63,11 @@ public class WeaponSelectionMenu : MonoBehaviour
         GetInput();
         GetWeaponInfo();
         GetAmmoCount();
+    }
+
+    public void OnStartWeapons()
+    {
+
     }
 
     public void GetInput()
@@ -108,6 +119,11 @@ public class WeaponSelectionMenu : MonoBehaviour
             GunName1.text = Slot1WeaponName;
             ImageContainer1.sprite = Slot1.GetComponent<WeaponInfo>().WeaponIcon;
 
+            Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
+            Debug.Log(Slot1WeaponID);
+
+            Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
+            Debug.Log(Slot2WeaponID);
 
             string Slot2WeaponName = Slot2.GetComponent<WeaponInfo>().WeaponName;
             GunName2.text = Slot2WeaponName;
