@@ -120,10 +120,10 @@ public class WeaponSelectionMenu : MonoBehaviour
             ImageContainer1.sprite = Slot1.GetComponent<WeaponInfo>().WeaponIcon;
 
             Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
-            Debug.Log(Slot1WeaponID);
+            // Debug.Log(Slot1WeaponID);
 
             Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
-            Debug.Log(Slot2WeaponID);
+            // Debug.Log(Slot2WeaponID);
 
             string Slot2WeaponName = Slot2.GetComponent<WeaponInfo>().WeaponName;
             GunName2.text = Slot2WeaponName;

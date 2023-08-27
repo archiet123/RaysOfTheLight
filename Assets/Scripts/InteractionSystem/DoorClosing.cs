@@ -15,7 +15,7 @@ public class DoorClosing : MonoBehaviour
 
     public void CloseFrontDoor()
     {
-        // animator.SetBool("LockFrontDoor", true);
-        // Debug.Log("close front door");
+        animator.SetBool("LockFrontDoors", true);
+        Debug.Log("close front door");
     }
 }
