@@ -40,14 +40,6 @@ public class GunScript : MonoBehaviour
 
     public Animator animator;
 
-    //interface
-
-
-    //weaponID
-    public string WeaponID;
-
-
-
     private void Awake()
     {
         BulletsLeft = MagazineSize;
