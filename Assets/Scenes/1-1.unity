@@ -10504,7 +10504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652735113}
   m_Layer: 0
-  m_Name: ServerEnemies
+  m_Name: Server
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11537,6 +11537,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: Slot1
+      value: 
+      objectReference: {fileID: 7015627233987268279}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: Slot2
+      value: 
+      objectReference: {fileID: 7015627234599070450}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunName1
+      value: 
+      objectReference: {fileID: 7015627234525958573}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunName2
+      value: 
+      objectReference: {fileID: 7015627235189046312}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: AmmoCounter1
+      value: 
+      objectReference: {fileID: 7015627235182899516}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: AmmoCounter2
+      value: 
+      objectReference: {fileID: 7015627234537804079}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: Slot1Container
+      value: 
+      objectReference: {fileID: 7015627234075486206}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: Slot2Container
+      value: 
+      objectReference: {fileID: 7015627234619524478}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: ImageContainer1
+      value: 
+      objectReference: {fileID: 7015627235712307139}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: ImageContainer2
+      value: 
+      objectReference: {fileID: 7015627233968675776}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 7015627234509882089}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 7015627235473303876}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 7015627235406539281}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunButtons.Array.data[3]
+      value: 
+      objectReference: {fileID: 7015627234153378192}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GunButtons.Array.data[4]
+      value: 
+      objectReference: {fileID: 7015627235954219488}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose1.Array.data[0]
+      value: 
+      objectReference: {fileID: 7015627234964280246}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose1.Array.data[1]
+      value: 
+      objectReference: {fileID: 7015627234877699405}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose1.Array.data[2]
+      value: 
+      objectReference: {fileID: 7015627234920505563}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose1.Array.data[3]
+      value: 
+      objectReference: {fileID: 7015627233987268279}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose2.Array.data[0]
+      value: 
+      objectReference: {fileID: 7015627235867180510}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose2.Array.data[1]
+      value: 
+      objectReference: {fileID: 7015627234844500896}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose2.Array.data[2]
+      value: 
+      objectReference: {fileID: 7015627235319390561}
+    - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WeaponsToChoose2.Array.data[3]
+      value: 
+      objectReference: {fileID: 7015627234599070450}
+    - target: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: MonersTMP
+      value: 
+      objectReference: {fileID: 7015627235789396525}
     - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: player
       value: 
@@ -11545,6 +11641,26 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 7316472211962115039}
+    - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: WinDisplay
+      value: 
+      objectReference: {fileID: 7015627234352744486}
+    - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: LoseDisplay
+      value: 
+      objectReference: {fileID: 7015627234299239046}
+    - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: OptionsMenu
+      value: 
+      objectReference: {fileID: 7015627234835371097}
+    - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: EquipmentMenu
+      value: 
+      objectReference: {fileID: 7015627235771316444}
+    - target: {fileID: 8951681778974190893, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 300878839227625428}
     - target: {fileID: 9029240288024749700, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -14828,8 +14944,8 @@ RectTransform:
   - {fileID: 140515754413464771}
   - {fileID: 3580985778668707011}
   - {fileID: 7015627234439690955}
-  - {fileID: 358757081}
   - {fileID: 7015627234352744489}
+  - {fileID: 358757081}
   - {fileID: 7015627234299239049}
   - {fileID: 7015627235771316447}
   m_Father: {fileID: 510851402788702229}
@@ -19048,7 +19164,7 @@ RectTransform:
   - {fileID: 7015627235187649325}
   - {fileID: 7015627234123328387}
   m_Father: {fileID: 300878838884516174}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
