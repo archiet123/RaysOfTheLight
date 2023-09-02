@@ -26,7 +26,7 @@ public class LockRooms : MonoBehaviour
             }
             else
             {
-                Debug.Log("entered");
+                // Debug.Log("entered");
                 CompletedRooms.Add(CurrentRoom);
                 LockAllDoors();
                 SpawnEnemies(CurrentRoom);

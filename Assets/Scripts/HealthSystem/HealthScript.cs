@@ -49,7 +49,7 @@ public class HealthScript : MonoBehaviour
     {
         gameObject.SetActive(false);
         DeadEnemyCount++;
-        Debug.Log($"enemy script: {DeadEnemyCount}");
+        // Debug.Log($"enemy script: {DeadEnemyCount}");
 
         //when enemy dies check if the room should open
         checkLevel.IsComplete(DeadEnemyCount, EnemyRoom);
