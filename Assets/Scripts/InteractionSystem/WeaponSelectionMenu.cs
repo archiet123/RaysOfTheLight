@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WeaponSelectionMenu : MonoBehaviour
 {
@@ -37,11 +38,11 @@ public class WeaponSelectionMenu : MonoBehaviour
 
     private Vector3 Shrink;
     private Vector3 Grow;
+    private int Slot1WeaponID;
+    private int Slot2WeaponID;
 
-
-    private string Slot1WeaponID;
-    private string Slot2WeaponID;
-
+    private int ToSetActive1;
+    private int ToSetActive2;
 
     void Start()
     {
@@ -55,7 +56,6 @@ public class WeaponSelectionMenu : MonoBehaviour
         ActiveSlot = "Slot1";
 
         Addlisteners();
-        OnStartWeapons();
     }
 
     void Update()
@@ -65,11 +65,42 @@ public class WeaponSelectionMenu : MonoBehaviour
         GetAmmoCount();
     }
 
-    public void OnStartWeapons()
+    void OnEnable()
     {
-
+        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
+    void OnDisable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. 
+        //Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        // Debug.Log(scene.name);
+        //read weapon data here
+        int loadedWeapon1 = PlayerPrefs.GetInt("Slot1Weapon");
+        int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
+
+        ToSetActive1 = loadedWeapon1;
+        ToSetActive2 = loadedWeapon2;
+
+        Slot1 = (WeaponsToChoose1[loadedWeapon1]);
+        Slot2 = (WeaponsToChoose2[loadedWeapon2]);
+    }
+
+    void OnDestroy()
+    {
+        //write weapon data here      
+        //need to write current weapon IDs     
+        Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
+        PlayerPrefs.SetInt("Slot1Weapon", Slot1WeaponID);
+        Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
+        PlayerPrefs.SetInt("Slot2Weapon", Slot2WeaponID);
+    }
     public void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -82,6 +113,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot1.SetActive(true);
 
             ActiveSlot = "Slot1";
+
             GetWeaponInfo();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -93,22 +125,9 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot2.SetActive(true);
 
             ActiveSlot = "Slot2";
+
             GetWeaponInfo();
         }
-    }
-
-    public void GetAmmoCount()
-    {
-        int bulletsLeft1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
-        int bulletsPerTap1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
-        int magazineSize1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
-
-        int bulletsLeft2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
-        int bulletsPerTap2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
-        int magazineSize2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
-
-        AmmoCounter1.SetText(bulletsLeft1 / bulletsPerTap1 + " / " + magazineSize1 / bulletsPerTap1);
-        AmmoCounter2.SetText(bulletsLeft2 / bulletsPerTap2 + " / " + magazineSize2 / bulletsPerTap2);
     }
 
     public void GetWeaponInfo()
@@ -118,12 +137,6 @@ public class WeaponSelectionMenu : MonoBehaviour
             string Slot1WeaponName = Slot1.GetComponent<WeaponInfo>().WeaponName;
             GunName1.text = Slot1WeaponName;
             ImageContainer1.sprite = Slot1.GetComponent<WeaponInfo>().WeaponIcon;
-
-            Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
-            // Debug.Log(Slot1WeaponID);
-
-            Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
-            // Debug.Log(Slot2WeaponID);
 
             string Slot2WeaponName = Slot2.GetComponent<WeaponInfo>().WeaponName;
             GunName2.text = Slot2WeaponName;
@@ -143,7 +156,6 @@ public class WeaponSelectionMenu : MonoBehaviour
             GunButtons[closureIndex].onClick.AddListener(() => TaskOnClick(closureIndex));
         }
     }
-
 
     //this function actually sucks but it works so dont touch it
     public void TaskOnClick(int buttonIndex)
@@ -168,5 +180,19 @@ public class WeaponSelectionMenu : MonoBehaviour
         {
             Debug.Log("not worked");
         }
+    }
+
+    public void GetAmmoCount()
+    {
+        int bulletsLeft1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
+        int bulletsPerTap1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
+        int magazineSize1 = Slot1.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
+
+        int bulletsLeft2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsLeft;
+        int bulletsPerTap2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().BulletsPerTap;
+        int magazineSize2 = Slot2.transform.GetChild(0).GetComponent<GunScript>().MagazineSize;
+
+        AmmoCounter1.SetText(bulletsLeft1 / bulletsPerTap1 + " / " + magazineSize1 / bulletsPerTap1);
+        AmmoCounter2.SetText(bulletsLeft2 / bulletsPerTap2 + " / " + magazineSize2 / bulletsPerTap2);
     }
 }
