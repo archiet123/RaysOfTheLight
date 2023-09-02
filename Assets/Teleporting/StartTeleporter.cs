@@ -9,8 +9,12 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public GameObject Portal;
     public Collider TeleporterCollider;
     // public GameObject PortalObject;
-    
-    
+
+    public void Awake()
+    {
+        PlayerPrefs.SetInt("Slot1Weapon", 0);
+        PlayerPrefs.SetInt("Slot2Weapon", 1);
+    }
     //entities functionality goes here
     public void ActionFunction()
     {
@@ -18,11 +22,9 @@ public class StartTeleporter : MonoBehaviour, IInteractable
         // TeleporterCollider.SetActive(true);
         TeleporterCollider = TeleporterCollider.GetComponent<CapsuleCollider>();
         TeleporterCollider.enabled = !TeleporterCollider.enabled;
-        
-    
     }
 
-    
+
     //Interactable stuff
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
