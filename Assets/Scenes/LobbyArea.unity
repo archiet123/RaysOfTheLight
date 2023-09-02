@@ -4567,11 +4567,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.3600001, z: 0.17829758}
   m_Center: {x: 0, y: 1.1800001, z: 0.91085124}
---- !u!1 &294279251 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3206447496731379053, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294483512
 GameObject:
   m_ObjectHideFlags: 0
@@ -11909,26 +11904,6 @@ RectTransform:
   m_AnchoredPosition: {x: 174.3, y: -410.16}
   m_SizeDelta: {x: 308.6, y: 204.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &887701849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1214015952379477210, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &887701850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887701849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81f7df42e0fdae449803f4088ea8caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponName: Hammer
-  WeaponIcon: {fileID: 21300000, guid: 103f532169f1e5f45aaab945e4327d0b, type: 3}
-  WeaponID: 5
 --- !u!1 &902024677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5174297044276595347, guid: 38b4d2a0227857e4086ed7db7bf36d4e, type: 3}
@@ -12589,26 +12564,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.3600001, z: 0.17829758}
   m_Center: {x: 0, y: 1.1800001, z: 0.91085124}
---- !u!1 &942152533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3206447498272543540, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &942152536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942152533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81f7df42e0fdae449803f4088ea8caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponName: Hammer
-  WeaponIcon: {fileID: 21300000, guid: 103f532169f1e5f45aaab945e4327d0b, type: 3}
-  WeaponID: 25
 --- !u!1 &944708611
 GameObject:
   m_ObjectHideFlags: 0
@@ -22952,11 +22907,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.3600001, z: 0.17829758}
   m_Center: {x: 0, y: 1.1800001, z: 0.91085124}
---- !u!1 &1544148814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3206447498831103282, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1546326095
 GameObject:
   m_ObjectHideFlags: 0
@@ -27520,15 +27470,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3206447496830216231, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
-      value: 23
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3206447496830216231, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponIcon
       value: 
       objectReference: {fileID: 21300000, guid: b2b4ec7f68312ab40b9d178434e090e3, type: 3}
+    - target: {fileID: 3206447496983880206, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: WeaponID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3206447497042092401, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
-      value: 27
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497042092401, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponIcon
@@ -27536,7 +27490,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: aed28da9e87b80e46817095024491fc2, type: 3}
     - target: {fileID: 3206447497075816348, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497075816348, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponIcon
@@ -27608,7 +27562,7 @@ PrefabInstance:
       objectReference: {fileID: 902024678}
     - target: {fileID: 3206447498235166515, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3206447498235166515, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponIcon
@@ -27616,7 +27570,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 3e8cfe78f650ff34d87777eb4e29afa8, type: 3}
     - target: {fileID: 3206447498546516331, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3206447498546516331, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponIcon
@@ -27638,6 +27592,10 @@ PrefabInstance:
       propertyPath: PlayerCam
       value: 
       objectReference: {fileID: 902024678}
+    - target: {fileID: 3206447498727039920, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: WeaponID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3206447498755584268, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: Bullet
       value: 
@@ -27732,6 +27690,11 @@ PrefabInstance:
       objectReference: {fileID: 1780753685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+--- !u!1 &1854543945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3206447497075816350, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 1854543944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1854543949 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5264702998907202819, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
@@ -27779,11 +27742,6 @@ Transform:
   m_Father: {fileID: 197385493}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1860844060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2359603439049060154, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861877319
 GameObject:
   m_ObjectHideFlags: 0
@@ -31361,11 +31319,6 @@ Transform:
   m_Father: {fileID: 769593312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2127659667 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4253584283127523478, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2128464505
 GameObject:
   m_ObjectHideFlags: 0
@@ -31866,6 +31819,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1677487745}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
+      propertyPath: GunButtons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: GunButtons.Array.data[0]
       value: 
       objectReference: {fileID: 1127921576}
@@ -31906,33 +31863,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1435069653}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
+      propertyPath: WeaponsToChoose1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
+      propertyPath: WeaponsToChoose2.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[0]
       value: 
       objectReference: {fileID: 1165590169}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[1]
       value: 
-      objectReference: {fileID: 1561487953}
+      objectReference: {fileID: 1854543945}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[2]
       value: 
-      objectReference: {fileID: 1035674477}
+      objectReference: {fileID: 1561487953}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[3]
       value: 
-      objectReference: {fileID: 2127659667}
+      objectReference: {fileID: 1035674477}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[4]
       value: 
-      objectReference: {fileID: 887701849}
+      objectReference: {fileID: 0}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[5]
       value: 
-      objectReference: {fileID: 1860844060}
+      objectReference: {fileID: 0}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose1.Array.data[6]
       value: 
-      objectReference: {fileID: 294279251}
+      objectReference: {fileID: 0}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[0]
       value: 
@@ -31940,23 +31905,23 @@ PrefabInstance:
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[1]
       value: 
-      objectReference: {fileID: 370118290}
+      objectReference: {fileID: 1982584674}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[2]
       value: 
-      objectReference: {fileID: 1265600204}
+      objectReference: {fileID: 370118290}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[3]
       value: 
-      objectReference: {fileID: 1544148814}
+      objectReference: {fileID: 1265600204}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[4]
       value: 
-      objectReference: {fileID: 942152533}
+      objectReference: {fileID: 0}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[5]
       value: 
-      objectReference: {fileID: 1860844060}
+      objectReference: {fileID: 0}
     - target: {fileID: 5088042159486742381, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[6]
       value: 
@@ -32043,6 +32008,7 @@ PrefabInstance:
       objectReference: {fileID: 161206519}
     m_RemovedComponents:
     - {fileID: 6143995566755671880, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
+    - {fileID: 8553704576903023823, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d2df3f793510d54e915be4d0b8b0d00, type: 3}
 --- !u!222 &2707773660519441408
 CanvasRenderer:
