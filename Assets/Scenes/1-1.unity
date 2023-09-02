@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkLevel: {fileID: 7015627235403154718}
-  animator: {fileID: 0}
+  animator: {fileID: 1527583251}
   CompletedRooms: []
 --- !u!1 &1022290555
 GameObject:
@@ -3426,7 +3426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkLevel: {fileID: 7015627235403154718}
-  animator: {fileID: 0}
+  animator: {fileID: 1527583251}
   CompletedRooms: []
 --- !u!136 &1174381523
 CapsuleCollider:
@@ -4456,7 +4456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkLevel: {fileID: 7015627235403154718}
-  animator: {fileID: 0}
+  animator: {fileID: 1527583251}
   CompletedRooms: []
 --- !u!1 &1566932651 stripped
 GameObject:
@@ -5655,7 +5655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkLevel: {fileID: 7015627235403154718}
-  animator: {fileID: 0}
+  animator: {fileID: 1527583251}
   CompletedRooms: []
 --- !u!1 &2130912671
 GameObject:
@@ -16163,7 +16163,7 @@ MonoBehaviour:
   KitchenEnemyCount: 2
   OfficeEnemyCount: 2
   ServerEnemyCount: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1527583251}
   TotalDead: 0
 --- !u!224 &7015627235406539278
 RectTransform:
