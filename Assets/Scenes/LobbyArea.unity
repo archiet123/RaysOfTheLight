@@ -27437,7 +27437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 1846367739}
-  GameScene: 1
+  GameScene: 2
 --- !u!1001 &1846810364
 PrefabInstance:
   m_ObjectHideFlags: 0
