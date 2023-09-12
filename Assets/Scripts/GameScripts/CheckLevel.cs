@@ -7,28 +7,47 @@ public class CheckLevel : MonoBehaviour
     //Room Names
     public string Kitchen;
     public string Office;
-    public string ServerRoom;
+    public string Server;
+    public string Storage;
+    public string Confrence;
 
     //amount enemys in each room
     public int KitchenEnemyCount;
     public int OfficeEnemyCount;
     public int ServerEnemyCount;
-
+    public int StorageEnemyCount;
+    public int ConfrenceEnemyCount;
     //animator to open doors
     public Animator animator;
 
-    //counter per room
+    //counters
     public int TotalDead;
+    //completed room list
+    public List<string> CompletedRooms;
+
+    void Start()
+    {
+
+    }
+    void Update()
+    {
+        if (CompletedRooms.Count == 5)
+        {
+            Debug.Log("unlock elevator");
+        }
+    }
 
     public void IsComplete(int DeadEnemyCount, string EnemyRoom)
     {
+
         TotalDead += DeadEnemyCount;
         if (EnemyRoom == Kitchen)
         {
             if (TotalDead == KitchenEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
                 // Debug.Log($"cl: {TotalDead}");
             }
             else
@@ -41,20 +60,48 @@ public class CheckLevel : MonoBehaviour
         {
             if (TotalDead == OfficeEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
             }
             else
             {
                 // Debug.Log("stay closed");
             }
         }
-        else if (EnemyRoom == ServerRoom)
+        else if (EnemyRoom == Server)
         {
             if (TotalDead == ServerEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel                
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
+            }
+            else
+            {
+                // Debug.Log("stay closed");
+            }
+        }
+        else if (EnemyRoom == Storage)
+        {
+            if (TotalDead == StorageEnemyCount)
+            {
+                //checkLevel
+                animator.SetBool("RoomLock", false);
+                TotalDead = 0;
+            }
+            else
+            {
+                // Debug.Log("stay closed");
+            }
+        }
+        else if (EnemyRoom == Confrence)
+        {
+            if (TotalDead == ConfrenceEnemyCount)
+            {
+                //checkLevel
+                animator.SetBool("RoomLock", false);
+                TotalDead = 0;
             }
             else
             {

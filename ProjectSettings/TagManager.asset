@@ -11,6 +11,10 @@ TagManager:
   - SecondRoom
   - Kitchen
   - Office
+  - Server
+  - Storage
+  - Confrence
+  - Server1
   layers:
   - Default
   - TransparentFX

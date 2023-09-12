@@ -27,12 +27,12 @@ public class EnemyProjectile : MonoBehaviour
         {
             // other.GetComponent<HealthScript>().DealDamage(WeaponDamage);
             Destroy();
-            Debug.Log("enmemy");
+
         }
         if (Collision.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerHealth>().DealDamage(EnemyDamage);
-            Debug.Log("player");
+
         }
         else if (Collision.gameObject.tag == "Untagged")
         {
