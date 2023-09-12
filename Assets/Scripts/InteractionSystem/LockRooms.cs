@@ -13,21 +13,24 @@ public class LockRooms : MonoBehaviour
     public Animator animator;
 
     //List of completed rooms
-    public List<string> CompletedRooms;
+    // public List<string> CompletedRooms;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             string CurrentRoom = (gameObject.tag);
-            if (CompletedRooms.Contains(CurrentRoom))
+            if (checkLevel.CompletedRooms.Contains(CurrentRoom))
             {
-                Debug.Log("previously completed");
+                // Debug.Log("previously completed");
             }
             else
             {
                 // Debug.Log("entered");
-                CompletedRooms.Add(CurrentRoom);
+
+                //this needs to be added to a global list, not specific to each collider
+                //this causes the doors to close rather than open if both colliders have not been triggered
+                checkLevel.CompletedRooms.Add(CurrentRoom);
                 LockAllDoors();
                 SpawnEnemies(CurrentRoom);
             }
@@ -41,10 +44,12 @@ public class LockRooms : MonoBehaviour
     public void SpawnEnemies(string EnemySpawn)
     {
         //resetting deathcounter to 0
-        checkLevel.TotalDead = 0;
+        //this is resetting counter every time the player touches a collider, not good
+        // checkLevel.TotalDead = 0;
 
         //sets the enemy container in the hieracy to true and 'spawns' enemies#endregion
         GameObject.Find(EnemySpawn).transform.GetChild(0).gameObject.SetActive(true);
+
     }
 
     public void LockAllDoors()

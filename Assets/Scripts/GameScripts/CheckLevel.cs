@@ -20,15 +20,20 @@ public class CheckLevel : MonoBehaviour
     //counter per room
     public int TotalDead;
 
+    //completed room list
+    public List<string> CompletedRooms;
+
     public void IsComplete(int DeadEnemyCount, string EnemyRoom)
     {
+
         TotalDead += DeadEnemyCount;
         if (EnemyRoom == Kitchen)
         {
             if (TotalDead == KitchenEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
                 // Debug.Log($"cl: {TotalDead}");
             }
             else
@@ -41,8 +46,9 @@ public class CheckLevel : MonoBehaviour
         {
             if (TotalDead == OfficeEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
             }
             else
             {
@@ -53,8 +59,9 @@ public class CheckLevel : MonoBehaviour
         {
             if (TotalDead == ServerEnemyCount)
             {
-                Debug.Log("open");
+                //checkLevel
                 animator.SetBool("RoomLock", false);
+                TotalDead = 0;
             }
             else
             {
