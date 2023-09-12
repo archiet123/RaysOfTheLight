@@ -48,6 +48,7 @@ public class LockRooms : MonoBehaviour
         // checkLevel.TotalDead = 0;
 
         //sets the enemy container in the hieracy to true and 'spawns' enemies#endregion
+        Debug.Log(EnemySpawn);
         GameObject.Find(EnemySpawn).transform.GetChild(0).gameObject.SetActive(true);
 
     }
