@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CheckLevel : MonoBehaviour
 {
+    public Elevator elevator;
+
     //Room Names
     public string Kitchen;
     public string Office;
@@ -27,13 +29,14 @@ public class CheckLevel : MonoBehaviour
 
     void Start()
     {
-
     }
+
     void Update()
     {
         if (CompletedRooms.Count == 5)
         {
             Debug.Log("unlock elevator");
+            elevator.LevelComplete = true;
         }
     }
 

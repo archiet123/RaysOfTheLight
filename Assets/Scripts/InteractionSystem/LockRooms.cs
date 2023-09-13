@@ -50,7 +50,8 @@ public class LockRooms : MonoBehaviour
         //sets the enemy container in the hieracy to true and 'spawns' enemies#endregion
         Debug.Log(EnemySpawn);
         GameObject.Find(EnemySpawn).transform.GetChild(0).gameObject.SetActive(true);
-
+        //i dont think this can find the GameObject 'Server', not sure Y not.
+        //this was the issue, why server and confrence now have goofy names
     }
 
     public void LockAllDoors()
