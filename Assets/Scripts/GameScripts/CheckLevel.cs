@@ -35,7 +35,7 @@ public class CheckLevel : MonoBehaviour
     {
         if (CompletedRooms.Count == 5)
         {
-            Debug.Log("unlock elevator");
+            // Debug.Log("unlock elevator");
             elevator.LevelComplete = true;
         }
     }
