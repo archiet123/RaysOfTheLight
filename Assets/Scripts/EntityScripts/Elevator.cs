@@ -20,6 +20,8 @@ public class Elevator : MonoBehaviour, IInteractable
             // Debug.Log("start next scene");
             SceneManager.LoadScene(0);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 1f;
         }
     }
 
