@@ -32,7 +32,7 @@ public class EnemyProjectile : MonoBehaviour
         if (Collision.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerHealth>().DealDamage(EnemyDamage);
-
+            // Debug.Log("damage player");
         }
         else if (Collision.gameObject.tag == "Untagged")
         {

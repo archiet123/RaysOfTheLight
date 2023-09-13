@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log(Health);
         if (Health <= 0)
         {
             // Debug.Log("you lose");
@@ -26,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetHealth(int CurrentHealth)
     {
-        // Debug.Log("sethealth");
         HealthSlider.value = CurrentHealth;
     }
 
