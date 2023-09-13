@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Health);
+
         if (Health <= 0)
         {
             // Debug.Log("you lose");

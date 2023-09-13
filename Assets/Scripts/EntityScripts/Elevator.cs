@@ -17,7 +17,7 @@ public class Elevator : MonoBehaviour, IInteractable
     {
         if (LevelComplete == true)
         {
-            Debug.Log("start next scene");
+            // Debug.Log("start next scene");
             SceneManager.LoadScene(0);
             Cursor.lockState = CursorLockMode.None;
         }
