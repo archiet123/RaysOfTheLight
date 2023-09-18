@@ -38,7 +38,7 @@ public class GunScript : MonoBehaviour
     public AudioSource ShootFX;
     public AudioSource ReloadFX;
 
-    public Animator animator;
+    // public Animator animator;
 
     private void Awake()
     {
@@ -46,7 +46,7 @@ public class GunScript : MonoBehaviour
         ReadyToShoot = true;
 
         //get animator component
-        animator = gameObject.GetComponent<Animator>();
+        // animator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -108,7 +108,7 @@ public class GunScript : MonoBehaviour
             }
             else
             {
-                animator.SetBool("isShooting", false);
+                // animator.SetBool("isShooting", false);
             }
         }
         else
@@ -125,7 +125,7 @@ public class GunScript : MonoBehaviour
         ShootFX.Play();
 
         //play shoot animation
-        animator.SetBool("isShooting", true);
+        // animator.SetBool("isShooting", true);
 
         ReadyToShoot = false;
 
