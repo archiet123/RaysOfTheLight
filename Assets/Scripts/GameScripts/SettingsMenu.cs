@@ -15,7 +15,7 @@ public class SettingsMenu : MonoBehaviour
 
     //values to write
     private bool ShowFPS;
-    private float PlayerSens = 500;
+    private float PlayerSens;
 
     //Datafile
     private PlayerSettings playerSettings;
@@ -30,11 +30,14 @@ public class SettingsMenu : MonoBehaviour
     public void Start()
     {
         SetPaths();
+
+        LoadData();
+        // Debug.Log(playerSettings.LoadFloat());
     }
 
     public void Update()
     {
-        SaveData();
+        UpatedCurrentPlayerSettings();
     }
 
     private void SetPaths()
@@ -43,7 +46,7 @@ public class SettingsMenu : MonoBehaviour
         PersistantPath = Application.persistentDataPath + "/" + "SaveData.json";
     }
 
-    private void WritePlayerSettings()
+    private void UpatedCurrentPlayerSettings()
     {
         playerSettings = new PlayerSettings(ShowFPS, PlayerSens);
     }
@@ -51,27 +54,49 @@ public class SettingsMenu : MonoBehaviour
 
     public void SaveData()
     {
-        string SavePath = Path;
-
-        Debug.Log("path: " + SavePath);
+        // Debug.Log("path: " + SavePath);
         string json = JsonUtility.ToJson(playerSettings);
         Debug.Log(json);
 
-        using StreamWriter writer = new StreamWriter(SavePath);
+        using StreamWriter writer = new StreamWriter(Path);
         writer.Write(json);
     }
 
+    public void LoadData()
+    {
+        using StreamReader reader = new StreamReader(Path);
+        string json = reader.ReadToEnd();
+        PlayerSettings settings = JsonUtility.FromJson<PlayerSettings>(json);
+        PlayerSens = settings.LoadFloat();
+        SetSensitivity(PlayerSens);
+        HideFPSCounter(ShowFPS);
+    }
+
+
+
+
     /* Player Settings */
+    [System.Serializable]
     public class PlayerSettings
     {
         //Settings
-        private bool FPS = true;
-        private float Sens = 500;
+        public bool FPS;
+        public float Sens;
 
         public PlayerSettings(bool FPS, float Sens)
         {
             this.FPS = FPS;
             this.Sens = Sens;
+        }
+
+        public float LoadFloat()
+        {
+            return Sens;
+        }
+
+        public bool LoadBool()
+        {
+            return FPS;
         }
     }
     /* Endregion */
@@ -92,11 +117,11 @@ public class SettingsMenu : MonoBehaviour
         }
     }
 
-    public void SetSensitivity(float Sens)
+    public void SetSensitivity(float Sensitivity)
     {
-        PlayerSens = Sens;
-        float XSens = Sens;
-        float YSens = Sens;
+        PlayerSens = Sensitivity;
+        float XSens = Sensitivity;
+        float YSens = Sensitivity;
         FindObjectOfType<PlayerCam>().RecieveSens(XSens, YSens);
     }
 
