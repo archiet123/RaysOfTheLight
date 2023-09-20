@@ -7,6 +7,9 @@ using System;
 
 public class VendingMachineScript : MonoBehaviour, IInteractable
 {
+    //items dispensed from machine
+    public GameObject items;
+    
     //currency script
     public CurrencySystem currencySystem;
 
@@ -51,6 +54,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         if (CurrentCurrency >= UseCost)
         {
             currencySystem.TakeMoners(UseCost);
+            items.SetActive (true);
             Debug.Log("give perk");
 
             //call spawn function here
