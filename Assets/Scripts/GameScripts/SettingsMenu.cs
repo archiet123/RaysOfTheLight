@@ -64,12 +64,20 @@ public class SettingsMenu : MonoBehaviour
 
     public void LoadData()
     {
+        //gets path and reads stuff in json
         using StreamReader reader = new StreamReader(Path);
         string json = reader.ReadToEnd();
         PlayerSettings settings = JsonUtility.FromJson<PlayerSettings>(json);
+
+        //updating variables to returned values
         PlayerSens = settings.LoadFloat();
+        ShowFPS = settings.LoadBool();
+
+        //updating settings in game
         SetSensitivity(PlayerSens);
         HideFPSCounter(ShowFPS);
+
+        //update UI in game below
     }
 
 
