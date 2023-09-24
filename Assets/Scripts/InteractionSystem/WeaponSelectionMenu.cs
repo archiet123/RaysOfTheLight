@@ -69,8 +69,8 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
-        Debug.Log(Slot1);
-        Debug.Log(Slot2);
+        //Debug.Log(Slot1);
+        //Debug.Log(Slot2);
     }
 
     void OnDisable()
@@ -78,13 +78,13 @@ public class WeaponSelectionMenu : MonoBehaviour
         //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. 
         //Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-        Debug.Log(Slot1);
-        Debug.Log(Slot2);
+        //Debug.Log(Slot1);
+        //Debug.Log(Slot2);
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        // Debug.Log(scene.name);
+        // //Debug.Log(scene.name);
         //read weapon data here
         int loadedWeapon1 = PlayerPrefs.GetInt("Slot1Weapon");
         int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
@@ -95,8 +95,8 @@ public class WeaponSelectionMenu : MonoBehaviour
         Slot1 = (WeaponsToChoose1[loadedWeapon1]);
         Slot2 = (WeaponsToChoose2[loadedWeapon2]);
 
-        Debug.Log(Slot1);
-        Debug.Log(Slot2);
+        //Debug.Log(Slot1);
+        //Debug.Log(Slot2);
     }
 
     void OnDestroy()
@@ -151,7 +151,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("a gun could not be found");
+            //Debug.Log("a gun could not be found");
         }
     }
 
@@ -185,7 +185,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("not worked");
+            //Debug.Log("not worked");
         }
     }
 
