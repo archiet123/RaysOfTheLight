@@ -39,8 +39,8 @@ public class SettingsMenu : MonoBehaviour
     public void Update()
     {
         UpatedCurrentPlayerSettings();
-        Debug.Log(PlayerSens);
-        Debug.Log(ShowFPS);
+        // Debug.Log(PlayerSens);
+        // Debug.Log(ShowFPS);
     }
 
     private void SetPaths()
@@ -59,7 +59,7 @@ public class SettingsMenu : MonoBehaviour
     {
         // Debug.Log("path: " + SavePath);
         string json = JsonUtility.ToJson(playerSettings);
-        Debug.Log(json);
+        // Debug.Log(json);
 
         using StreamWriter writer = new StreamWriter(Path);
         writer.Write(json);
