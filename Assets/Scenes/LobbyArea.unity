@@ -8634,6 +8634,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1053834848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5255494053714219003, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+  m_PrefabInstance: {fileID: 5255494054187144480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079825898
 GameObject:
   m_ObjectHideFlags: 0
@@ -17677,6 +17688,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.3600001, z: 0.17829758}
   m_Center: {x: 0, y: 1.1800001, z: 0.91085124}
+--- !u!114 &2022636443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5255494053759526333, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+  m_PrefabInstance: {fileID: 5255494054187144480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2030714133
 GameObject:
   m_ObjectHideFlags: 0
@@ -18889,6 +18911,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1265600204}
     - target: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: Moners
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: MonersTMP
       value: 
       objectReference: {fileID: 393637740}
@@ -19125,6 +19151,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3287398505669878068, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+      propertyPath: FPStoggle
+      value: 
+      objectReference: {fileID: 2022636443}
+    - target: {fileID: 3287398505669878068, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+      propertyPath: SensSlider
+      value: 
+      objectReference: {fileID: 1053834848}
     - target: {fileID: 3892812862230654281, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

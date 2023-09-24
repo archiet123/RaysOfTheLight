@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System.IO;
-// using StreamWriter;
+using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     //audio
@@ -11,7 +11,8 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer SFXMixer;
     //display
     public GameObject FPSCounter;
-
+    public Toggle FPStoggle;
+    public Slider SensSlider;
 
     //values to write
     private bool ShowFPS;
@@ -38,6 +39,8 @@ public class SettingsMenu : MonoBehaviour
     public void Update()
     {
         UpatedCurrentPlayerSettings();
+        Debug.Log(PlayerSens);
+        Debug.Log(ShowFPS);
     }
 
     private void SetPaths()
@@ -78,6 +81,8 @@ public class SettingsMenu : MonoBehaviour
         HideFPSCounter(ShowFPS);
 
         //update UI in game below
+        SensSlider.value = PlayerSens;
+        FPStoggle.isOn = ShowFPS;
     }
 
 
