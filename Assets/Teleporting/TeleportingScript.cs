@@ -33,7 +33,7 @@ public class TeleportingScript : MonoBehaviour
         }
         else
         {
-            Debug.Log(other.tag);
+            //Debug.Log(other.tag);
         }
 
 
