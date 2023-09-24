@@ -69,6 +69,8 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        Debug.Log(Slot1);
+        Debug.Log(Slot2);
     }
 
     void OnDisable()
@@ -76,6 +78,8 @@ public class WeaponSelectionMenu : MonoBehaviour
         //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. 
         //Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+        Debug.Log(Slot1);
+        Debug.Log(Slot2);
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -85,21 +89,24 @@ public class WeaponSelectionMenu : MonoBehaviour
         int loadedWeapon1 = PlayerPrefs.GetInt("Slot1Weapon");
         int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
 
-        ToSetActive1 = loadedWeapon1;
-        ToSetActive2 = loadedWeapon2;
+        // ToSetActive1 = loadedWeapon1;
+        // ToSetActive2 = loadedWeapon2;
 
         Slot1 = (WeaponsToChoose1[loadedWeapon1]);
         Slot2 = (WeaponsToChoose2[loadedWeapon2]);
+
+        Debug.Log(Slot1);
+        Debug.Log(Slot2);
     }
 
     void OnDestroy()
     {
         //write weapon data here      
         //need to write current weapon IDs     
-        Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
-        PlayerPrefs.SetInt("Slot1Weapon", Slot1WeaponID);
-        Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
-        PlayerPrefs.SetInt("Slot2Weapon", Slot2WeaponID);
+        // Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
+        // PlayerPrefs.SetInt("Slot1Weapon", Slot1WeaponID);
+        // Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
+        // PlayerPrefs.SetInt("Slot2Weapon", Slot2WeaponID);
     }
     public void GetInput()
     {
