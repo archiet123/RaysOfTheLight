@@ -17,10 +17,9 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //calc length of item list
     //output random string from 0,length of list
     //GameObject.Find corresponding Named script on Spawned perk 'item'
-    //
-
     //This methods means that all unique ability scripts will be stored on the spawned items,
     //this logic just sets one to active at random and 
+
     public void Start()
     {
     }
