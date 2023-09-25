@@ -12,6 +12,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     //currency script
     public CurrencySystem currencySystem;
+    public ItemGeneration itemGeneration;
 
     //value of currency
     private int CurrentCurrency;
@@ -55,7 +56,8 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         {
             currencySystem.TakeMoners(UseCost);
             items.SetActive(true);
-            Debug.Log("give perk");
+            // Debug.Log("give perk");
+
 
             //call spawn function here
         }
