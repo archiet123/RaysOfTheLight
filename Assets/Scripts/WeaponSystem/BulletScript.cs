@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour
     public int MaxCollisions;
     public int Collisions;
     public int WeaponDamage;
-    public int EnemyDamage;
+
 
     private void Update()
     {
@@ -25,13 +25,13 @@ public class BulletScript : MonoBehaviour
 
         if (Collision.gameObject.tag == "Enemy")
         {
+            //calc damage = bullet damage*playerDamageMultiplyer
             other.GetComponent<HealthScript>().DealDamage(WeaponDamage);
             Destroy();
         }
         else if (Collision.gameObject.tag == "Player")
         {
-
-            other.GetComponent<PlayerHealth>().DealDamage(EnemyDamage);
+            // other.GetComponent<PlayerHealth>().DealDamage(EnemyDamage);
         }
         else if (Collision.gameObject.tag == "Untagged")
         {
