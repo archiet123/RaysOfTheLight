@@ -101,7 +101,7 @@ public class CurrencySystem : MonoBehaviour
 
     public void TakeMoners(int MonersToSubtract)
     {
-        Debug.Log(MonersToSubtract);
+        // Debug.Log(MonersToSubtract);
         StartCoroutine(SubtractMoners(MonersToSubtract));
     }
 
