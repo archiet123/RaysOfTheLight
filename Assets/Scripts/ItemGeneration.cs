@@ -12,7 +12,8 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     private string RandomItemName;
 
     //List of possible perks
-    string[] AllItems = new string[] { "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans", };
+    string[] AllItems = new string[] { "GoFast", "DamageIncrease", "MoreHealth", "Armour", "HighCapacityMagazine", "ShootFaster" };
+    //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
 
     //calc length of item list
     //output random string from 0,length of list

@@ -199,37 +199,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9290201}
   m_CullTransparentMesh: 1
---- !u!1 &11867062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 11867063}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &11867063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11867062}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.2565975, y: 5.681445, z: 38.749195}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18013333
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +349,6 @@ MonoBehaviour:
   MaxCollisions: 1
   Collisions: 0
   WeaponDamage: 20
-  EnemyDamage: 20
 --- !u!54 &50500092
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6179,7 +6147,6 @@ MonoBehaviour:
   MaxCollisions: 10
   Collisions: 0
   WeaponDamage: 15
-  EnemyDamage: 15
 --- !u!54 &782911207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7875,6 +7842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24cbfb60d525024bb4e8849c758138a, type: 3}
+--- !u!1 &1007693706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 1854543944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1008607138
 GameObject:
   m_ObjectHideFlags: 0
@@ -11191,7 +11163,6 @@ MonoBehaviour:
   MaxCollisions: 1
   Collisions: 0
   WeaponDamage: 100
-  EnemyDamage: 20
 --- !u!54 &1379277859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11643,6 +11614,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f37a319b3d7364c9d6a7a80694fbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 161206519}
+  playerCam: {fileID: 902024678}
+  Bullet: {fileID: 2030714133}
+  weaponSelectionMenu: {fileID: 7309461463745230928}
 --- !u!1001 &1450899312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16028,6 +16003,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 698542091874311755, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206447496731378835, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
       value: 2
@@ -17901,7 +17880,6 @@ MonoBehaviour:
   MaxCollisions: 10
   Collisions: 0
   WeaponDamage: 20
-  EnemyDamage: 20
 --- !u!1001 &2031215836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18799,7 +18777,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5174297044276595349, guid: 38b4d2a0227857e4086ed7db7bf36d4e, type: 3}
       propertyPath: field of view
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5174297044276595351, guid: 38b4d2a0227857e4086ed7db7bf36d4e, type: 3}
       propertyPath: SensX
@@ -18985,7 +18963,7 @@ PrefabInstance:
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1007693706}
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[3]
       value: 
@@ -19144,9 +19122,25 @@ PrefabInstance:
       value: VendingMachine
       objectReference: {fileID: 0}
     - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 2030714133}
+    - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 161206519}
+    - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: PerkName
       value: Akdov
       objectReference: {fileID: 0}
+    - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 902024678}
+    - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: weaponSelectionMenu
+      value: 
+      objectReference: {fileID: 7309461463745230928}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
 --- !u!1001 &5255494054187144480

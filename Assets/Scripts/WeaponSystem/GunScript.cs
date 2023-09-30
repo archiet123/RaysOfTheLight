@@ -15,7 +15,7 @@ public class GunScript : MonoBehaviour
     public float ShootForce, UpwardForce;
 
     //Gun Stats
-    public float TimeBetweenShooting, spread, ReloadTime, TimeBetweenShots;
+    public float TimeBetweenShooting, spread, ReloadTime, TimeBetweenShots, BaseROF;
     public int MagazineSize, BulletsPerTap;
     public bool AllowButtonHold;
 
