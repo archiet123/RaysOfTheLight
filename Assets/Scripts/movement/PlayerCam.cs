@@ -31,7 +31,7 @@ public class PlayerCam : MonoBehaviour
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         int FOVCounter = PlayerPrefs.GetInt("CameraFOV");
-        // playerCam.fieldOfView = FOVCounter * 2.5f;
+        playerCam.fieldOfView = 60 + FOVCounter * 2.5f;
     }
 
 
