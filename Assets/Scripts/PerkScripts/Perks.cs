@@ -57,8 +57,13 @@ public class Perks : MonoBehaviour
     {
         //Debug.Log();.Log($"Picked GoFast");
 
-        player.GetComponent<PlayerMovement>().MoveSpeed += 1;
-        playerCam.fieldOfView += 10f;
+        int PlayerSpeedMultiplier = vendingMachineScript.MoveSpeedCounter += 1;
+        player.GetComponent<PlayerMovement>().MoveSpeed += 0.5f;
+        PlayerPrefs.SetInt("PlayerSpeed", PlayerSpeedMultiplier);
+
+        int FOVCounter = vendingMachineScript.FOVCounter += 1;
+        playerCam.fieldOfView += 2.5f;
+        PlayerPrefs.SetInt("CameraFOVCounter", FOVCounter);
     }
 
     public void DamageIncrease()
@@ -90,8 +95,7 @@ public class Perks : MonoBehaviour
         //weapon rate of fire * ROFMultiplier
         vendingMachineScript.ROFCounter += 1f;
         float ROFMultiplier = vendingMachineScript.ROFCounter * 0.02f;
-        // Debug.Log(ROFMultiplier);
-        // Debug.Log(ROFCounter);
+
 
         //Get the weapnons 'Base' rate of fire
         float Slot1BaseROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
@@ -107,7 +111,5 @@ public class Perks : MonoBehaviour
 
         //write values to playerprefs
         PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
-
-
     }
 }
