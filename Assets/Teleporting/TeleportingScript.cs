@@ -25,6 +25,7 @@ public class TeleportingScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            // current equiped weapons are saved to player prefs
             ActionFunction();
             int Slot1WeaponID = weaponSelectionMenu.Slot1.GetComponent<WeaponInfo>().WeaponID;
             PlayerPrefs.SetInt("Slot1Weapon", Slot1WeaponID);

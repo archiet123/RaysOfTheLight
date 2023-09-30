@@ -25,6 +25,9 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     int countDownStartValue = 3;
 
+    //counters
+    public float ROFCounter;
+
     //entities functionality goes here
     public void ActionFunction()
     {

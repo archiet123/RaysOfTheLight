@@ -11,9 +11,9 @@ public class FlickeringLights : MonoBehaviour
     public float minTime;
     public float maxTime;
     public float timer;
-    
-    
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +31,13 @@ public class FlickeringLights : MonoBehaviour
         if (timer > 0)
             timer -= Time.deltaTime;
 
-        if(timer <= 0) 
+        if (timer <= 0)
         {
             LightOB.enabled = !LightOB.enabled;
             timer = Random.Range(minTime, maxTime);
-            LightSound.Play();
+            // LightSound.Play();
 
-        }   
+        }
 
 
     }

@@ -56,6 +56,9 @@ public class WeaponSelectionMenu : MonoBehaviour
         ActiveSlot = "Slot1";
 
         Addlisteners();
+
+        float test = Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
+        Debug.Log(test);
     }
 
     void Update()
@@ -69,8 +72,6 @@ public class WeaponSelectionMenu : MonoBehaviour
     {
         //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
-        //Debug.Log(Slot1);
-        //Debug.Log(Slot2);
     }
 
     void OnDisable()
@@ -78,8 +79,6 @@ public class WeaponSelectionMenu : MonoBehaviour
         //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. 
         //Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-        //Debug.Log(Slot1);
-        //Debug.Log(Slot2);
     }
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -174,6 +173,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot1.SetActive(false);
             Slot1 = ActiveWeapon1;
             Slot1.SetActive(true);
+            //read stats from player prefs
             GetWeaponInfo();
         }
         else if (ActiveSlot == "Slot2")
@@ -181,6 +181,7 @@ public class WeaponSelectionMenu : MonoBehaviour
             Slot2.SetActive(false);
             Slot2 = ActiveWeapon2;
             Slot2.SetActive(true);
+            //read stats from player prefs
             GetWeaponInfo();
         }
         else

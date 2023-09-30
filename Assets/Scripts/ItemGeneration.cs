@@ -21,6 +21,8 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //This methods means that all unique ability scripts will be stored on the spawned items,
     //this logic just sets one to active at random and 
 
+
+
     public void Start()
     {
     }

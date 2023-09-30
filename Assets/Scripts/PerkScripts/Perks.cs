@@ -9,10 +9,10 @@ public class Perks : MonoBehaviour
     public Camera playerCam;
     public GameObject Bullet;
     public WeaponSelectionMenu weaponSelectionMenu;
-
+    public VendingMachineScript vendingMachineScript;
 
     //Base Stat Values
-    public float ROFCounter;
+
 
     //
     public void Start()
@@ -88,9 +88,10 @@ public class Perks : MonoBehaviour
         //this will also mean it has to be set back to its default ROF before i can be set the the correct multiplyer value
         //ROFMultiplier = ItemCounter * 1
         //weapon rate of fire * ROFMultiplier
-        ROFCounter += 1f;
-        float ROFMultiplier = ROFCounter * 0.1f;
-        Debug.Log(ROFCounter);
+        vendingMachineScript.ROFCounter += 1f;
+        float ROFMultiplier = vendingMachineScript.ROFCounter * 0.02f;
+        // Debug.Log(ROFMultiplier);
+        // Debug.Log(ROFCounter);
 
         //Get the weapnons 'Base' rate of fire
         float Slot1BaseROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
@@ -101,7 +102,12 @@ public class Perks : MonoBehaviour
         float Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1BaseROF;
 
         //update to current multiplier rate of fire
-        Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting -= ROFMultiplier;
-        Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting -= ROFMultiplier;
+        Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
+        Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
+
+        //write values to playerprefs
+        PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
+
+
     }
 }
