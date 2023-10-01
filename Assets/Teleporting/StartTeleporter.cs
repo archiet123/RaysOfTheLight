@@ -15,9 +15,11 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     {
         PlayerPrefs.SetInt("Slot1Weapon", 0);
         PlayerPrefs.SetInt("Slot2Weapon", 1);
+
+        //perks
         PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);
-        PlayerPrefs.SetInt("PlayerSpeed", 9);
-        PlayerPrefs.SetInt("CameraFOV", 1);
+        PlayerPrefs.SetInt("PlayerSpeedCounter", 0);
+        PlayerPrefs.SetInt("CameraFOVCounter", 0);
     }
     //entities functionality goes here
     public void ActionFunction()

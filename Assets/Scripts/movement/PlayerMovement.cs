@@ -47,9 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        int SpeedCounter = PlayerPrefs.GetInt("PlayerSpeed");
-        MoveSpeed = 9 + SpeedCounter * 0.5f;
-        Debug.Log(MoveSpeed);
+        int SpeedCounter = PlayerPrefs.GetInt("PlayerSpeedCounter");
+        MoveSpeed += SpeedCounter * 1f;
+        // Debug.Log(MoveSpeed);
     }
 
 

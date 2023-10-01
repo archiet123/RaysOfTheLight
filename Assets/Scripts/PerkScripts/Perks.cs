@@ -57,9 +57,9 @@ public class Perks : MonoBehaviour
     {
         //Debug.Log();.Log($"Picked GoFast");
 
-        int PlayerSpeedMultiplier = vendingMachineScript.MoveSpeedCounter += 1;
-        player.GetComponent<PlayerMovement>().MoveSpeed += 0.5f;
-        PlayerPrefs.SetInt("PlayerSpeed", PlayerSpeedMultiplier);
+        int PlayerSpeedCounter = vendingMachineScript.MoveSpeedCounter += 1;
+        player.GetComponent<PlayerMovement>().MoveSpeed += 1f;
+        PlayerPrefs.SetInt("PlayerSpeedCounter", PlayerSpeedCounter);
 
         int FOVCounter = vendingMachineScript.FOVCounter += 1;
         playerCam.fieldOfView += 2.5f;
@@ -108,6 +108,8 @@ public class Perks : MonoBehaviour
         //update to current multiplier rate of fire
         Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
         Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
+
+        Debug.Log(Slot1ROF);
 
         //write values to playerprefs
         PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);

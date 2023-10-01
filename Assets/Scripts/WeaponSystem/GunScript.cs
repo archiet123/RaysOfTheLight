@@ -54,9 +54,7 @@ public class GunScript : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
-        TimeBetweenShooting -= ROFMultiplier;
-        Debug.Log(TimeBetweenShooting);
+
     }
 
 
@@ -73,7 +71,7 @@ public class GunScript : MonoBehaviour
         // animator = gameObject.GetComponent<Animator>();
 
         //Set Base Rate of fire to default on start
-        BaseROF = TimeBetweenShooting;
+        // BaseROF = TimeBetweenShooting;
     }
 
     private void Update()
