@@ -109,7 +109,7 @@ public class Perks : MonoBehaviour
         Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
         Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
 
-        Debug.Log(Slot1ROF);
+        Debug.Log(ROFMultiplier);
 
         //write values to playerprefs
         PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
