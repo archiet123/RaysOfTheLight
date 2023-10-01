@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        // Debug.Log(Health);
         if (Health <= 0)
         {
             // Debug.Log("you lose");
@@ -33,6 +33,12 @@ public class PlayerHealth : MonoBehaviour
     {
         // Debug.Log("test");
         Health = Health - EnemyDamage;
+        SetHealth(Health);
+    }
+
+    public void IncreaseHealth(int HealthIncrease)
+    {
+        Health += HealthIncrease;
         SetHealth(Health);
     }
 }

@@ -10,10 +10,16 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public Collider TeleporterCollider;
     // public GameObject PortalObject;
 
+    //to make sure the player always spawns with pistol and shotgun
     public void Awake()
     {
         PlayerPrefs.SetInt("Slot1Weapon", 0);
         PlayerPrefs.SetInt("Slot2Weapon", 1);
+
+        //perks
+        PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);
+        PlayerPrefs.SetInt("PlayerSpeedCounter", 0);
+        PlayerPrefs.SetInt("CameraFOVCounter", 0);
     }
     //entities functionality goes here
     public void ActionFunction()

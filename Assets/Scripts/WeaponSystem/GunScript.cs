@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GunScript : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GunScript : MonoBehaviour
     public float ShootForce, UpwardForce;
 
     //Gun Stats
-    public float TimeBetweenShooting, spread, ReloadTime, TimeBetweenShots;
+    public float TimeBetweenShooting, spread, ReloadTime, TimeBetweenShots, BaseROF;
     public int MagazineSize, BulletsPerTap;
     public bool AllowButtonHold;
 
@@ -40,6 +41,27 @@ public class GunScript : MonoBehaviour
 
     // public Animator animator;
 
+    //On Load data loading
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+
+    }
+
+
+
+
+
+
     private void Awake()
     {
         BulletsLeft = MagazineSize;
@@ -47,6 +69,9 @@ public class GunScript : MonoBehaviour
 
         //get animator component
         // animator = gameObject.GetComponent<Animator>();
+
+        //Set Base Rate of fire to default on start
+        // BaseROF = TimeBetweenShooting;
     }
 
     private void Update()

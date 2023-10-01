@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 4938230384962540737}
   - component: {fileID: 4938230384962540739}
   - component: {fileID: 4938230384962540764}
+  - component: {fileID: 2104319763923404202}
   m_Layer: 0
   m_Name: Item2
   m_TagString: Untagged
@@ -860,6 +861,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.0000038146973, y: 0, z: 0}
+--- !u!114 &2104319763923404202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938230384962540742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f37a319b3d7364c9d6a7a80694fbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerCam: {fileID: 0}
+  Bullet: {fileID: 0}
+  weaponSelectionMenu: {fileID: 0}
 --- !u!1 &4938230385338297841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1036,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f37a319b3d7364c9d6a7a80694fbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PerkName: 
+  player: {fileID: 0}
+  playerCam: {fileID: 0}
+  Bullet: {fileID: 0}
+  weaponSelectionMenu: {fileID: 0}
 --- !u!1 &5208825899459232855
 GameObject:
   m_ObjectHideFlags: 0

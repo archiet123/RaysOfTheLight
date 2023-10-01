@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,6 +32,27 @@ public class PlayerMovement : MonoBehaviour
     Vector3 MoveDirection;
 
     Rigidbody rb;
+
+
+    //On Load data loading
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        int SpeedCounter = PlayerPrefs.GetInt("PlayerSpeedCounter");
+        MoveSpeed += SpeedCounter * 1f;
+        // Debug.Log(MoveSpeed);
+    }
+
+
 
     private void Start()
     {
