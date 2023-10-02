@@ -10,6 +10,7 @@ public class Perks : MonoBehaviour
     public GameObject Bullet;
     public WeaponSelectionMenu weaponSelectionMenu;
     public VendingMachineScript vendingMachineScript;
+    public ItemGeneration itemGeneration;
 
     //Base Stat Values
 
@@ -24,6 +25,14 @@ public class Perks : MonoBehaviour
     public void RecievePerkName(string MethodToCall)
     {
         Invoke(MethodToCall, 0f);
+
+
+    }
+
+    public void RecievePerkIndex(int ObjectID)
+    {
+        // GameObject SetPerk = itemGeneration.PerkObjects[ObjectID];
+        // gameObject = SetPerk;
     }
 
     //All perk functions below
@@ -53,7 +62,7 @@ public class Perks : MonoBehaviour
         //Debug.Log();.Log($"Picked Beans");
     }
 
-    public void GoFast()
+    public void Pills()
     {
         //Debug.Log();.Log($"Picked GoFast");
 
@@ -76,7 +85,7 @@ public class Perks : MonoBehaviour
 
         player.GetComponent<PlayerHealth>().IncreaseHealth(25);
     }
-    public void Armour()
+    public void Pheromones()
     {
         //Debug.Log();.Log($"Picked Armour");
     }

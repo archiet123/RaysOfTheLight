@@ -10,9 +10,16 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     [SerializeField]
     private string RandomItemName;
+    private int RandInt;
+    private Vector3 ItemVector;
 
     //List of possible perks
-    string[] AllItems = new string[] { "GoFast", "DamageIncrease", "MoreHealth", "Armour", "HighCapacityMagazine", "ShootFaster" };
+    //make this a dictionary with the key a description of what the item does
+    string[] AllItems = new string[] { "Pills", "Pheromones", "DamageIncrease", "MoreHealth", "HighCapacityMagazine", "ShootFaster" };
+    public GameObject[] PerkObjects = new GameObject[] { };
+
+
+
     //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
 
     //calc length of item list
@@ -25,23 +32,43 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     public void Start()
     {
+        ItemVector = gameObject.transform.position;
+        // Debug.Log(ItemVector);
     }
 
     public void GetRandomInt()
     {
         //Gets random number from 0 to length of list,
         //will be used to get index of perk
-        int RandInt = Random.Range(0, AllItems.Length);
+        RandInt = Random.Range(0, AllItems.Length);
         RandomItemName = AllItems[RandInt];
+
+        //Spawn object
+        string path = $"Items/{RandomItemName}";
+        // Instantiate(Resources.Load<GameObject>(path));
+
+        UnityEngine.Object GetObject = Resources.Load(path);
+        GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, ItemVector, Quaternion.identity);
+
+        // Debug.Log(path);
+
     }
 
 
     public void ActionFunction()
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
+
+        //another ass method
+        //relys on all objects in list being in a particular order
+        gameObject.SendMessage("RecievePerkIndex", RandInt);
         //play item animation disappear
         Invoke("DestroySpawnedItems", 0.2f);
+
+
     }
+
+
 
     public void DestroySpawnedItems()
     {
