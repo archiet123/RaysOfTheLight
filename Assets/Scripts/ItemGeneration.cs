@@ -15,7 +15,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     //List of possible perks
     //make this a dictionary with the key a description of what the item does
-    string[] AllItems = new string[] { "Pills", "Pheromones", "DamageIncrease", "MoreHealth", "HighCapacityMagazine", "ShootFaster" };
+    string[] AllItems = new string[] { "Pills", "Pheromones" };
     public GameObject[] PerkObjects = new GameObject[] { };
 
 
@@ -33,7 +33,11 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void Start()
     {
         ItemVector = gameObject.transform.position;
-        // Debug.Log(ItemVector);
+        Debug.Log(ItemVector);
+        //these are obviously relative
+        //(-12.29, 2.02, 49.41)
+        //(-12.29, 2.02, 51.69)
+
     }
 
     public void GetRandomInt()
@@ -44,14 +48,12 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         RandomItemName = AllItems[RandInt];
 
         //Spawn object
+        //gets path
+        //loads object and resizes it
         string path = $"Items/{RandomItemName}";
-        // Instantiate(Resources.Load<GameObject>(path));
-
         UnityEngine.Object GetObject = Resources.Load(path);
-        GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, ItemVector, Quaternion.identity);
-
-        // Debug.Log(path);
-
+        GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
+        SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
     }
 
 

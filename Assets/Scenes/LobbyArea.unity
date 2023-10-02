@@ -19128,7 +19128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.486
+      value: 17.33
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19136,7 +19136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.39
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19166,6 +19166,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4938230384962540737, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: PerkObjects.Array.size
       value: 2
@@ -19184,7 +19188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4938230385338297842, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.656
+      value: -0.251
       objectReference: {fileID: 0}
     - target: {fileID: 4938230385823873281, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: WarningTMP
@@ -19198,6 +19202,10 @@ PrefabInstance:
       propertyPath: currencySystem
       value: 
       objectReference: {fileID: 7309461463745230933}
+    - target: {fileID: 4938230386496344552, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: RandomItemName
       value: 
