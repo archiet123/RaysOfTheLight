@@ -5,6 +5,7 @@ using System;
 using Random = UnityEngine.Random;
 public class ItemGeneration : MonoBehaviour, IInteractable
 {
+    public GameObject SetObject;
     public GameObject items;
     public int itemOption;
 
@@ -15,7 +16,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     //List of possible perks
     //make this a dictionary with the key a description of what the item does
-    string[] AllItems = new string[] { "Pills", "Pheromones" };
+    string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds"};
     public GameObject[] PerkObjects = new GameObject[] { };
 
 
@@ -52,7 +53,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         //loads object and resizes it
         string path = $"Items/{RandomItemName}";
         UnityEngine.Object GetObject = Resources.Load(path);
-        GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
+        SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
         SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
         //NEED TO DESTROY OBJECT
@@ -80,6 +81,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void DestroySpawnedItems()
     {
         items.SetActive(false);
+        Destroy(SetObject);
     }
 
     void OnEnable()
