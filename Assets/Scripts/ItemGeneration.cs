@@ -10,9 +10,16 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     [SerializeField]
     private string RandomItemName;
+    private int RandInt;
+    private Vector3 ItemVector;
 
     //List of possible perks
-    string[] AllItems = new string[] { "GoFast", "DamageIncrease", "MoreHealth", "Armour", "HighCapacityMagazine", "ShootFaster" };
+    //make this a dictionary with the key a description of what the item does
+    string[] AllItems = new string[] { "Pills", "Pheromones" };
+    public GameObject[] PerkObjects = new GameObject[] { };
+
+
+
     //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
 
     //calc length of item list
@@ -25,23 +32,50 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     public void Start()
     {
+        ItemVector = gameObject.transform.position;
+        Debug.Log(ItemVector);
+        //these are obviously relative
+        //(-12.29, 2.02, 49.41)
+        //(-12.29, 2.02, 51.69)
+
     }
 
     public void GetRandomInt()
     {
         //Gets random number from 0 to length of list,
         //will be used to get index of perk
-        int RandInt = Random.Range(0, AllItems.Length);
+        RandInt = Random.Range(0, AllItems.Length);
         RandomItemName = AllItems[RandInt];
+
+        //Spawn object
+        //gets path
+        //loads object and resizes it
+        string path = $"Items/{RandomItemName}";
+        UnityEngine.Object GetObject = Resources.Load(path);
+        GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
+        SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+
+        //NEED TO DESTROY OBJECT
+
+        //set weapons from path
+        //then use inheritance to set the correct settings
     }
 
 
     public void ActionFunction()
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
+
+        //another ass method
+        //relys on all objects in list being in a particular order
+        gameObject.SendMessage("RecievePerkIndex", RandInt);
         //play item animation disappear
         Invoke("DestroySpawnedItems", 0.2f);
+
+
     }
+
+
 
     public void DestroySpawnedItems()
     {

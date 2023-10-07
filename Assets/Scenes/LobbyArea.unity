@@ -297,6 +297,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18013333}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &23621475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+  m_PrefabInstance: {fileID: 4938230385994192012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65894deb8d572459de9076d9135519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &50500089
 GameObject:
   m_ObjectHideFlags: 0
@@ -19117,7 +19128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.486
+      value: 17.33
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19125,7 +19136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.39
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 4828605516050538221, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19155,6 +19166,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4938230384962540737, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 6e1c2396faaf11b4db83ba6303a1e19e, type: 3}
+    - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 91877a74feeb4d24581caf10cb7bc8cb, type: 3}
+    - target: {fileID: 4938230385338297841, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938230385338297842, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.251
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230385823873281, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: WarningTMP
       value: 
@@ -19167,10 +19202,26 @@ PrefabInstance:
       propertyPath: currencySystem
       value: 
       objectReference: {fileID: 7309461463745230933}
+    - target: {fileID: 4938230386496344552, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: RandomItemName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 6e1c2396faaf11b4db83ba6303a1e19e, type: 3}
+    - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: PerkObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 91877a74feeb4d24581caf10cb7bc8cb, type: 3}
     - target: {fileID: 5208825899459232855, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: m_Name
       value: VendingMachine
@@ -19191,6 +19242,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 902024678}
+    - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: itemGeneration
+      value: 
+      objectReference: {fileID: 23621475}
     - target: {fileID: 5488174097709635743, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: weaponSelectionMenu
       value: 
