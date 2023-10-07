@@ -54,6 +54,11 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         UnityEngine.Object GetObject = Resources.Load(path);
         GameObject SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
         SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+
+        //NEED TO DESTROY OBJECT
+
+        //set weapons from path
+        //then use inheritance to set the correct settings
     }
 
 
