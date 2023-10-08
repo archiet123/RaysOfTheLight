@@ -123,4 +123,9 @@ public class Perks : MonoBehaviour
         //write values to playerprefs
         PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
     }
+
+    public void Spanner()
+    {
+        Debug.Log("olly is stinky");
+    }
 }
