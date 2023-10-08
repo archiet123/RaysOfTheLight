@@ -29,12 +29,6 @@ public class Perks : MonoBehaviour
 
     }
 
-    public void RecievePerkIndex(int ObjectID)
-    {
-        // GameObject SetPerk = itemGeneration.PerkObjects[ObjectID];
-        // gameObject = SetPerk;
-    }
-
     //All perk functions below
     //I recommend ctrl + f
     public void Akdov()
@@ -64,7 +58,7 @@ public class Perks : MonoBehaviour
 
     public void Pills()
     {
-        //Debug.Log();.Log($"Picked GoFast");
+        Debug.Log($"Picked GoFast");
 
         int PlayerSpeedCounter = vendingMachineScript.MoveSpeedCounter += 1;
         player.GetComponent<PlayerMovement>().MoveSpeed += 1f;
@@ -79,12 +73,7 @@ public class Perks : MonoBehaviour
     {
         //Debug.Log();.Log($"Picked DamageIncrease");
     }
-    public void MoreHealth()
-    {
-        // //Debug.Log();.Log($"Picked MoreHealth");
 
-        player.GetComponent<PlayerHealth>().IncreaseHealth(25);
-    }
     public void Pheromones()
     {
         //Debug.Log();.Log($"Picked Armour");
@@ -127,5 +116,17 @@ public class Perks : MonoBehaviour
     public void Spanner()
     {
         Debug.Log("olly is stinky");
+    }
+
+    public void Mag()
+    {
+        Debug.Log("increase ammo capacity");
+    }
+
+    public void Meds()
+    {
+        // Debug.Log("increase health");
+        player.GetComponent<PlayerHealth>().IncreaseHealth(25);
+        //need to refrence health bar to stretch bar
     }
 }
