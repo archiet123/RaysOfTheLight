@@ -8,7 +8,6 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public int GameScene;
     public GameObject Portal;
     public Collider TeleporterCollider;
-    // public GameObject PortalObject;
 
     //to make sure the player always spawns with pistol and shotgun
     public void Awake()

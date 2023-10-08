@@ -53,7 +53,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         string path = $"Items/{RandomItemName}";
         UnityEngine.Object GetObject = Resources.Load(path);
         SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
-        // SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
         // DestroyList.Add(SetObject);
         vendingMachineScript.DestroyList.Add(SetObject);
