@@ -12,7 +12,6 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     //currency script
     public CurrencySystem currencySystem;
-    public ItemGeneration itemGeneration;
 
     //value of currency
     private int CurrentCurrency;
@@ -29,6 +28,8 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
     public float ROFCounter;
     public int MoveSpeedCounter;
     public int FOVCounter;
+
+    public List<GameObject> DestroyList = new List<GameObject>();
 
     //entities functionality goes here
     public void ActionFunction()

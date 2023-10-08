@@ -5,19 +5,19 @@ using System;
 using Random = UnityEngine.Random;
 public class ItemGeneration : MonoBehaviour, IInteractable
 {
+    public VendingMachineScript vendingMachineScript;
     public GameObject SetObject;
     public GameObject items;
-    public int itemOption;
-
-    [SerializeField]
-    private string RandomItemName;
+    [SerializeField] private string RandomItemName;
     private int RandInt;
     private Vector3 ItemVector;
 
     //List of possible perks
     //make this a dictionary with the key a description of what the item does
-    string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds"};
+    string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     public GameObject[] PerkObjects = new GameObject[] { };
+
+    //items to destroy 
 
 
 
@@ -29,15 +29,14 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //This methods means that all unique ability scripts will be stored on the spawned items,
     //this logic just sets one to active at random and 
 
-
-
     public void Start()
     {
         ItemVector = gameObject.transform.position;
-        Debug.Log(ItemVector);
+        // Debug.Log(ItemVector);
         //these are obviously relative
         //(-12.29, 2.02, 49.41)
         //(-12.29, 2.02, 51.69)
+
 
     }
 
@@ -54,8 +53,10 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         string path = $"Items/{RandomItemName}";
         UnityEngine.Object GetObject = Resources.Load(path);
         SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
-        SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+        // SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
+        // DestroyList.Add(SetObject);
+        vendingMachineScript.DestroyList.Add(SetObject);
         //NEED TO DESTROY OBJECT
 
         //set weapons from path
@@ -68,12 +69,9 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         gameObject.SendMessage("RecievePerkName", RandomItemName);
 
         //another ass method
-        //relys on all objects in list being in a particular order
-        gameObject.SendMessage("RecievePerkIndex", RandInt);
+        //relys on all objects in list being in a particular order        
         //play item animation disappear
         Invoke("DestroySpawnedItems", 0.2f);
-
-
     }
 
 
@@ -81,7 +79,11 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void DestroySpawnedItems()
     {
         items.SetActive(false);
-        Destroy(SetObject);
+        // Destroy(SetObject);
+        foreach (GameObject go in vendingMachineScript.DestroyList)
+        {
+            Destroy(go);
+        }
     }
 
     void OnEnable()

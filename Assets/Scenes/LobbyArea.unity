@@ -19171,6 +19171,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: vendingMachineScript
+      value: 
+      objectReference: {fileID: 543450651717683810}
+    - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: PerkObjects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -19210,6 +19214,10 @@ PrefabInstance:
       propertyPath: RandomItemName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
+      propertyPath: vendingMachineScript
+      value: 
+      objectReference: {fileID: 543450651717683810}
     - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: PerkObjects.Array.size
       value: 2
