@@ -7,6 +7,11 @@ public class PlayerInteract : MonoBehaviour
     //bools
     public bool DisableInteract = false;
 
+
+
+
+
+
     private void Update()
     {
 
