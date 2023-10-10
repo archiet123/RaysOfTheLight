@@ -11241,11 +11241,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340345934}
   m_CullTransparentMesh: 1
---- !u!1 &1351268882 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5492390376883818724, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
-  m_PrefabInstance: {fileID: 1854543944}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1357161074
 GameObject:
   m_ObjectHideFlags: 0
@@ -17049,7 +17044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1854543947 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4677026057833039789, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1001991720277384024, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
   m_PrefabInstance: {fileID: 1854543944}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1854543949 stripped
@@ -19680,7 +19675,7 @@ PrefabInstance:
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[4]
       value: 
-      objectReference: {fileID: 1351268882}
+      objectReference: {fileID: 1854543947}
     - target: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: Moners
       value: 15
@@ -20787,7 +20782,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5413824676667321543, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
 --- !u!1 &5255494054187144481 stripped
 GameObject:

@@ -13,7 +13,7 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public void Awake()
     {
         PlayerPrefs.SetInt("Slot1Weapon", 0);
-        PlayerPrefs.SetInt("Slot2Weapon", 1);
+        PlayerPrefs.SetInt("Slot2Weapon", 4);
 
         //perks
         PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);

@@ -58,7 +58,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         Addlisteners();
 
         float test = Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
-        // Debug.Log(test);
+        // Debug.Log(test);       
     }
 
     void Update()
@@ -95,25 +95,10 @@ public class WeaponSelectionMenu : MonoBehaviour
         Slot2 = (WeaponsToChoose2[loadedWeapon2]);
 
         float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
-        // Debug.Log(ROFMultiplier);
 
-
-
-        // Debug.Log(TimeBetweenShooting);
-
-        //Debug.Log(Slot1);
-        //Debug.Log(Slot2);
     }
 
-    void OnDestroy()
-    {
-        //write weapon data here      
-        //need to write current weapon IDs     
-        // Slot1WeaponID = Slot1.GetComponent<WeaponInfo>().WeaponID;
-        // PlayerPrefs.SetInt("Slot1Weapon", Slot1WeaponID);
-        // Slot2WeaponID = Slot2.GetComponent<WeaponInfo>().WeaponID;
-        // PlayerPrefs.SetInt("Slot2Weapon", Slot2WeaponID);
-    }
+
     public void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -145,6 +130,7 @@ public class WeaponSelectionMenu : MonoBehaviour
 
     public void GetWeaponInfo()
     {
+
         if (Slot1.tag == "Weapon" && Slot2.tag == "Weapon")
         {
             string Slot1WeaponName = Slot1.GetComponent<WeaponInfo>().WeaponName;
@@ -157,7 +143,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else
         {
-            //Debug.Log("a gun could not be found");
+            Debug.Log("Script could not be found");
         }
     }
 
@@ -210,4 +196,22 @@ public class WeaponSelectionMenu : MonoBehaviour
         AmmoCounter1.SetText(bulletsLeft1 / bulletsPerTap1 + " / " + magazineSize1 / bulletsPerTap1);
         AmmoCounter2.SetText(bulletsLeft2 / bulletsPerTap2 + " / " + magazineSize2 / bulletsPerTap2);
     }
+
+    //good testing but pointless
+
+    // public void GetWeaponType()
+    // {
+    //     if (Slot2.transform.GetChild(0).GetComponent<GunScript>())
+    //     {
+    //         Debug.Log("type gun");
+    //     }
+    //     else if (Slot2.transform.GetChild(0).GetComponent<MeleeScript>())
+    //     {
+    //         Debug.Log("Melee weapon");
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("scripts could not be found");
+    //     }
+    // }
 }
