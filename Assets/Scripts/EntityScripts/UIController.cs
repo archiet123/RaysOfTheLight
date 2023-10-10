@@ -12,8 +12,10 @@ public class UIController : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject WinDisplay;
     public GameObject LoseDisplay;
+    public GameObject PerkInfoUI;
     //bools
     public static bool isPaused;
+    public bool PerkInfo;
     [SerializeField] public static bool DisablePauseMenu = false;
     public static bool OptionsDisplayed = false;
 
@@ -30,7 +32,7 @@ public class UIController : MonoBehaviour
     private void GetInput()
     {
 
-        if (!DisablePauseMenu)
+        if (!DisablePauseMenu && !PerkInfo)
         {
             //if false the pause menu will be displayed
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,13 +41,21 @@ public class UIController : MonoBehaviour
                 {
                     HideOptionsMenu();
                 }
+                else if (PerkInfo)
+                {
+                    HidePerkUI();
+                }
                 else if (isPaused)
                 {
                     ResumeGame();
                 }
-                else
+                else if (!PerkInfo)
                 {
                     PauseGame();
+                }
+                else
+                {
+                    Debug.Log("error");
                 }
             }
             else
@@ -74,7 +84,24 @@ public class UIController : MonoBehaviour
         }
         else
         {
-            Debug.Log("error");
+            // Debug.Log("error");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            //if tab clicked
+            //if pause menu is not displayed
+            //if perkUI menu is not displayed
+            if (!isPaused && !PerkInfo)
+            {
+                ShowPerkUI();
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            {
+                HidePerkUI();
+            }
         }
     }
 
@@ -96,7 +123,6 @@ public class UIController : MonoBehaviour
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
     }
 
     public void DisplayOptionsMenu()
@@ -131,4 +157,17 @@ public class UIController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    public void ShowPerkUI()
+    {
+        PerkInfo = true;
+        PerkInfoUI.SetActive(true);
+    }
+
+    public void HidePerkUI()
+    {
+        PerkInfo = false;
+        PerkInfoUI.SetActive(false);
+    }
 }
+

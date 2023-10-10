@@ -52,7 +52,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         //loads object and resizes it
         string path = $"Items/{RandomItemName}";
         UnityEngine.Object GetObject = Resources.Load(path);
-        SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.identity); // Quaternion.identity needs to flip item 180
+        SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.Euler(0f, 180f, 0f)); // Quaternion.identity needs to flip item 180
         SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 
         // DestroyList.Add(SetObject);
