@@ -33,32 +33,32 @@ public class Perks : MonoBehaviour
     //I recommend ctrl + f
     public void Akdov()
     {
-        //Debug.Log();.Log($"Picked Akdov");
+        ////Debug.Log();.Log($"Picked Akdov");
     }
 
     public void FabergeEgg()
     {
-        //Debug.Log();.Log($"Picked FabergeEgg");
+        ////Debug.Log();.Log($"Picked FabergeEgg");
     }
 
     public void MouldyTurnip()
     {
-        //Debug.Log();.Log($"Picked MouldyTurnip");
+        ////Debug.Log();.Log($"Picked MouldyTurnip");
     }
 
     public void JarOfBees()
     {
-        //Debug.Log();.Log($"Picked JarOfBees");
+        ////Debug.Log();.Log($"Picked JarOfBees");
     }
 
     public void Beans()
     {
-        //Debug.Log();.Log($"Picked Beans");
+        ////Debug.Log();.Log($"Picked Beans");
     }
 
     public void Pills()
     {
-        Debug.Log($"Picked GoFast");
+        //Debug.Log($"Picked GoFast");
 
         int PlayerSpeedCounter = vendingMachineScript.MoveSpeedCounter += 1;
         player.GetComponent<PlayerMovement>().MoveSpeed += 1f;
@@ -71,20 +71,20 @@ public class Perks : MonoBehaviour
 
     public void DamageIncrease()
     {
-        //Debug.Log();.Log($"Picked DamageIncrease");
+        ////Debug.Log();.Log($"Picked DamageIncrease");
     }
 
     public void Pheromones()
     {
-        //Debug.Log();.Log($"Picked Armour");
+        ////Debug.Log();.Log($"Picked Armour");
     }
     public void HighCapacityMagazine()
     {
-        //Debug.Log();.Log($"Picked HighCapacityMagazine");
+        ////Debug.Log();.Log($"Picked HighCapacityMagazine");
     }
     public void ShootFaster()
     {
-        //Debug.Log();.Log($"Picked ShootFaster");
+        ////Debug.Log();.Log($"Picked ShootFaster");
 
         //a counter is required because the selected weapon will change
         //meaning the variable value will be different for each weapon
@@ -107,7 +107,7 @@ public class Perks : MonoBehaviour
         Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
         Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
 
-        Debug.Log(ROFMultiplier);
+        //Debug.Log(ROFMultiplier);
 
         //write values to playerprefs
         PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
@@ -115,17 +115,17 @@ public class Perks : MonoBehaviour
 
     public void Spanner()
     {
-        Debug.Log("olly is stinky");
+        //Debug.Log("olly is stinky");
     }
 
     public void Mag()
     {
-        Debug.Log("increase ammo capacity");
+        // //Debug.Log("increase ammo capacity");
     }
 
     public void Meds()
     {
-        // Debug.Log("increase health");
+        // //Debug.Log("increase health");
         player.GetComponent<PlayerHealth>().IncreaseHealth(25);
         //need to refrence health bar to stretch bar
     }
