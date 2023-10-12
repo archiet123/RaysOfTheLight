@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5566283238560439011}
   - component: {fileID: 5566283238560439014}
   - component: {fileID: 3017044195382721160}
+  - component: {fileID: 5333329409755004593}
+  - component: {fileID: 6599694390187921594}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -80,6 +82,8 @@ MonoBehaviour:
   OptionsMenu: {fileID: 0}
   WinDisplay: {fileID: 0}
   LoseDisplay: {fileID: 0}
+  PerkInfoUI: {fileID: 0}
+  PerkInfo: 0
 --- !u!114 &5566283238560439011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,11 +148,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15ced5a6c744b24ba0a4ee227ba19e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elevator: {fileID: 0}
   Kitchen: Kitchen
   Office: Office
-  ServerRoom: Server
+  Server: 
+  Storage: 
+  Confrence: 
   KitchenEnemyCount: 3
   OfficeEnemyCount: 6
   ServerEnemyCount: 2
+  StorageEnemyCount: 0
+  ConfrenceEnemyCount: 0
   animator: {fileID: 0}
   TotalDead: 0
+  CompletedRooms: []
+--- !u!114 &5333329409755004593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904546213075817199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PerkList: []
+  PerkContainer: {fileID: 0}
+--- !u!114 &6599694390187921594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904546213075817199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PerkList: []
+  PerkContainer: {fileID: 0}

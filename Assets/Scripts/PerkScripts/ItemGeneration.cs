@@ -6,7 +6,8 @@ using Random = UnityEngine.Random;
 public class ItemGeneration : MonoBehaviour, IInteractable
 {
     public VendingMachineScript vendingMachineScript;
-    public GameObject SetObject;
+    public InventoryManager inventoryManager;
+    private GameObject SetObject;
     public GameObject items;
     [SerializeField] private string RandomItemName;
     private int RandInt;
@@ -18,11 +19,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public GameObject[] PerkObjects = new GameObject[] { };
 
     //items to destroy 
-
-
-
     //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
-
     //calc length of item list
     //output random string from 0,length of list
     //GameObject.Find corresponding Named script on Spawned perk 'item'
@@ -32,10 +29,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void Start()
     {
         ItemVector = gameObject.transform.position;
-        // Debug.Log(ItemVector);
-        //these are obviously relative
-        //(-12.29, 2.02, 49.41)
-        //(-12.29, 2.02, 51.69)
+        // Debug.Log(ItemVector);    
 
 
     }
@@ -47,6 +41,8 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         RandInt = Random.Range(0, AllItems.Length);
         RandomItemName = AllItems[RandInt];
 
+
+
         //Spawn object
         //gets path
         //loads object and resizes it
@@ -54,8 +50,6 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         UnityEngine.Object GetObject = Resources.Load(path);
         SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.Euler(0f, 180f, 0f)); // Quaternion.identity needs to flip item 180
         SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
-
-        // DestroyList.Add(SetObject);
         vendingMachineScript.DestroyList.Add(SetObject);
         //NEED TO DESTROY OBJECT
 
@@ -63,23 +57,18 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         //then use inheritance to set the correct settings
     }
 
-
     public void ActionFunction()
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
-
-        //another ass method
-        //relys on all objects in list being in a particular order        
+        inventoryManager.PerkList.Add(RandomItemName);
+        inventoryManager.UpdatePerkQuantities();
         //play item animation disappear
         Invoke("DestroySpawnedItems", 0.2f);
     }
 
-
-
     public void DestroySpawnedItems()
     {
         items.SetActive(false);
-        // Destroy(SetObject);
         foreach (GameObject go in vendingMachineScript.DestroyList)
         {
             Destroy(go);
