@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
     // List<Sprite> PerkSprites = new List<Sprite>();
 
     public GameObject PerkContainer;
+    private string ImgToSet;
+    private string path;
     // public GameObject PerkContainer;
 
     //PerkName will be added to PerkUIList when perk is picked
@@ -29,40 +31,105 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void UpdatePerkQuantities()
+    public void UpdatePerkQuantities(string RandomItemName)
     {
-        var List = PerkList.GroupBy(item => item).Select(g => new { Value = g.Key, Count = g.Count() }).OrderByDescending(item => item.Count);
+        bool Add = true;
+        Debug.Log(Add);
+        // string item = RandomItemName;
 
-        foreach (var i in List)
+        foreach (string item in PerkList)
         {
-            Debug.Log("Value: " + i.Value + " Count: " + i.Count);
-            // Debug.Log(List);
-            string ImgToSet = i.Value;
-            string path = $"ItemIcons/{ImgToSet}";
+            if (item.Contains(RandomItemName))
+            {
+                Add = false;
+            }
+            else
+            {
+                Add = true;
+                PerkList.Add(RandomItemName);
+            }
 
-            GameObject imgObject = new GameObject(path);
-            RectTransform trans = imgObject.AddComponent<RectTransform>();
+        }
 
-            trans.transform.SetParent(PerkContainer.transform); // setting parent
-            trans.localScale = Vector3.one;
-            trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
-            trans.sizeDelta = new Vector2(50, 50); // custom size
+        ImgToSet = RandomItemName;
+        path = $"ItemIcons/{ImgToSet}";
 
+        GameObject imgObject = new GameObject(path);
+        RectTransform trans = imgObject.AddComponent<RectTransform>();
+        // Debug.Log(imgObject);
+
+        trans.transform.SetParent(PerkContainer.transform); // setting parent
+        trans.localScale = Vector3.one;
+        trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
+        trans.sizeDelta = new Vector2(50, 50); // custom size
+        Debug.Log($"before {Add}");
+        if (Add)
+        {
+            Debug.Log($"after {Add}");
             Image image = imgObject.AddComponent<Image>();
             Texture2D tex = Resources.Load<Texture2D>(path);
             image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0f, 0f));
             imgObject.transform.SetParent(PerkContainer.transform);
-
-
-            //create text in code]
-            //add image to that text??
-
-            //or instantiate text to image??
-            //check if i.value is in list
-            //if not, destroy current and instantiate new text
-            //this 
-
-            //else
         }
+
+    }
+
+    //     var List = PerkList.GroupBy(item => item).Select(g => new { Value = g.Key, Count = g.Count() }).OrderByDescending(item => item.Count);
+
+    //     int test = PerkList.item.Count;
+
+    //     foreach (var i in List)
+    //     {
+    //         Debug.Log("Value: " + i.Value + " Count: " + i.Count);
+    //         // Debug.Log(List);
+
+    //         ImgToSet = i.Value;
+    //         path = $"ItemIcons/{ImgToSet}";
+
+    //         if (i.Count > 1)
+    //         {
+    //             Debug.Log("already set");
+    //         }
+    //         else
+    //         {
+    //             AddImage();
+    //             Debug.Log(ImgToSet);
+    //         }
+
+    //     }
+    // }
+    // var selectQuery = from word in PerkList group word by word into g select new { Word = g.Key, Count = g.Count() };
+    //     foreach (var word in selectQuery)
+    //     {
+    //         int amount = word.Count;
+    //         if (amount > 1)
+    //         {
+    //             Add = false;
+    //             Debug.Log(Add);
+    //             Debug.Log($"dont add {word.Word}: {amount}");
+    //         }
+    //         else
+    //         {
+    //             Debug.Log($"add {word.Word}: {amount}");
+    //             Add = true;
+    //         }
+
+    //     }
+
+    public void AddImage()
+    {
+        GameObject imgObject = new GameObject(path);
+        RectTransform trans = imgObject.AddComponent<RectTransform>();
+        Debug.Log(imgObject);
+
+        trans.transform.SetParent(PerkContainer.transform); // setting parent
+        trans.localScale = Vector3.one;
+        trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
+        trans.sizeDelta = new Vector2(50, 50); // custom size
+
+        Image image = imgObject.AddComponent<Image>();
+        Texture2D tex = Resources.Load<Texture2D>(path);
+        image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0f, 0f));
+        imgObject.transform.SetParent(PerkContainer.transform);
     }
 }

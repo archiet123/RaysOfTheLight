@@ -60,8 +60,8 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void ActionFunction()
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
-        inventoryManager.PerkList.Add(RandomItemName);
-        inventoryManager.UpdatePerkQuantities();
+        // inventoryManager.PerkList.Add(RandomItemName);
+        inventoryManager.UpdatePerkQuantities(RandomItemName);
         //play item animation disappear
         Invoke("DestroySpawnedItems", 0.2f);
     }
