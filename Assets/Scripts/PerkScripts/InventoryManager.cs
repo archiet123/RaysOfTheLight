@@ -47,6 +47,11 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log(Add);
                 Debug.Log($"dont add {word.Word}: {amount}");
             }
+            else
+            {
+                Debug.Log($"add {word.Word}: {amount}");
+                Add = true;
+            }
 
         }
         ImgToSet = RandomItemName;
@@ -54,14 +59,16 @@ public class InventoryManager : MonoBehaviour
 
         GameObject imgObject = new GameObject(path);
         RectTransform trans = imgObject.AddComponent<RectTransform>();
-        Debug.Log(imgObject);
+        // Debug.Log(imgObject);
 
         trans.transform.SetParent(PerkContainer.transform); // setting parent
         trans.localScale = Vector3.one;
         trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
         trans.sizeDelta = new Vector2(50, 50); // custom size
+        Debug.Log($"before {Add}");
         if (Add)
         {
+            Debug.Log($"after {Add}");
             Image image = imgObject.AddComponent<Image>();
             Texture2D tex = Resources.Load<Texture2D>(path);
             image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0f, 0f));
