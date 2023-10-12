@@ -35,25 +35,22 @@ public class InventoryManager : MonoBehaviour
     {
         bool Add = true;
         Debug.Log(Add);
+        // string item = RandomItemName;
 
-        //this is linq bullshit to get count of string in list
-        var selectQuery = from word in PerkList group word by word into g select new { Word = g.Key, Count = g.Count() };
-        foreach (var word in selectQuery)
+        foreach (string item in PerkList)
         {
-            int amount = word.Count;
-            if (amount > 1)
+            if (item.Contains(RandomItemName))
             {
                 Add = false;
-                Debug.Log(Add);
-                Debug.Log($"dont add {word.Word}: {amount}");
             }
             else
             {
-                Debug.Log($"add {word.Word}: {amount}");
                 Add = true;
+                PerkList.Add(RandomItemName);
             }
 
         }
+
         ImgToSet = RandomItemName;
         path = $"ItemIcons/{ImgToSet}";
 
@@ -101,6 +98,23 @@ public class InventoryManager : MonoBehaviour
 
     //     }
     // }
+    // var selectQuery = from word in PerkList group word by word into g select new { Word = g.Key, Count = g.Count() };
+    //     foreach (var word in selectQuery)
+    //     {
+    //         int amount = word.Count;
+    //         if (amount > 1)
+    //         {
+    //             Add = false;
+    //             Debug.Log(Add);
+    //             Debug.Log($"dont add {word.Word}: {amount}");
+    //         }
+    //         else
+    //         {
+    //             Debug.Log($"add {word.Word}: {amount}");
+    //             Add = true;
+    //         }
+
+    //     }
 
     public void AddImage()
     {
