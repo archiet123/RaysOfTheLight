@@ -78,13 +78,20 @@ public class InventoryManager : MonoBehaviour
             GameObject PerkCounterText = new GameObject("PerkCounter");
             PerkCounterText.transform.SetParent(imgObject.transform);
 
+            RectTransform TextTrans = PerkCounterText.AddComponent<RectTransform>();
+            TextTrans.anchoredPosition = new Vector2(40f, -35f);
+
+
             Text CounterText = PerkCounterText.AddComponent<Text>();
             CounterText.transform.SetParent(PerkCounterText.transform);
-            CounterText.text = "0";
 
+            CounterText.text = "0";
             Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
             CounterText.font = ArialFont;
             CounterText.material = ArialFont.material;
+            // CounterText.color = Color.Red;
+
+            CounterText.color = new Color(2, 0, 0, 2);
 
         }
 
