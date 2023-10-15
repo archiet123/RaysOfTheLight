@@ -40,8 +40,10 @@ public class InventoryManager : MonoBehaviour
         if (PerkList.Contains(RandomItemName))
         {
             Add = false;
-            // PerkList.Add($"already in list{RandomItemName}");
             Debug.Log($"{RandomItemName} already in list");
+            //position is the index that the item is in the list, will be the same as the item in hierarcy
+            int position = PerkList.IndexOf(RandomItemName);
+            Debug.Log(position);
         }
         else
         {
@@ -53,7 +55,7 @@ public class InventoryManager : MonoBehaviour
         ImgToSet = RandomItemName;
         path = $"ItemIcons/{ImgToSet}";
 
-        GameObject imgObject = new GameObject(path);
+        GameObject imgObject = new GameObject(RandomItemName);
         RectTransform trans = imgObject.AddComponent<RectTransform>();
         // Debug.Log(imgObject);
 
@@ -61,6 +63,7 @@ public class InventoryManager : MonoBehaviour
         // Debug.Log($"before {Add}");
         if (Add)
         {
+            //setting image
             trans.transform.SetParent(PerkContainer.transform); // setting parent
             trans.localScale = Vector3.one;
             trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
@@ -70,7 +73,26 @@ public class InventoryManager : MonoBehaviour
             Texture2D tex = Resources.Load<Texture2D>(path);
             image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0f, 0f));
             imgObject.transform.SetParent(PerkContainer.transform);
+
+            //setting text
+            GameObject PerkCounterText = new GameObject("PerkCounter");
+            PerkCounterText.transform.SetParent(imgObject.transform);
+
+            Text CounterText = PerkCounterText.AddComponent<Text>();
+            CounterText.transform.SetParent(PerkCounterText.transform);
+            CounterText.text = "0";
+
+            Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
+            CounterText.font = ArialFont;
+            CounterText.material = ArialFont.material;
+
         }
 
+        //too instantiate text on the correct item get index of item in list, 
+        //get index
+        //set parent to gameobject in hierarcy of the same index as item in list
+        //get counter of this item from playerprefs
+        //clear any text that has previously been set to this gameobject
+        //instantiate new text on corresponding gameobject using playerprefs counter variable
     }
 }
