@@ -85,7 +85,9 @@ public class InventoryManager : MonoBehaviour
             Text CounterText = PerkCounterText.AddComponent<Text>();
             CounterText.transform.SetParent(PerkCounterText.transform);
 
-            CounterText.text = "0";
+            int textValue = PlayerPrefs.GetInt(RandomItemName);
+            Debug.Log(textValue);
+            CounterText.text = textValue.ToString();
             Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
             CounterText.font = ArialFont;
             CounterText.material = ArialFont.material;
