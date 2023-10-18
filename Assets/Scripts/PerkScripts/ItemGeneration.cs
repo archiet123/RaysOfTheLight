@@ -34,7 +34,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void Start()
     {
         ItemVector = gameObject.transform.position;
-        // Debug.Log(ItemVector);    
+        // //.Log(ItemVector);    
 
 
     }
@@ -94,7 +94,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
             }
             catch
             {
-                Debug.Log("Perk not previously set");
+                //.Log("Perk not previously set");
             }
         }
     }
@@ -134,7 +134,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
 
     public Transform GetTransform()
     {
-        // Debug.Log("got transform");
+        // //.Log("got transform");
         return transform;
     }
 }

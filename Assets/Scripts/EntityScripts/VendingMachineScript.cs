@@ -50,7 +50,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         }
         else
         {
-            Debug.Log("vending machine type could not be found");
+            //.Log("vending machine type could not be found");
         }
 
     }
@@ -65,7 +65,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         }
         else
         {
-            // Debug.Log("Cannot afford");
+            // //.Log("Cannot afford");
             WarningParent.SetActive(true);
             WarningTMP.SetText("Cannot afford");
             countDownTimer();
@@ -117,7 +117,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     public Transform GetTransform()
     {
-        // Debug.Log("got transform");
+        // //.Log("got transform");
         return transform;
     }
 }

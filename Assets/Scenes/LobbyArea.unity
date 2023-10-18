@@ -21136,11 +21136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255494054293239576, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5255494054293239576, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5255494054326536485, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -21188,7 +21188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6311435924850716729, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6576714275730433091, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_RootOrder
@@ -21311,7 +21311,7 @@ MonoBehaviour:
   columns: 10
   rows: 0
   spacing: {x: 10, y: 10}
-  cellSize: {x: 30, y: 30}
+  cellSize: {x: 50, y: 50}
   fitX: 0
   fitY: 0
   NudgeLastItemsOver: 0
