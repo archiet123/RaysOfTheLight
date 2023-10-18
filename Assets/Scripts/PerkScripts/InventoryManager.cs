@@ -10,9 +10,11 @@ public class InventoryManager : MonoBehaviour
     public List<string> PerkList = new List<string> { };
     // List<Sprite> PerkSprites = new List<Sprite>();
 
+    public Font GameFont;
     public GameObject PerkContainer;
     private string ImgToSet;
     private string path;
+
     // public GameObject PerkContainer;
 
     //PerkName will be added to PerkUIList when perk is picked
@@ -34,19 +36,17 @@ public class InventoryManager : MonoBehaviour
     public void UpdatePerkQuantities(string RandomItemName)
     {
         bool Add = true;
-        // Debug.Log(Add);
-        // string item = RandomItemName;
 
         if (PerkList.Contains(RandomItemName))
         {
             Add = false;
-            Debug.Log($"{RandomItemName} already in list");
+            //.Log($"{RandomItemName} already in list");
             //position is the index that the item is in the list, will be the same as the item in hierarcy
             int position = PerkList.IndexOf(RandomItemName);
-            // Debug.Log(position);
+            // //.Log(position);
 
             // string CurrentItemText = PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text;
-            // Debug.Log(CurrentItemText);
+            // //.Log(CurrentItemText);
             int CurrentItemText = PlayerPrefs.GetInt(RandomItemName);
             PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text = CurrentItemText.ToString();
         }
@@ -54,18 +54,19 @@ public class InventoryManager : MonoBehaviour
         {
             Add = true;
             PerkList.Add(RandomItemName);
-            Debug.Log($"add to list{RandomItemName}");
+            //.Log($"add to list{RandomItemName}");
         }
 
         ImgToSet = RandomItemName;
         path = $"ItemIcons/{ImgToSet}";
+        string FontPath = "Fonts/OCR-A Regular";
 
         GameObject imgObject = new GameObject(RandomItemName);
         RectTransform trans = imgObject.AddComponent<RectTransform>();
-        // Debug.Log(imgObject);
+        // //.Log(imgObject);
 
 
-        // Debug.Log($"before {Add}");
+        // //.Log($"before {Add}");
         if (Add)
         {
             //setting new gameObjects size/parent/vector
@@ -85,22 +86,19 @@ public class InventoryManager : MonoBehaviour
             PerkCounterText.transform.SetParent(imgObject.transform);
 
             RectTransform TextTrans = PerkCounterText.AddComponent<RectTransform>();
-            TextTrans.anchoredPosition = new Vector2(40f, -35f);
-
+            TextTrans.anchoredPosition = new Vector2(45f, -35f);
 
             Text CounterText = PerkCounterText.AddComponent<Text>();
             CounterText.transform.SetParent(PerkCounterText.transform);
 
             int textValue = PlayerPrefs.GetInt(RandomItemName);
-            Debug.Log($"{RandomItemName}{textValue}");
+            //.Log($"{RandomItemName}{textValue}");
             CounterText.text = textValue.ToString();
-            Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
-            CounterText.font = ArialFont;
-            CounterText.material = ArialFont.material;
-            // CounterText.color = Color.Red;
 
+            CounterText.font = GameFont;
+            CounterText.material = GameFont.material;
             CounterText.color = new Color(2, 0, 0, 2);
-
+            CounterText.fontSize = 20;
         }
 
         //too instantiate text on the correct item get index of item in list, 
