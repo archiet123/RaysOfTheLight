@@ -43,7 +43,12 @@ public class InventoryManager : MonoBehaviour
             Debug.Log($"{RandomItemName} already in list");
             //position is the index that the item is in the list, will be the same as the item in hierarcy
             int position = PerkList.IndexOf(RandomItemName);
-            Debug.Log(position);
+            // Debug.Log(position);
+
+            // string CurrentItemText = PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text;
+            // Debug.Log(CurrentItemText);
+            int CurrentItemText = PlayerPrefs.GetInt(RandomItemName);
+            PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text = CurrentItemText.ToString();
         }
         else
         {
@@ -63,12 +68,13 @@ public class InventoryManager : MonoBehaviour
         // Debug.Log($"before {Add}");
         if (Add)
         {
-            //setting image
+            //setting new gameObjects size/parent/vector
             trans.transform.SetParent(PerkContainer.transform); // setting parent
             trans.localScale = Vector3.one;
             trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
             trans.sizeDelta = new Vector2(50, 50); // custom size
-            // Debug.Log($"after {Add}");
+
+            //creating image component and setting Source image
             Image image = imgObject.AddComponent<Image>();
             Texture2D tex = Resources.Load<Texture2D>(path);
             image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0f, 0f));
@@ -86,7 +92,7 @@ public class InventoryManager : MonoBehaviour
             CounterText.transform.SetParent(PerkCounterText.transform);
 
             int textValue = PlayerPrefs.GetInt(RandomItemName);
-            Debug.Log(textValue);
+            Debug.Log($"{RandomItemName}{textValue}");
             CounterText.text = textValue.ToString();
             Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
             CounterText.font = ArialFont;

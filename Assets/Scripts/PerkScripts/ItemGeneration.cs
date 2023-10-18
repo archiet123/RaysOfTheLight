@@ -26,6 +26,11 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //This methods means that all unique ability scripts will be stored on the spawned items,
     //this logic just sets one to active at random and 
 
+    public void Awake()
+    {
+        //foreach item in AllItems, PlayerPrefs.reset
+    }
+
     public void Start()
     {
         ItemVector = gameObject.transform.position;
@@ -60,13 +65,38 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     public void ActionFunction()
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
-        // inventoryManager.PerkList.Add(RandomItemName);
+
+        //will try to get counter otherwise will create new and +1
+        try
+        {
+            int CurrentItemCounter = PlayerPrefs.GetInt(RandomItemName);
+            CurrentItemCounter += 1;
+            PlayerPrefs.SetInt(RandomItemName, CurrentItemCounter);
+        }
+        catch
+        {
+            PlayerPrefs.SetInt(RandomItemName, 0);
+        }
         inventoryManager.UpdatePerkQuantities(RandomItemName);
-        
-        PlayerPrefs.SetInt(RandomItemName, +1);
 
         //play item animation disappear
+
         Invoke("DestroySpawnedItems", 0.2f);
+    }
+
+    void OnDestroy()
+    {
+        foreach (string ItemName in AllItems)
+        {
+            try
+            {
+                PlayerPrefs.SetInt(ItemName, 0);
+            }
+            catch
+            {
+                Debug.Log("Perk not previously set");
+            }
+        }
     }
 
     public void DestroySpawnedItems()
