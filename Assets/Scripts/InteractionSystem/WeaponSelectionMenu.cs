@@ -58,7 +58,10 @@ public class WeaponSelectionMenu : MonoBehaviour
         Addlisteners();
 
         float test = Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
-        // Debug.Log(test);       
+        // //.Log(test);       
+
+        int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
+        //.Log($"start {Slot2WeaponID}");
     }
 
     void Update()
@@ -83,17 +86,18 @@ public class WeaponSelectionMenu : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        // //Debug.Log(scene.name);
+        // ////.Log(scene.name);
         //read weapon data here
         int loadedWeapon1 = PlayerPrefs.GetInt("Slot1Weapon");
         int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
 
-        // ToSetActive1 = loadedWeapon1;
+        //.Log($"test {loadedWeapon1}");
+        //.Log($"test {loadedWeapon2}");
         // ToSetActive2 = loadedWeapon2;
 
         Slot1 = (WeaponsToChoose1[loadedWeapon1]);
         Slot2 = (WeaponsToChoose2[loadedWeapon2]);
-
+        //.Log(Slot2.ToString());
         float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
 
     }
@@ -143,7 +147,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("Script could not be found");
+            //.Log("Script could not be found");
         }
     }
 
@@ -179,7 +183,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         }
         else
         {
-            //Debug.Log("not worked");
+            ////.Log("not worked");
         }
     }
 
@@ -203,15 +207,15 @@ public class WeaponSelectionMenu : MonoBehaviour
     // {
     //     if (Slot2.transform.GetChild(0).GetComponent<GunScript>())
     //     {
-    //         Debug.Log("type gun");
+    //         //.Log("type gun");
     //     }
     //     else if (Slot2.transform.GetChild(0).GetComponent<MeleeScript>())
     //     {
-    //         Debug.Log("Melee weapon");
+    //         //.Log("Melee weapon");
     //     }
     //     else
     //     {
-    //         Debug.Log("scripts could not be found");
+    //         //.Log("scripts could not be found");
     //     }
     // }
 }
