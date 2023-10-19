@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00313068, g: 0.0061691664, b: 0.014243009, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031405292, g: 0.0061706104, b: 0.014241753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13086,7 +13086,7 @@ PrefabInstance:
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5558309240861622996}
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WeaponsToChoose2.Array.data[3]
       value: 
@@ -16589,6 +16589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1001991720277384024, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2722277470395579083, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: Bullet
       value: 
@@ -16942,6 +16946,14 @@ PrefabInstance:
       value: 3.303
       objectReference: {fileID: 0}
     - target: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_Name
+      value: Assult Rifle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677026057833039789, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -17019,6 +17031,11 @@ PrefabInstance:
       objectReference: {fileID: 300878840029604035}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+--- !u!1 &5558309240861622996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 5558309240861622995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5895585657311054375
 PrefabInstance:
   m_ObjectHideFlags: 0

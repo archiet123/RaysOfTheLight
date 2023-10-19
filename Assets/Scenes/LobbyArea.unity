@@ -16813,6 +16813,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1001991720277384024, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206447496731378835, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: WeaponID
       value: 2
@@ -20067,6 +20071,10 @@ PrefabInstance:
       propertyPath: EquipmentMenu
       value: 
       objectReference: {fileID: 369773981}
+    - target: {fileID: 6599694390187921594, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: GameFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 38c91d9d317da1348af427fb054476df, type: 3}
     - target: {fileID: 6599694390187921594, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: PerkContainer
       value: 
