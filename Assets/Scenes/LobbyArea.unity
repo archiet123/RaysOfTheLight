@@ -6444,7 +6444,7 @@ MonoBehaviour:
   Bullet: {fileID: 782911204}
   MaxCollisions: 10
   Collisions: 0
-  WeaponDamage: 25
+  WeaponDamage: 20
 --- !u!54 &782911207
 Rigidbody:
   m_ObjectHideFlags: 0

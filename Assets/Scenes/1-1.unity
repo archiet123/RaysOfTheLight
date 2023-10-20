@@ -16548,6 +16548,10 @@ PrefabInstance:
       propertyPath: gunscript
       value: 
       objectReference: {fileID: 7015627233885464181}
+    - target: {fileID: 5963129915795896655, guid: dde4c146aa71a82429808ecb84566e35, type: 3}
+      propertyPath: WeaponDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8495896291395274242, guid: dde4c146aa71a82429808ecb84566e35, type: 3}
       propertyPath: m_RootOrder
       value: 6

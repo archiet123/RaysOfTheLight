@@ -480,10 +480,11 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   ShootForce: 200
   UpwardForce: 0
-  TimeBetweenShooting: 0.5
-  spread: 2
-  ReloadTime: 2
+  TimeBetweenShooting: 1
+  spread: 1.5
+  ReloadTime: 3
   TimeBetweenShots: 0
+  BaseROF: 0
   MagazineSize: 16
   BulletsPerTap: 8
   AllowButtonHold: 0
@@ -496,7 +497,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 0}
   ReloadFX: {fileID: 0}
-  animator: {fileID: 6312068635014154339}
 --- !u!1 &7827229409008048930
 GameObject:
   m_ObjectHideFlags: 0
