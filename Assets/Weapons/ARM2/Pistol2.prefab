@@ -761,7 +761,7 @@ MonoBehaviour:
   TimeBetweenShooting: 0.3
   spread: 0
   ReloadTime: 1.5
-  TimeBetweenShots: 0.6
+  TimeBetweenShots: 0.5
   BaseROF: 0
   MagazineSize: 10
   BulletsPerTap: 1

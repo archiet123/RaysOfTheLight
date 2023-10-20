@@ -792,10 +792,10 @@ MonoBehaviour:
   Bullet: {fileID: 0}
   ShootForce: 500
   UpwardForce: 0
-  TimeBetweenShooting: 0.6
+  TimeBetweenShooting: 0.5
   spread: 0
-  ReloadTime: 1.2
-  TimeBetweenShots: 0.15
+  ReloadTime: 1.5
+  TimeBetweenShots: 0.5
   BaseROF: 0
   MagazineSize: 10
   BulletsPerTap: 1
