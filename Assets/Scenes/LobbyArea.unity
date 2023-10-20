@@ -7060,7 +7060,7 @@ MonoBehaviour:
   spread: 0
   ReloadTime: 1.5
   TimeBetweenShots: 0
-  BaseROF: 0.25
+  BaseROF: 0.15
   MagazineSize: 30
   BulletsPerTap: 1
   AllowButtonHold: 1
@@ -7505,7 +7505,7 @@ MonoBehaviour:
   Bullet: {fileID: 914442450}
   MaxCollisions: 0
   Collisions: 0
-  WeaponDamage: 50
+  WeaponDamage: 10
   EnemyDamage: 20
 --- !u!1001 &941431491
 PrefabInstance:
@@ -17374,7 +17374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5580381669142736285, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: TimeBetweenShooting
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8285440497477263804, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: m_LocalPosition.x

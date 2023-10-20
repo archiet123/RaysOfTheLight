@@ -16548,6 +16548,10 @@ PrefabInstance:
       propertyPath: gunscript
       value: 
       objectReference: {fileID: 7015627233885464181}
+    - target: {fileID: 5963129915396061040, guid: dde4c146aa71a82429808ecb84566e35, type: 3}
+      propertyPath: WeaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5963129915795896655, guid: dde4c146aa71a82429808ecb84566e35, type: 3}
       propertyPath: WeaponDamage
       value: 20
@@ -17177,6 +17181,10 @@ PrefabInstance:
       propertyPath: PlayerCam
       value: 
       objectReference: {fileID: 300878840029604035}
+    - target: {fileID: 5580381669142736285, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: TimeBetweenShooting
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
 --- !u!1 &5558309240861622996 stripped
