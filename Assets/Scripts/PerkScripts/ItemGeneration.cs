@@ -17,6 +17,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //make this a dictionary with the key a description of what the item does
     string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     public GameObject[] PerkObjects = new GameObject[] { };
+    private string[] TestArray = new string[] { };
 
     //items to destroy 
     //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
@@ -66,6 +67,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     {
         gameObject.SendMessage("RecievePerkName", RandomItemName);
 
+        //adding +1 when perk picked
         //will try to get counter otherwise will create new and +1
         try
         {
@@ -77,6 +79,10 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         {
             PlayerPrefs.SetInt(RandomItemName, 0);
         }
+
+        //testing ArrayPrefs2
+        PlayerPrefsX.SetStringArray(RandomItemName, TestArray);
+
         inventoryManager.UpdatePerkQuantities(RandomItemName);
 
         //play item animation disappear
@@ -84,19 +90,12 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         Invoke("DestroySpawnedItems", 0.2f);
     }
 
+
+    //move this to lobby only object
+
     void OnDestroy()
     {
-        foreach (string ItemName in AllItems)
-        {
-            try
-            {
-                PlayerPrefs.SetInt(ItemName, 0);
-            }
-            catch
-            {
-                //.Log("Perk not previously set");
-            }
-        }
+
     }
 
     public void DestroySpawnedItems()

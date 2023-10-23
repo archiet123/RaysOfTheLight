@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public List<string> PerkList = new List<string> { };
     private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     // List<Sprite> PerkSprites = new List<Sprite>();
+    private string[] TestArray = new string[] { };
 
     public Font GameFont;
     public GameObject PerkContainer;
@@ -29,25 +30,43 @@ public class InventoryManager : MonoBehaviour
     //  add sprite to PerkList (content)
     //}
 
-    // void Awake()
-    // {
-    //     foreach (string ItemName in AllItems)
-    //     {
-    //         try
-    //         {
-    //             PlayerPrefs.GetInt(ItemName);
-    //             PerkList.Add(ItemName);
-    //         }
-    //         catch
-    //         {
-    //             Debug.Log($"{ItemName} Perk not previously set");
-    //         }
-    //     }
-    // }
+    void Awake()
+    {
+
+    }
+
+    void Start()
+    {
+        OnStartPerkChecker();
+    }
 
     void Update()
     {
 
+    }
+
+    public void OnStartPerkChecker()
+    {
+        foreach (string ItemName in AllItems)
+        {
+            // try
+            // {
+            //     int CurrentItemCounter = PlayerPrefs.GetInt(ItemName);
+            //     if (CurrentItemCounter > 0)
+            //     {
+            //         // Debug.Log(CurrentItemCounter);
+            //         UpdatePerkQuantities(ItemName);
+            //     }
+            //     // PerkList.Add(ItemName);
+            //     // Debug.Log(NewItemName.ToString());
+            // }
+            // catch
+            // {
+            //     Debug.Log($"{ItemName} Perk not previously set");
+            // }
+
+
+        }
     }
 
     public void UpdatePerkQuantities(string RandomItemName)

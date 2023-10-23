@@ -27,6 +27,10 @@ public class SettingsMenu : MonoBehaviour
 
 
     //====================================================================================//
+    // void Awake()
+    // {
+    //     DontDestroyOnLoad(this.gameObject);
+    // }
 
     public void Start()
     {
