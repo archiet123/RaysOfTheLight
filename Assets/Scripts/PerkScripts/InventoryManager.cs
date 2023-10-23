@@ -8,6 +8,7 @@ using System.Linq;
 public class InventoryManager : MonoBehaviour
 {
     public List<string> PerkList = new List<string> { };
+    private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     // List<Sprite> PerkSprites = new List<Sprite>();
 
     public Font GameFont;
@@ -27,6 +28,22 @@ public class InventoryManager : MonoBehaviour
     //{
     //  add sprite to PerkList (content)
     //}
+
+    void Awake()
+    {
+        foreach (string ItemName in AllItems)
+        {
+            try
+            {
+                PlayerPrefs.GetInt(ItemName);
+                PerkList.Add(ItemName);
+            }
+            catch
+            {
+                Debug.Log($"{ItemName} Perk not previously set");
+            }
+        }
+    }
 
     void Update()
     {
