@@ -29,21 +29,21 @@ public class InventoryManager : MonoBehaviour
     //  add sprite to PerkList (content)
     //}
 
-    void Awake()
-    {
-        foreach (string ItemName in AllItems)
-        {
-            try
-            {
-                PlayerPrefs.GetInt(ItemName);
-                PerkList.Add(ItemName);
-            }
-            catch
-            {
-                Debug.Log($"{ItemName} Perk not previously set");
-            }
-        }
-    }
+    // void Awake()
+    // {
+    //     foreach (string ItemName in AllItems)
+    //     {
+    //         try
+    //         {
+    //             PlayerPrefs.GetInt(ItemName);
+    //             PerkList.Add(ItemName);
+    //         }
+    //         catch
+    //         {
+    //             Debug.Log($"{ItemName} Perk not previously set");
+    //         }
+    //     }
+    // }
 
     void Update()
     {
