@@ -3,6 +3,11 @@ using UnityEngine.UI;
 
 public class AddPerkToUI : LayoutGroup
 {
+    // void Awake()
+    // {
+    //     DontDestroyOnLoad(this.gameObject);
+    // }
+
     public enum Alignment
     {
         Horizontal,

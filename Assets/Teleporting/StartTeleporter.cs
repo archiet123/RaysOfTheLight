@@ -8,6 +8,8 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public int GameScene;
     public GameObject Portal;
     public Collider TeleporterCollider;
+    private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
+    private string[] ResetStringList = new string[] { };
 
     //to make sure the player always spawns with pistol and shotgun
     public void Awake()
@@ -19,6 +21,23 @@ public class StartTeleporter : MonoBehaviour, IInteractable
         PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);
         PlayerPrefs.SetInt("PlayerSpeedCounter", 0);
         PlayerPrefs.SetInt("CameraFOVCounter", 0);
+
+
+
+        //resetting
+        PlayerPrefsX.SetStringArray("CurrentEquipedPerks", ResetStringList);
+
+        foreach (string ItemName in AllItems)
+        {
+            try
+            {
+                PlayerPrefs.SetInt(ItemName, 0);
+            }
+            catch
+            {
+                //.Log("Perk not previously set");
+            }
+        }
     }
     //entities functionality goes here
     public void ActionFunction()

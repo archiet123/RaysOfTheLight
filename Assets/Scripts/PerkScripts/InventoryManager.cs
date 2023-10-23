@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
     public List<string> PerkList = new List<string> { };
     private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     // List<Sprite> PerkSprites = new List<Sprite>();
+    private string[] CurrentEquipedPerks = new string[] { };
 
     public Font GameFont;
     public GameObject PerkContainer;
@@ -29,29 +31,35 @@ public class InventoryManager : MonoBehaviour
     //  add sprite to PerkList (content)
     //}
 
-    void Awake()
+    void OnEnable()
     {
-        foreach (string ItemName in AllItems)
-        {
-            try
-            {
-                PlayerPrefs.GetInt(ItemName);
-                PerkList.Add(ItemName);
-            }
-            catch
-            {
-                Debug.Log($"{ItemName} Perk not previously set");
-            }
-        }
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
-    void Update()
+    void OnDisable()
     {
 
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        OnStartPerkChecker();
+    }
+
+    public void OnStartPerkChecker()
+    {
+        CurrentEquipedPerks = PlayerPrefsX.GetStringArray("CurrentEquipedPerks");
+        foreach (string ItemName in CurrentEquipedPerks)
+        {
+            // UpdatePerkQuantities(ItemName);
+            Debug.Log(ItemName);
+        }
     }
 
     public void UpdatePerkQuantities(string RandomItemName)
     {
+        // Debug.Log(RandomItemName);
         bool Add = true;
 
         if (PerkList.Contains(RandomItemName))
@@ -60,10 +68,7 @@ public class InventoryManager : MonoBehaviour
             //.Log($"{RandomItemName} already in list");
             //position is the index that the item is in the list, will be the same as the item in hierarcy
             int position = PerkList.IndexOf(RandomItemName);
-            // //.Log(position);
 
-            // string CurrentItemText = PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text;
-            // //.Log(CurrentItemText);
             int CurrentItemText = PlayerPrefs.GetInt(RandomItemName);
             PerkContainer.transform.GetChild(position).transform.GetChild(0).GetComponent<Text>().text = CurrentItemText.ToString();
         }

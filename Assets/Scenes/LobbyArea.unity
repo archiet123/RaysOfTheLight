@@ -6274,6 +6274,66 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.3600001, z: 0.17829758}
   m_Center: {x: 0, y: 1.1800001, z: 0.91085124}
+--- !u!1 &688460816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688460818}
+  - component: {fileID: 688460817}
+  - component: {fileID: 688460819}
+  m_Layer: 0
+  m_Name: PerkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688460817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688460816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PerkList: []
+  GameFont: {fileID: 12800000, guid: 38c91d9d317da1348af427fb054476df, type: 3}
+  PerkContainer: {fileID: 1528123929}
+--- !u!4 &688460818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688460816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4625.1, y: 18.15, z: 300.93866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &688460819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688460816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f816a50cfd34140a459e2b39cd277d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &695971675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17527,7 +17587,7 @@ PrefabInstance:
       objectReference: {fileID: 914442450}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: BaseROF
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: ShootFX
@@ -17543,7 +17603,7 @@ PrefabInstance:
       objectReference: {fileID: 902024678}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: TimeBetweenShooting
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497498274403, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: Bullet
@@ -20537,6 +20597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4543789686754739163, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+      propertyPath: PerkContainer
+      value: 
+      objectReference: {fileID: 1528123929}
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: Slot1
       value: 
@@ -20738,7 +20802,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5333329409755004593, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
+    - {fileID: 7152526835767326218, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
 --- !u!1001 &4938230385994192012
 PrefabInstance:
@@ -20822,7 +20886,7 @@ PrefabInstance:
     - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 7309461463745230937}
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230384962540739, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -20870,7 +20934,7 @@ PrefabInstance:
     - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 7309461463745230937}
+      objectReference: {fileID: 0}
     - target: {fileID: 4938230386496344554, guid: 1c4a5d1f560b5134d93813f42956b73e, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -20932,6 +20996,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6471859292362917, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+      propertyPath: rows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471859292362917, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+      propertyPath: columns
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471859292362917, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 46638985520195475, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_Color.a
       value: 0.1764706
@@ -21978,7 +22054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474961303667840359, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.6877685
+      value: 7.6884217
       objectReference: {fileID: 0}
     - target: {fileID: 5492865998220039102, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_IsActive
@@ -22126,7 +22202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130502524138849084, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.96583456
+      value: 0.9658294
       objectReference: {fileID: 0}
     - target: {fileID: 9130502524138849084, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_AnchorMin.y
@@ -22407,17 +22483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e070f26bb3f8f47856a11613371ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7309461463745230937 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6599694390187921594, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
-  m_PrefabInstance: {fileID: 2904546213551137459}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014820956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8180221648409653512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22650,7 +22715,7 @@ PrefabInstance:
     - target: {fileID: 3820648729476335274, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 7309461463745230937}
+      objectReference: {fileID: 688460817}
     - target: {fileID: 3820648729476335274, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -22658,7 +22723,7 @@ PrefabInstance:
     - target: {fileID: 6562894884506292839, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 7309461463745230937}
+      objectReference: {fileID: 688460817}
     - target: {fileID: 6562894884506292839, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -22721,7 +22786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8681433378964197541, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.241829
+      value: -17.35
       objectReference: {fileID: 0}
     - target: {fileID: 8681433378964197541, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: m_LocalPosition.y
