@@ -62,6 +62,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
         {
             currencySystem.TakeMoners(UseCost);
             items.SetActive(true);
+            Debug.Log("gumball");
         }
         else
         {

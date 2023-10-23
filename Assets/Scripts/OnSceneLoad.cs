@@ -6,6 +6,7 @@ public class OnSceneLoad : MonoBehaviour
 {
 
     public WeaponSelectionMenu weaponSelectionMenu;
+    public InventoryManager inventoryManager;
 
     void OnEnable()
     {
@@ -30,7 +31,8 @@ public class OnSceneLoad : MonoBehaviour
         // weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
         float test = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting -= ROFMultiplier;
 
-        // Debug.Log(ROFMultiplier);
-        // Debug.Log(test);    }
+
+
+
     }
 }
