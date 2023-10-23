@@ -17527,7 +17527,7 @@ PrefabInstance:
       objectReference: {fileID: 914442450}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: BaseROF
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: ShootFX
@@ -17543,7 +17543,7 @@ PrefabInstance:
       objectReference: {fileID: 902024678}
     - target: {fileID: 3206447497460884646, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: TimeBetweenShooting
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3206447497498274403, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: Bullet
