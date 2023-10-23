@@ -16,8 +16,12 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     //List of possible perks
     //make this a dictionary with the key a description of what the item does
     string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
+    // private string[] CurrentEquipedPerks = new string[] { };
+    List<string> CurrentEquipedPerks = new List<string> { };
+
+    string[] test = new string[] { };
+
     public GameObject[] PerkObjects = new GameObject[] { };
-    private string[] TestArray = new string[] { };
 
     //items to destroy 
     //items to add: "Akdov", "FabergeEgg", "MouldyTurnip", "JarOfBees", "Beans",
@@ -32,12 +36,17 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         //foreach item in AllItems, PlayerPrefs.reset
     }
 
-    public void Start()
+    void Start()
     {
         ItemVector = gameObject.transform.position;
-        // //.Log(ItemVector);    
 
-
+        Debug.Log("started");
+        test = PlayerPrefsX.GetStringArray("CurrentEquipedPerks");
+        foreach (string ItemName in test)
+        {
+            // UpdatePerkQuantities(ItemName);
+            // Debug.Log(ItemName);
+        }
     }
 
     public void GetRandomInt()
@@ -47,8 +56,6 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         RandInt = Random.Range(0, AllItems.Length);
         RandomItemName = AllItems[RandInt];
 
-
-
         //Spawn object
         //gets path
         //loads object and resizes it
@@ -57,10 +64,6 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         SetObject = (GameObject)GameObject.Instantiate(GetObject, gameObject.transform.position, Quaternion.Euler(0f, 180f, 0f)); // Quaternion.identity needs to flip item 180
         SetObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
         vendingMachineScript.DestroyList.Add(SetObject);
-        //NEED TO DESTROY OBJECT
-
-        //set weapons from path
-        //then use inheritance to set the correct settings
     }
 
     public void ActionFunction()
@@ -80,23 +83,31 @@ public class ItemGeneration : MonoBehaviour, IInteractable
             PlayerPrefs.SetInt(RandomItemName, 0);
         }
 
-        //testing ArrayPrefs2
-        PlayerPrefsX.SetStringArray(RandomItemName, TestArray);
-
         inventoryManager.UpdatePerkQuantities(RandomItemName);
-
+        SetCurrentPerks();
         //play item animation disappear
 
         Invoke("DestroySpawnedItems", 0.2f);
     }
 
-
-    //move this to lobby only object
-
-    void OnDestroy()
+    public void SetCurrentPerks()
     {
+        if (CurrentEquipedPerks.Contains(RandomItemName))
+        {
+            Debug.Log("already added");
+        }
+        else
+        {
+            // Debug.Log($"added {RandomItemName}");
+            CurrentEquipedPerks.Add(RandomItemName);
 
+            string[] str = CurrentEquipedPerks.ToArray();
+            PlayerPrefsX.SetStringArray("CurrentEquipedPerks", str);
+        }
     }
+
+
+
 
     public void DestroySpawnedItems()
     {

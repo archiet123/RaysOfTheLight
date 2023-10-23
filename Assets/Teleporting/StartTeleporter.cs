@@ -9,6 +9,7 @@ public class StartTeleporter : MonoBehaviour, IInteractable
     public GameObject Portal;
     public Collider TeleporterCollider;
     private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
+    private string[] ResetStringList = new string[] { };
 
     //to make sure the player always spawns with pistol and shotgun
     public void Awake()
@@ -21,7 +22,11 @@ public class StartTeleporter : MonoBehaviour, IInteractable
         PlayerPrefs.SetInt("PlayerSpeedCounter", 0);
         PlayerPrefs.SetInt("CameraFOVCounter", 0);
 
+
+
         //resetting
+        PlayerPrefsX.SetStringArray("CurrentEquipedPerks", ResetStringList);
+
         foreach (string ItemName in AllItems)
         {
             try
