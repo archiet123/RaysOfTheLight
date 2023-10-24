@@ -33,40 +33,20 @@ public class InventoryManager : MonoBehaviour
     //foreach Sprite in list
     //{
     //  add sprite to PerkList (content)
-    //}
-    void Awake()
-    {
-        MakeThisTheOnlyGameManager();
-    }
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    }
+    //}   
 
-    void OnDisable()
+    void Start()
     {
-
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    }
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        OnStartPerkChecker();
-    }
-
-    public void OnStartPerkChecker()
-    {
-        CurrentEquipedPerks = PlayerPrefsX.GetStringArray("CurrentEquipedPerks");
-        foreach (string ItemName in CurrentEquipedPerks)
+        int SceneInt = SceneManager.GetActiveScene().buildIndex;
+        if (SceneInt == 1)
         {
-            // UpdatePerkQuantities(ItemName);
-            Debug.Log(ItemName);
+            //Debug.Log("reset stuff");
         }
     }
 
     public void UpdatePerkQuantities(string RandomItemName)
     {
-        // Debug.Log(RandomItemName);
+        // //Debug.Log(RandomItemName);
         bool Add = true;
 
         if (PerkList.Contains(RandomItemName))

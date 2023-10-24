@@ -39,14 +39,6 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     void Start()
     {
         ItemVector = gameObject.transform.position;
-
-        Debug.Log("started");
-        test = PlayerPrefsX.GetStringArray("CurrentEquipedPerks");
-        foreach (string ItemName in test)
-        {
-            // UpdatePerkQuantities(ItemName);
-            // Debug.Log(ItemName);
-        }
     }
 
     public void GetRandomInt()
@@ -84,6 +76,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
         }
 
         // inventoryManager.UpdatePerkQuantities(RandomItemName);
+        GameObject.FindObjectOfType<InventoryManager>().UpdatePerkQuantities(RandomItemName);
         SetCurrentPerks();
         //play item animation disappear
 
@@ -94,11 +87,11 @@ public class ItemGeneration : MonoBehaviour, IInteractable
     {
         if (CurrentEquipedPerks.Contains(RandomItemName))
         {
-            Debug.Log("already added");
+            //Debug.Log("already added");
         }
         else
         {
-            // Debug.Log($"added {RandomItemName}");
+            // //Debug.Log($"added {RandomItemName}");
             CurrentEquipedPerks.Add(RandomItemName);
 
             string[] str = CurrentEquipedPerks.ToArray();

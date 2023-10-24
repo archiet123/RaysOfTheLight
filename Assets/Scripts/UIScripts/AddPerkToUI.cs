@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AddPerkToUI : LayoutGroup
 {
@@ -40,6 +41,18 @@ public class AddPerkToUI : LayoutGroup
 
     public bool NudgeLastItemsOver;
 
+    void Start()
+    {
+        int SceneInt = SceneManager.GetActiveScene().buildIndex;
+        if (SceneInt == 2)
+        {
+            foreach (Transform child in transform)
+            {
+                Debug.Log("reset stuff");
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+    }
     public override void CalculateLayoutInputVertical()
     {
         base.CalculateLayoutInputHorizontal();

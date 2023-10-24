@@ -52,7 +52,7 @@ public class UIController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Error");
+
             }
         }
         else if (DisablePauseMenu)
