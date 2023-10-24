@@ -1,12 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AddPerkToUI : LayoutGroup
 {
-    // void Awake()
-    // {
-    //     DontDestroyOnLoad(this.gameObject);
-    // }
 
     public enum Alignment
     {
@@ -39,6 +36,29 @@ public class AddPerkToUI : LayoutGroup
     public bool fitY;
 
     public bool NudgeLastItemsOver;
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        int SceneInt = SceneManager.GetActiveScene().buildIndex;
+        if (SceneInt == 1)
+        {
+            Debug.Log("?");
+            foreach (Transform child in transform)
+            {
+                Debug.Log("reset stuff");
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+    }
 
     public override void CalculateLayoutInputVertical()
     {

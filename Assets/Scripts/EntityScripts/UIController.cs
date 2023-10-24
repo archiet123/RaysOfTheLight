@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject WinDisplay;
     public GameObject LoseDisplay;
-    public GameObject PerkInfoUI;
+
     //bools
     public static bool isPaused;
     public bool PerkInfo;
@@ -32,7 +32,7 @@ public class UIController : MonoBehaviour
     private void GetInput()
     {
 
-        if (!DisablePauseMenu && !PerkInfo)
+        if (!DisablePauseMenu)
         {
             //if false the pause menu will be displayed
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -41,21 +41,13 @@ public class UIController : MonoBehaviour
                 {
                     HideOptionsMenu();
                 }
-                else if (PerkInfo)
-                {
-                    HidePerkUI();
-                }
                 else if (isPaused)
                 {
                     ResumeGame();
                 }
-                else if (!PerkInfo)
-                {
-                    PauseGame();
-                }
                 else
                 {
-                    Debug.Log("error");
+                    PauseGame();
                 }
             }
             else
@@ -86,24 +78,84 @@ public class UIController : MonoBehaviour
         {
             // Debug.Log("error");
         }
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            //if tab clicked
-            //if pause menu is not displayed
-            //if perkUI menu is not displayed
-            if (!isPaused && !PerkInfo)
-            {
-                ShowPerkUI();
-            }
-        }
-        else if (Input.GetKeyUp(KeyCode.Tab))
-        {
-            {
-                HidePerkUI();
-            }
-        }
     }
+
+    //old 
+    // private void GetInput()
+    // {
+
+    //     if (!DisablePauseMenu && !PerkInfo)
+    //     {
+    //         //if false the pause menu will be displayed
+    //         if (Input.GetKeyDown(KeyCode.Escape))
+    //         {
+    //             if (OptionsDisplayed)
+    //             {
+    //                 HideOptionsMenu();
+    //             }
+    //             else if (PerkInfo)
+    //             {
+    //                 HidePerkUI();
+    //             }
+    //             else if (isPaused)
+    //             {
+    //                 ResumeGame();
+    //             }
+    //             else if (!PerkInfo)
+    //             {
+    //                 PauseGame();
+    //             }
+    //             else
+    //             {
+    //                 Debug.Log("error");
+    //             }
+    //         }
+    //         else
+    //         {
+
+    //         }
+    //     }
+    //     else if (DisablePauseMenu)
+    //     {
+    //         //if true the gunbenchUI will be hidden
+    //         if (Input.GetKeyDown(KeyCode.Escape))
+    //         {
+    //             EquipmentMenu.SetActive(false);
+    //             Time.timeScale = 1f;
+    //             player.SetActive(true);
+    //             Cursor.lockState = CursorLockMode.Locked;
+    //             Cursor.visible = false;
+    //             DisablePauseMenu = false;
+    //             // getting variable from GunBenchScript
+    //             // FindObjectOfType<EquipmentController>().GetBool(DisablePauseMenu);
+    //             FindObjectOfType<EquipmentController>().GetBool(DisablePauseMenu);
+    //             // FindObjectOfType<EquipmentController>().GetBool1(DisablePauseMenu);
+    //             //is false
+    //             FindObjectOfType<GunScript>().GetBool1(DisablePauseMenu);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         // Debug.Log("error");
+    //     }
+
+    //     if (Input.GetKeyDown(KeyCode.Tab))
+    //     {
+    //         //if tab clicked
+    //         //if pause menu is not displayed
+    //         //if perkUI menu is not displayed
+    //         if (!isPaused && !PerkInfo)
+    //         {
+    //             ShowPerkUI();
+    //         }
+    //     }
+    //     else if (Input.GetKeyUp(KeyCode.Tab))
+    //     {
+    //         {
+    //             HidePerkUI();
+    //         }
+    //     }
+    // }
 
     public void PauseGame()
     {
@@ -158,16 +210,6 @@ public class UIController : MonoBehaviour
         Cursor.visible = true;
     }
 
-    public void ShowPerkUI()
-    {
-        PerkInfo = true;
-        PerkInfoUI.SetActive(true);
-    }
 
-    public void HidePerkUI()
-    {
-        PerkInfo = false;
-        PerkInfoUI.SetActive(false);
-    }
 }
 

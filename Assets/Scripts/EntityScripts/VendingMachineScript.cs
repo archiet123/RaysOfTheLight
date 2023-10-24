@@ -11,7 +11,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
     public GameObject items;
 
     //currency script
-    public CurrencySystem currencySystem;
+    // public CurrencySystem currencySystem;
 
     //value of currency
     private int CurrentCurrency;
@@ -57,12 +57,17 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     public void GivePlayerPerk()
     {
-        int CurrentCurrency = currencySystem.GetComponent<CurrencySystem>().Moners;
+        // int CurrentCurrency = currencySystem.GetComponent<CurrencySystem>().Moners;
+
+        int CurrentCurrency = CurrencySystem.Moners;
+
+
         if (CurrentCurrency >= UseCost)
         {
-            currencySystem.TakeMoners(UseCost);
+            GameObject.FindObjectOfType<CurrencySystem>().TakeMoners(UseCost);
+            // currencySystem.TakeMoners(UseCost);
             items.SetActive(true);
-            Debug.Log("gumball");
+            //Debug.Log("gumball");
         }
         else
         {

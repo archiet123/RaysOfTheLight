@@ -20,7 +20,7 @@ public class LobbyDoors : MonoBehaviour
 
     private void OnTriggerEnter(Collider CollsionObject)
     {
-        Debug.Log(CollsionObject.gameObject.tag);
+        // Debug.Log(CollsionObject.gameObject.tag);
         animator.SetBool("DoorTrigger", true);
     }
 

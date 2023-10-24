@@ -293,7 +293,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 2018212326}
   EnemyHealthBar: {fileID: 2108564359}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &2450061
 MonoBehaviour:
@@ -637,7 +637,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1353129584}
   EnemyHealthBar: {fileID: 1832462428}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &67625584
 MonoBehaviour:
@@ -2293,17 +2293,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1044641359550804994, guid: b65bf3c678706484aa57e24dc6e15c10, type: 3}
---- !u!114 &292923474 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5255494053943245388, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
-  m_PrefabInstance: {fileID: 1380455920}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &296242431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5057071011450592129, guid: b65bf3c678706484aa57e24dc6e15c10, type: 3}
@@ -3190,7 +3179,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 976142313}
   EnemyHealthBar: {fileID: 1460256295}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &426346873
 MonoBehaviour:
@@ -3605,7 +3594,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 336930973}
   EnemyHealthBar: {fileID: 32029268}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &448721478
 MonoBehaviour:
@@ -4536,7 +4525,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1877145994}
   EnemyHealthBar: {fileID: 2004711409}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &628351994
 MonoBehaviour:
@@ -5350,7 +5339,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1864438336}
   EnemyHealthBar: {fileID: 1576341871}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &771439847
 MonoBehaviour:
@@ -5718,7 +5707,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 129230371}
   EnemyHealthBar: {fileID: 850418991}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &831695054
 MonoBehaviour:
@@ -6193,7 +6182,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 81322378}
   EnemyHealthBar: {fileID: 147190026}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &853545168
 MonoBehaviour:
@@ -7019,7 +7008,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 924749176}
   EnemyHealthBar: {fileID: 815521343}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &966581357
 MonoBehaviour:
@@ -8064,7 +8053,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1506671022}
   EnemyHealthBar: {fileID: 228752146}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1108984091
 MonoBehaviour:
@@ -8853,11 +8842,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.30480036, y: 3, z: 1.9999998}
   m_Center: {x: 0.05126221, y: 0.000004288944, z: 0.16117947}
---- !u!1 &1250803024 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4925041724885794963, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
-  m_PrefabInstance: {fileID: 1380455920}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1252813703
 GameObject:
   m_ObjectHideFlags: 0
@@ -9359,7 +9343,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1353188027}
   EnemyHealthBar: {fileID: 173002380}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1288832345
 MonoBehaviour:
@@ -10915,7 +10899,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 2077687746}
   EnemyHealthBar: {fileID: 299437190}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1393216866
 MonoBehaviour:
@@ -12013,7 +11997,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 202083745}
   EnemyHealthBar: {fileID: 920501170}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1532704935
 MonoBehaviour:
@@ -12828,7 +12812,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 106248955}
   EnemyHealthBar: {fileID: 1925003979}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1609121832
 MonoBehaviour:
@@ -13201,7 +13185,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1028625340}
   EnemyHealthBar: {fileID: 431992872}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1650768991
 MonoBehaviour:
@@ -13865,7 +13849,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 415253608}
   EnemyHealthBar: {fileID: 2051461993}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1739039582
 MonoBehaviour:
@@ -14809,7 +14793,7 @@ PrefabInstance:
     - target: {fileID: 5333329409755004593, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: PerkContainer
       value: 
-      objectReference: {fileID: 1250803024}
+      objectReference: {fileID: 0}
     - target: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: Slot1
       value: 
@@ -14905,7 +14889,7 @@ PrefabInstance:
     - target: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: MonersTMP
       value: 
-      objectReference: {fileID: 292923474}
+      objectReference: {fileID: 0}
     - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: player
       value: 
@@ -14917,7 +14901,7 @@ PrefabInstance:
     - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: PerkInfoUI
       value: 
-      objectReference: {fileID: 2107351412}
+      objectReference: {fileID: 0}
     - target: {fileID: 5566283238560439033, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
       propertyPath: WinDisplay
       value: 
@@ -15007,17 +14991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cd4db09c588444ebb50c4a0930001c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1815865981 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566283238560439014, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
-  m_PrefabInstance: {fileID: 1815865978}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351047682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e070f26bb3f8f47856a11613371ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1815865982 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5566283238560439011, guid: 35b3affe3e4362c44aa53aa4f441a44c, type: 3}
@@ -15040,21 +15013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15ced5a6c744b24ba0a4ee227ba19e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1815865986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351047682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PerkList: []
-  GameFont: {fileID: 12800000, guid: 38c91d9d317da1348af427fb054476df, type: 3}
-  PerkContainer: {fileID: 1250803024}
 --- !u!1001 &1830644292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15290,7 +15248,7 @@ PrefabInstance:
     - target: {fileID: 2631796686867890391, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: currencySystem
       value: 
-      objectReference: {fileID: 1815865981}
+      objectReference: {fileID: 0}
     - target: {fileID: 3660891069404184749, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: Bullet
       value: 
@@ -15314,7 +15272,7 @@ PrefabInstance:
     - target: {fileID: 3820648729476335274, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 1815865986}
+      objectReference: {fileID: 0}
     - target: {fileID: 3820648729476335274, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -15322,7 +15280,7 @@ PrefabInstance:
     - target: {fileID: 6562894884506292839, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 1815865986}
+      objectReference: {fileID: 0}
     - target: {fileID: 6562894884506292839, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: vendingMachineScript
       value: 
@@ -16754,7 +16712,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 736036974}
   EnemyHealthBar: {fileID: 1176427454}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &1945145909
 MonoBehaviour:
@@ -17611,7 +17569,7 @@ MonoBehaviour:
   checkLevel: {fileID: 1815865985}
   HealthSlider: {fileID: 1802232772}
   EnemyHealthBar: {fileID: 877337929}
-  currencySystem: {fileID: 1815865981}
+  currencySystem: {fileID: 0}
   EnemyValue: 5
 --- !u!114 &2023335416
 MonoBehaviour:
@@ -18375,11 +18333,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2107351412 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6036653786941124604, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
-  m_PrefabInstance: {fileID: 1380455920}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2108564359
 GameObject:
   m_ObjectHideFlags: 0
@@ -18861,7 +18814,7 @@ PrefabInstance:
     - target: {fileID: 1026195571369099049, guid: 06032f9382939df4781b18b8bff03a45, type: 3}
       propertyPath: currencySystem
       value: 
-      objectReference: {fileID: 1815865981}
+      objectReference: {fileID: 0}
     - target: {fileID: 1026195571369099050, guid: 06032f9382939df4781b18b8bff03a45, type: 3}
       propertyPath: m_RootOrder
       value: 0

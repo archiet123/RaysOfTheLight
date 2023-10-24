@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class DontDestroy : MonoBehaviour
 {
 
-    public static GameManager GM;
+    public static DontDestroy DD;
 
     void Awake()
     {
@@ -15,14 +15,14 @@ public class GameManager : MonoBehaviour
 
     void MakeThisTheOnlyGameManager()
     {
-        if (GM == null)
+        if (DD == null)
         {
             DontDestroyOnLoad(gameObject);
-            GM = this;
+            DD = this;
         }
         else
         {
-            if (GM != this)
+            if (DD != this)
             {
                 Destroy(gameObject);
             }
