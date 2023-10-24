@@ -83,7 +83,7 @@ public class ItemGeneration : MonoBehaviour, IInteractable
             PlayerPrefs.SetInt(RandomItemName, 0);
         }
 
-        inventoryManager.UpdatePerkQuantities(RandomItemName);
+        // inventoryManager.UpdatePerkQuantities(RandomItemName);
         SetCurrentPerks();
         //play item animation disappear
 

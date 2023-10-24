@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager inventoryManager;
+    public GameObject PerkInfoUI;
+
+
     public List<string> PerkList = new List<string> { };
     private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
     // List<Sprite> PerkSprites = new List<Sprite>();
@@ -30,7 +34,10 @@ public class InventoryManager : MonoBehaviour
     //{
     //  add sprite to PerkList (content)
     //}
-
+    void Awake()
+    {
+        MakeThisTheOnlyGameManager();
+    }
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
@@ -129,5 +136,64 @@ public class InventoryManager : MonoBehaviour
         //get counter of this item from playerprefs
         //clear any text that has previously been set to this gameobject
         //instantiate new text on corresponding gameobject using playerprefs counter variable
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            //if tab clicked
+            //if pause menu is not displayed
+            //if perkUI menu is not displayed
+
+            ShowPerkUI();
+            // if (!isPaused && !PerkInfo)
+            // {
+
+            // }
+        }
+        else if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            HidePerkUI();
+            // {
+
+            // }
+        }
+    }
+
+
+    public void ShowPerkUI()
+    {
+        // PerkInfo = true;
+        PerkInfoUI.SetActive(true);
+    }
+
+    public void HidePerkUI()
+    {
+        // PerkInfo = false;
+        PerkInfoUI.SetActive(false);
+    }
+
+
+
+
+
+
+
+
+    void MakeThisTheOnlyGameManager()
+    {
+        if (inventoryManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            inventoryManager = this;
+        }
+        else
+        {
+            if (inventoryManager != this)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

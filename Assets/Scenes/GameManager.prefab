@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 8951681778974190893}
   - component: {fileID: 5566283238560439033}
   - component: {fileID: 5566283238560439011}
-  - component: {fileID: 5566283238560439014}
   - component: {fileID: 3017044195382721160}
-  - component: {fileID: 4543789686754739163}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -121,20 +119,6 @@ MonoBehaviour:
   GunName2: {fileID: 0}
   AmmoCounter1: {fileID: 0}
   AmmoCounter2: {fileID: 0}
---- !u!114 &5566283238560439014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2904546213075817199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e070f26bb3f8f47856a11613371ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonersTMP: {fileID: 0}
-  Moners: 0
 --- !u!114 &3017044195382721160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,18 +145,3 @@ MonoBehaviour:
   animator: {fileID: 0}
   TotalDead: 0
   CompletedRooms: []
---- !u!114 &4543789686754739163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2904546213075817199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1e9c37e35adf54d8bb40415f39a8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PerkList: []
-  GameFont: {fileID: 12800000, guid: 38c91d9d317da1348af427fb054476df, type: 3}
-  PerkContainer: {fileID: 0}

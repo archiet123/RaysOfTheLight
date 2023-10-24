@@ -6,11 +6,21 @@ using TMPro;
 
 public class CurrencySystem : MonoBehaviour
 {
+
+
+    public static CurrencySystem currencySystem;
+    public static int Moners = 15;
+
+    void Awake()
+    {
+        MakeThisTheOnlyGameManager();
+    }
+
     //TMP for money
     public TextMeshProUGUI MonersTMP;
 
     //variable for Moners
-    public int Moners = 0;
+
 
     void Start()
     {
@@ -178,6 +188,22 @@ public class CurrencySystem : MonoBehaviour
             yield return null;
             yield return null;
 
+        }
+    }
+
+    void MakeThisTheOnlyGameManager()
+    {
+        if (currencySystem == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            currencySystem = this;
+        }
+        else
+        {
+            if (currencySystem != this)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
