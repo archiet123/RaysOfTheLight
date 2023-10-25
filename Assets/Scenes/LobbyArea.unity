@@ -6446,6 +6446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PerkInfoUI: {fileID: 1154938849}
+  PerkUIContainer: {fileID: 1154938848}
   PerkList: []
   GameFont: {fileID: 12800000, guid: 38c91d9d317da1348af427fb054476df, type: 3}
   PerkContainer: {fileID: 1154938848}

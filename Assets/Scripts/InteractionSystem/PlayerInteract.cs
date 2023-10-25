@@ -1,14 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerInteract : MonoBehaviour
 {
     //bools
     public bool DisableInteract = false;
 
 
+    // public static PlayerInteract playerInteract;
 
+    // void Awake()
+    // {
+    //     MakeThisTheOnlyGameManager();
+    // }
+
+
+    // void MakeThisTheOnlyGameManager()
+    // {
+    //     if (playerInteract == null)
+    //     {
+    //         DontDestroyOnLoad(gameObject);
+    //         playerInteract = this;
+    //     }
+    //     else
+    //     {
+    //         if (playerInteract != this)
+    //         {
+    //             Destroy(gameObject);
+    //         }
+    //     }
+    // }
 
 
 

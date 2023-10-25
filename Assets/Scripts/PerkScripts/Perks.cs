@@ -60,6 +60,14 @@ public class Perks : MonoBehaviour
     {
         //Debug.Log($"Picked GoFast");
 
+        // int ThisCounter = PlayerPrefs.GetInt(Pills);
+
+        // ThisCounter + 1;
+        // float ROFMultiplier = ThisCounter * 0.02f;
+
+        // PlayerPrefs.SetInt(Pills, ThisCounter);
+
+
         int PlayerSpeedCounter = vendingMachineScript.MoveSpeedCounter += 1;
         player.GetComponent<PlayerMovement>().MoveSpeed += 1f;
         PlayerPrefs.SetInt("PlayerSpeedCounter", PlayerSpeedCounter);
@@ -91,6 +99,10 @@ public class Perks : MonoBehaviour
         //this will also mean it has to be set back to its default ROF before i can be set the the correct multiplyer value
         //ROFMultiplier = ItemCounter * 1
         //weapon rate of fire * ROFMultiplier
+        // int ThisCounter = PlayerPrefs.GetInt(Pills)
+        // PlayerPrefs.SetInt(RandomItemName, CurrentItemCounter);
+
+
         vendingMachineScript.ROFCounter += 1f;
         float ROFMultiplier = vendingMachineScript.ROFCounter * 0.02f;
 

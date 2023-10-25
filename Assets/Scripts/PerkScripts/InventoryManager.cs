@@ -10,38 +10,22 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventoryManager;
     public GameObject PerkInfoUI;
-
-
     public List<string> PerkList = new List<string> { };
-    private string[] AllItems = new string[] { "Pills", "Pheromones", "Mag", "Spanner", "Meds" };
-    // List<Sprite> PerkSprites = new List<Sprite>();
-    private string[] CurrentEquipedPerks = new string[] { };
 
     public Font GameFont;
     public GameObject PerkContainer;
     private string ImgToSet;
     private string path;
 
-    // public GameObject PerkContainer;
-
-    //PerkName will be added to PerkUIList when perk is picked
 
     //any duplicates will then be calculated and totaled
     //potentially calculate totals of sprite list, might be hard to associate wtih correct sprite after totalled
-
     //the icon/sprite will then be fetched from the list and added to PerkSprites List
-    //foreach Sprite in list
-    //{
-    //  add sprite to PerkList (content)
-    //}   
+
 
     void Start()
     {
-        int SceneInt = SceneManager.GetActiveScene().buildIndex;
-        if (SceneInt == 1)
-        {
-            //Debug.Log("reset stuff");
-        }
+
     }
 
     public void UpdatePerkQuantities(string RandomItemName)
@@ -63,7 +47,6 @@ public class InventoryManager : MonoBehaviour
         {
             Add = true;
             PerkList.Add(RandomItemName);
-            //.Log($"add to list{RandomItemName}");
         }
 
         ImgToSet = RandomItemName;
@@ -72,10 +55,9 @@ public class InventoryManager : MonoBehaviour
 
         GameObject imgObject = new GameObject(RandomItemName);
         RectTransform trans = imgObject.AddComponent<RectTransform>();
-        // //.Log(imgObject);
 
 
-        // //.Log($"before {Add}");
+
         if (Add)
         {
             //setting new gameObjects size/parent/vector
@@ -122,44 +104,23 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            //if tab clicked
-            //if pause menu is not displayed
-            //if perkUI menu is not displayed
-
             ShowPerkUI();
-            // if (!isPaused && !PerkInfo)
-            // {
-
-            // }
         }
         else if (Input.GetKeyUp(KeyCode.Tab))
         {
             HidePerkUI();
-            // {
-
-            // }
         }
     }
 
-
     public void ShowPerkUI()
     {
-        // PerkInfo = true;
         PerkInfoUI.SetActive(true);
     }
 
     public void HidePerkUI()
     {
-        // PerkInfo = false;
         PerkInfoUI.SetActive(false);
     }
-
-
-
-
-
-
-
 
     void MakeThisTheOnlyGameManager()
     {
@@ -173,6 +134,27 @@ public class InventoryManager : MonoBehaviour
             if (inventoryManager != this)
             {
                 Destroy(gameObject);
+            }
+        }
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        int SceneInt = SceneManager.GetActiveScene().buildIndex;
+        if (SceneInt == 1)
+        {
+            foreach (Transform child in PerkContainer.transform)
+            {
+                GameObject.Destroy(child.gameObject);
             }
         }
     }
