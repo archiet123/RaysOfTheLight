@@ -48,6 +48,7 @@ public class AddPerkToUI : LayoutGroup
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("is this even loaded?");
         int SceneInt = SceneManager.GetActiveScene().buildIndex;
         if (SceneInt == 1)
         {

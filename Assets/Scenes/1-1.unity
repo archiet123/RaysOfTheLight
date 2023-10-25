@@ -15238,6 +15238,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2631796686867890391, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
+      propertyPath: UseCost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631796686867890391, guid: 62e0f5ee982a89743ba5f6cdf2f56bd0, type: 3}
       propertyPath: WarningTMP
       value: 
       objectReference: {fileID: 116631929}

@@ -41,7 +41,8 @@ public class HealthScript : MonoBehaviour
         if (EnemyHealth <= 0)
         {
             DisableEnemy();
-            currencySystem.GetMoners(EnemyValue);
+            // currencySystem.GetMoners(EnemyValue);
+            GameObject.FindObjectOfType<CurrencySystem>().GetMoners(EnemyValue);
         }
     }
 
