@@ -57,7 +57,7 @@ public class WeaponSelectionMenu : MonoBehaviour
 
         Addlisteners();
 
-        float test = Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
+        // float test = Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
         // //.Log(test);       
 
         int loadedWeapon2 = PlayerPrefs.GetInt("Slot2Weapon");
