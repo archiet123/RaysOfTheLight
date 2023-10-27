@@ -17,6 +17,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
     private int CurrentCurrency;
     //cost of vendingmachine
     public int UseCost = 15;
+    //public string UseCoseText = "15";
 
     //UI warning if not affordable
     public GameObject WarningParent;

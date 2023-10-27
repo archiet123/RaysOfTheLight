@@ -26,10 +26,10 @@ public class OnSceneLoad : MonoBehaviour
 
     public void LoadData()
     {
-        float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
+        // float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
 
         // weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting;
-        float test = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting -= ROFMultiplier;
+        // float test = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting -= ROFMultiplier;
 
 
 

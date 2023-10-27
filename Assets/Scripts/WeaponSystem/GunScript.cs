@@ -58,10 +58,6 @@ public class GunScript : MonoBehaviour
     }
 
 
-
-
-
-
     private void Awake()
     {
         BulletsLeft = MagazineSize;
@@ -87,9 +83,6 @@ public class GunScript : MonoBehaviour
 
 
     }
-
-
-
 
     public void GetBool(bool IsShown)
     {
@@ -226,9 +219,6 @@ public class GunScript : MonoBehaviour
         Reloading = false;
         // Debug.Log("Reloaded");
     }
-
-
-
 
 }
 

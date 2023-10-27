@@ -18,7 +18,7 @@ public class StartTeleporter : MonoBehaviour, IInteractable
         PlayerPrefs.SetInt("Slot2Weapon", 2);
 
         //perks
-        PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);
+        // PlayerPrefs.SetFloat("WeaponRateOfFire", 0.3f);
         PlayerPrefs.SetInt("PlayerSpeedCounter", 0);
         PlayerPrefs.SetInt("CameraFOVCounter", 0);
 

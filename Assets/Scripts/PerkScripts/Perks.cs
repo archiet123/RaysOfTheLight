@@ -103,26 +103,26 @@ public class Perks : MonoBehaviour
         // PlayerPrefs.SetInt(RandomItemName, CurrentItemCounter);
 
 
-        vendingMachineScript.ROFCounter += 1f;
-        float ROFMultiplier = vendingMachineScript.ROFCounter * 0.02f;
+        // vendingMachineScript.ROFCounter += 1f;
+        // float ROFMultiplier = vendingMachineScript.ROFCounter * 0.02f;
+        // Debug.Log(ROFMultiplier);
 
+        // //Get the weapnons 'Base' rate of fire
+        // float Slot1BaseROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
+        // float Slot2BaseROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
 
-        //Get the weapnons 'Base' rate of fire
-        float Slot1BaseROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
-        float Slot2BaseROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().BaseROF;
+        // //Set base rate of fire
+        // float Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1BaseROF;
+        // float Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1BaseROF;
 
-        //Set base rate of fire
-        float Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1BaseROF;
-        float Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1BaseROF;
+        // //update to current multiplier rate of fire
+        // Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
+        // Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
 
-        //update to current multiplier rate of fire
-        Slot1ROF = weaponSelectionMenu.Slot1.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
-        Slot2ROF = weaponSelectionMenu.Slot2.transform.GetChild(0).GetComponent<GunScript>().TimeBetweenShooting = Slot1ROF - ROFMultiplier;
-
-        //Debug.Log(ROFMultiplier);
+        //Debug.Log(ROFMultiplier);     
 
         //write values to playerprefs
-        PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
+        // PlayerPrefs.SetFloat("WeaponRateOfFire", ROFMultiplier);
     }
 
     public void Spanner()

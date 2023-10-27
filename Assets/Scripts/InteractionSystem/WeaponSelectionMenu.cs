@@ -98,7 +98,7 @@ public class WeaponSelectionMenu : MonoBehaviour
         Slot1 = (WeaponsToChoose1[loadedWeapon1]);
         Slot2 = (WeaponsToChoose2[loadedWeapon2]);
         //.Log(Slot2.ToString());
-        float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
+        // float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");S
 
     }
 

@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 MoveDirection;
 
     Rigidbody rb;
-
+    private Vector3 OldTransPos;
+    private Vector3 currentPosition;
 
     //On Load data loading
     void OnEnable()
@@ -67,6 +68,17 @@ public class PlayerMovement : MonoBehaviour
 
         MyInput();
         SpeedControl();
+
+        currentPosition = transform.position;
+        if (currentPosition != OldTransPos)
+        {
+            Debug.Log("play sound");
+        }
+        else
+        {
+            Debug.Log("dont play sound");
+        }
+        OldTransPos = currentPosition;
 
         //handle drag
         if (Grounded)
