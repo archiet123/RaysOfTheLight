@@ -10317,6 +10317,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 300878840029604035}
     - target: {fileID: 5580381669142736285, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: AmmoDisplay
+      value: 
+      objectReference: {fileID: 1380455923}
+    - target: {fileID: 5580381669142736285, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: TimeBetweenShooting
       value: 0.15
       objectReference: {fileID: 0}
@@ -10372,13 +10376,58 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.46174866
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6848121110073156271, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+    - {fileID: 4907445856653397608, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
 --- !u!1 &5558309240861622996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
   m_PrefabInstance: {fileID: 5558309240861622995}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5558309240861622997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3903390438942328777, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 5558309240861622995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5558309240861622998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1342654917916619404, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 5558309240861622995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5558309240861622999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558309240861622998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138feccc86c4b434bbc21c85a80fd146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: 
+  Bullet: {fileID: 7015627235226779027}
+  ShootForce: 400
+  UpwardForce: 0
+  TimeBetweenShooting: 0.25
+  spread: 0
+  ReloadTime: 1.5
+  TimeBetweenShots: 0
+  BaseROF: 0.15
+  MagazineSize: 30
+  BulletsPerTap: 1
+  AllowButtonHold: 1
+  BulletsLeft: 0
+  BulletsShot: 0
+  PlayerCam: {fileID: 300878840029604035}
+  AttackPoint: {fileID: 5558309240861622997}
+  MuzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
+  AmmoDisplay: {fileID: 1380455923}
+  AllowInvoke: 1
+  ShootFX: {fileID: 7015627234007008888}
+  ReloadFX: {fileID: 7015627234184325462}
 --- !u!1001 &5895585657311054375
 PrefabInstance:
   m_ObjectHideFlags: 0
