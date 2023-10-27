@@ -323,6 +323,7 @@ MonoBehaviour:
   spread: 0
   ReloadTime: 4
   TimeBetweenShots: 1
+  BaseROF: 0.1
   MagazineSize: 100
   BulletsPerTap: 1
   AllowButtonHold: 1
@@ -335,7 +336,6 @@ MonoBehaviour:
   AllowInvoke: 1
   ShootFX: {fileID: 0}
   ReloadFX: {fileID: 0}
-  animator: {fileID: 5902945606602853902}
 --- !u!1 &8167595773815341568
 GameObject:
   m_ObjectHideFlags: 0
