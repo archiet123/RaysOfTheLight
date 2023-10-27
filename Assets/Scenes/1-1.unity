@@ -11251,7 +11251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255494053145598633, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255494053285919463, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_IsActive
@@ -11323,7 +11323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6311435924850716729, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7375566722885103414, guid: 076c3ab1669dcf5438ef768bf064e330, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -24999,6 +24999,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.529
       objectReference: {fileID: 0}
+    - target: {fileID: 3206447498549683047, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206447498549683047, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206447498549683047, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.245
+      objectReference: {fileID: 0}
     - target: {fileID: 3206447498718944758, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: Bullet
       value: 
@@ -25243,6 +25255,18 @@ PrefabInstance:
       propertyPath: TimeBetweenShooting
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 7821464785550059217, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821464785550059217, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821464785550059217, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.245
+      objectReference: {fileID: 0}
     - target: {fileID: 7849722237018723751, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.03
@@ -25290,6 +25314,49 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3993636096803098319, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
   m_PrefabInstance: {fileID: 5558309240861622995}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5558309240861622997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8285440497477263804, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 5558309240861622995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5558309240861622998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1342654917916619404, guid: c61c08273bbf3314e83ffc98be292100, type: 3}
+  m_PrefabInstance: {fileID: 5558309240861622995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5558309240861622999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558309240861622998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138feccc86c4b434bbc21c85a80fd146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: 
+  Bullet: {fileID: 7015627234412333140}
+  ShootForce: 400
+  UpwardForce: 0
+  TimeBetweenShooting: 0.15
+  spread: 0
+  ReloadTime: 1.5
+  TimeBetweenShots: 0
+  BaseROF: 0
+  MagazineSize: 30
+  BulletsPerTap: 1
+  AllowButtonHold: 1
+  BulletsLeft: 0
+  BulletsShot: 0
+  PlayerCam: {fileID: 300878840029604035}
+  AttackPoint: {fileID: 5558309240861622997}
+  MuzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
+  AmmoDisplay: {fileID: 0}
+  AllowInvoke: 1
+  ShootFX: {fileID: 7015627234007008888}
+  ReloadFX: {fileID: 7015627234184325462}
 --- !u!1001 &5895585657311054375
 PrefabInstance:
   m_ObjectHideFlags: 0

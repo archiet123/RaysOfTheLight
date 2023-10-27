@@ -113,7 +113,7 @@ public class VendingMachineScript : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "Buy (₪15)";
+        return "Buy (₪5)";
     }
 
     void IInteractable.Interact(Transform InteractorTransform)
