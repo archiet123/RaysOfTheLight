@@ -6,6 +6,7 @@ using TMPro;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
+//Singletense
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventoryManager;
@@ -152,6 +153,7 @@ public class InventoryManager : MonoBehaviour
         int SceneInt = SceneManager.GetActiveScene().buildIndex;
         if (SceneInt == 1)
         {
+            PerkList.Clear();
             foreach (Transform child in PerkContainer.transform)
             {
                 GameObject.Destroy(child.gameObject);
