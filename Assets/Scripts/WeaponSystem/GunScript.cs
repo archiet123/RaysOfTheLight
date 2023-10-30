@@ -72,6 +72,8 @@ public class GunScript : MonoBehaviour
 
         //Set Base Rate of fire to default on start
         // BaseROF = TimeBetweenShooting;
+        float ROFMultiplier = PlayerPrefs.GetFloat("WeaponRateOfFire");
+        TimeBetweenShooting -= ROFMultiplier;
     }
 
     private void Update()

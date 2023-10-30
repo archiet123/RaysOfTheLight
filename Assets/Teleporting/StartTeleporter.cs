@@ -25,7 +25,7 @@ public class StartTeleporter : MonoBehaviour, IInteractable
 
 
         //resetting
-        PlayerPrefsX.SetStringArray("CurrentEquipedPerks", ResetStringList);
+        // PlayerPrefsX.SetStringArray("CurrentEquipedPerks", ResetStringList);
 
         foreach (string ItemName in AllItems)
         {
